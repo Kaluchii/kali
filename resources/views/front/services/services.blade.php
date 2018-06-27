@@ -12,52 +12,52 @@
         <h2 class="services__subtitle">Компания "Kali" предлагает следующий спектр услуг:</h2>
         <ul class="services__list icon-cards">
             <li class="icon-cards__item">
-                <a href="#" class="icon-cards__link">
+                <div class="icon-cards__item-container">
                     <div class="icon-cards__icon-wrap">
                         <img src="" alt="" class="icon-cards__icon">
                     </div>
                     <p class="icon-cards__text">Окна, двери, витражи из ПВХ - профилей. (КНР, Турция, Германия)</p>
-                </a>
+                </div>
             </li>
             <li class="icon-cards__item">
-                <a href="#" class="icon-cards__link">
+                <div class="icon-cards__item-container">
                     <div class="icon-cards__icon-wrap">
                         <img src="" alt="" class="icon-cards__icon">
                     </div>
                     <p class="icon-cards__text">Однокамерные, двукамерные стеклопакеты</p>
-                </a>
+                </div>
             </li>
             <li class="icon-cards__item">
-                <a href="#" class="icon-cards__link">
+                <div class="icon-cards__item-container">
                     <div class="icon-cards__icon-wrap">
                         <img src="" alt="" class="icon-cards__icon">
                     </div>
                     <p class="icon-cards__text">Изготовление пластиковых окон</p>
-                </a>
+                </div>
             </li>
             <li class="icon-cards__item">
-                <a href="#" class="icon-cards__link">
+                <div class="icon-cards__item-container">
                     <div class="icon-cards__icon-wrap">
                         <img src="" alt="" class="icon-cards__icon">
                     </div>
                     <p class="icon-cards__text">Энергосберегающие стеклопакеты</p>
-                </a>
+                </div>
             </li>
             <li class="icon-cards__item">
-                <a href="#" class="icon-cards__link">
+                <div class="icon-cards__item-container">
                     <div class="icon-cards__icon-wrap">
                         <img src="" alt="" class="icon-cards__icon">
                     </div>
                     <p class="icon-cards__text">Изготовление изделий из алюминиевых профилей. (Беларусь)</p>
-                </a>
+                </div>
             </li>
             <li class="icon-cards__item">
-                <a href="#" class="icon-cards__link">
+                <div class="icon-cards__item-container">
                     <div class="icon-cards__icon-wrap">
                         <img src="" alt="" class="icon-cards__icon">
                     </div>
                     <p class="icon-cards__text">Стеклопакет с декоративной рассечкой</p>
-                </a>
+                </div>
             </li>
         </ul>
     </div>
