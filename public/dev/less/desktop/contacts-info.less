@@ -1,0 +1,78 @@
+.contacts-info{
+  background: url("/img/contacts-info_bg.jpg") no-repeat center / cover;
+  color: #ffffff;
+
+  &__container{
+    position: relative;
+    max-width: 1374px;
+    width: 100%;
+    padding: 40px 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col{}
+
+  &__title{
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 600;
+
+    &:nth-child(n+2){
+      margin-top: 11px;
+    }
+  }
+
+  &__socials{
+    margin: 30px 0;
+    display: flex;
+  }
+
+  &__social{
+    width: 51px;
+    height: 51px;
+
+    &--inst{
+      background: url("/img/contacts-info_inst.png") no-repeat center / cover;
+    }
+
+    &--vk{
+      margin-left: 35px;
+      background: url("/img/contacts-info_vk.png") no-repeat center / cover;
+    }
+  }
+
+  &__text{
+    margin-top: 7px;
+    font-size: 22px;
+    line-height: 1.2;
+
+    &--phones{
+      text-align: right;
+      line-height: 1.5;
+    }
+  }
+
+  &__made-with-love{
+    margin-top: 30px;
+    margin-left: auto;
+    max-width: 205px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__made-logo{
+    width: 49px;
+    height: 51px;
+    flex-shrink: 0;
+    background: url("/img/goodviz_w.png") no-repeat center / cover;
+  }
+
+  &__made-text{
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+}

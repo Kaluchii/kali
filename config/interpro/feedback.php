@@ -17,14 +17,14 @@ return [
         //Предпоследнее место где формы смотрят: from, host, port, encryption, password, to
         //Здесь можно настроить конфиг из админки
         //доп. поля формате qs конфига
-        'string' => ['descr1', 'descr2'],
-        'int' => ['number1', 'number2']
+//        'string' => ['descr1', 'descr2'],
+//        'int' => ['number1', 'number2']
     ],
     'mailfromac' => [
         //Подчинен блоку feedback
         //Группа автоподстановки по домену почты отправителя from значений host, port и encryption отправителя
     ],
-    'forms' => [
+    /*'forms' => [
         //Блоки форм
         //предопределенные поля: from, subject, host, port, encryption, password, to
         'form1' => [
@@ -42,5 +42,5 @@ return [
             ]
         ],
         'form2' => []
-    ]
+    ]*/
 ];

@@ -25,9 +25,7 @@ class FrontController extends Controller
 
 
     public function getIndex(){
-        $example = $this->extract->getBlock('example');
         return view('front.index.index', [
-            'example' => $example,
         ]);
     }
 }

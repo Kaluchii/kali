@@ -1,7 +1,8 @@
 @section('header')
     <div class="only">
         <div class="only__container">
-            <div class="only__text">Единственный дистрибьютор <img src="" alt="" class="only__img"> в Казахстане</div>
+            <div class="only__text">Единственный дистрибьютор <img src="/img/only_conch.png" alt="Kali дистрибьютор CONCH" class="only__img"> в Казахстане</div>
+            <div class="only__years"></div>
         </div>
     </div>
     <header class="header">
@@ -12,10 +13,17 @@
                         <a href="#" class="header__link link-black">О компании</a>
                         <a href="#" class="header__link header__link--calc link-black">Калькулятор стоимости</a>
                     </div>
+                    <ul class="header__phones-list">
+                        <li class="header__phones-item">+ 7 (727) 294 86 51</li>
+                        <li class="header__phones-item">+ 7 (777) 256 09 07</li>
+                    </ul>
+                    <div class="header__call-btn-wrap">
+                        <a href="#" class="header__call-btn button button--orange-border">Заказать звонок</a>
+                    </div>
                 </div>
                 <div class="header__center-col">
                     <a href="/" class="header__home-link">
-                        <img src="" alt="" class="header__logo">
+                        <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="header__logo">
                     </a>
                     <p class="header__under-logo">ДОСТОЙНОЕ РЕШЕНИЕ</p>
                 </div>

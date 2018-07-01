@@ -4,26 +4,38 @@
 
 
                                       Пример подключения шрифтов
+*/
 
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto Light'), local('RobotoLight'), url('../fonts/Roboto/Robotolight.woff2') format('woff2'), url('../fonts/Roboto/Robotolight.woff') format('woff'), url('../fonts/Roboto/Robotolight.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), local('RobotoRegular'), url('../fonts/Roboto/Roboto.woff2') format('woff2'), url('../fonts/Roboto/Roboto.woff') format('woff'), url('../fonts/Roboto/Roboto.ttf') format('truetype');
+  font-family: 'Segoe UI';
+  src: local('Segoe UI Regular'), local('SegoeUI'), url('../fonts/SegoeUI/SegoeUIRegular.woff') format('woff'), url('../fonts/SegoeUI/SegoeUIRegular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto Black'), local('RobotoBlack'), url('../fonts/Roboto/Robotoblack.woff2') format('woff2'), url('../fonts/Roboto/Robotoblack.woff') format('woff'), url('../fonts/Roboto/Robotoblack.ttf') format('truetype');
-  font-weight: 900;
+  font-family: 'Segoe UI';
+  src: local('Segoe UI SemiBold'), local('SegoeUI SemiBold'), url('../fonts/SegoeUI/SegoeUISemiBold.woff') format('woff'), url('../fonts/SegoeUI/SegoeUISemiBold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
-}*/
+}
+@font-face {
+  font-family: 'Segoe UI';
+  src: local('Segoe UI Bold'), local('SegoeUI Bold'), url('../fonts/SegoeUI/SegoeUIBold.woff') format('woff'), url('../fonts/SegoeUI/SegoeUIBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
 
-.link{
-  .link(@link-color,@link-border,@hover-color,@hover-border);
+
+.page-wrapper{
+  max-width: 100%;
+}
+
+.link-black{
+  .link(@main-black, @main-black, @main-blue, @main-blue);
+  font-size: inherit;
+}
+
+.link-white{
+  .link(#ffffff, #ffffff, @main-orange, @main-orange);
+  font-size: inherit;
 }

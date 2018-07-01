@@ -1,0 +1,67 @@
+.application{
+  background: url("/img/application_bg.jpg") no-repeat center / cover;
+
+  &__container{
+    position: relative;
+    max-width: 1374px;
+    width: 100%;
+    padding: 80px 30px 100px;
+    margin: 0 auto;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 20px;
+      width: 312px;
+      height: 385px;
+      background: url("/img/application_yardstick.png") no-repeat center / cover;
+    }
+  }
+
+  &__title{
+    position: relative;
+    z-index: 1;
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  &__form{
+    position: relative;
+    z-index: 1;
+    margin-top: 45px;
+    display: flex;
+  }
+
+  &__input-wrap{
+    width: 100%;
+    max-width: 215px;
+
+    & + &{
+      margin-left: 40px;
+    }
+
+    & + &--btn{
+      margin-left: 65px;
+    }
+
+    &--btn{
+      max-width: 240px;
+    }
+  }
+
+  &__validation-wrap{}
+
+  &__btn{
+    &.load{
+      background: url(/img/default.svg) center center no-repeat, rgba(170, 170, 170, 0.8);
+      background-size: 40px 90%;
+      color: transparent;
+      cursor: default;
+      pointer-events: none;
+      transition: .3s;
+    }
+  }
+}

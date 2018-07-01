@@ -12,7 +12,7 @@
     {{--{!! $scripts->before_head_close_field !!}--}}
 </head>
 <body>
-{{--    {!! $scripts->after_open_field !!}--}}
+{{--    {!! $scripts->after_body_open_field !!}--}}
 @include('front.header')
 @include('front.application')
 @include('front.small-info')
@@ -20,7 +20,7 @@
 @include('front.footer')
 @include('front.scripts')
 
-    <div class="wrapper">
+    <div class="page-wrapper">
         @yield('header')
 
         @yield('content')
@@ -40,7 +40,7 @@
 
     @yield('scripts')
 
-{{--    {!! $scripts->before_close_field !!}--}}
+{{--    {!! $scripts->before_body_close_field !!}--}}
 
 </body>
 </html>

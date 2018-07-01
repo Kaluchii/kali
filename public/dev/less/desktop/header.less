@@ -1,0 +1,149 @@
+.header{
+  &__container{
+    max-width: 1374px;
+    width: 100%;
+    padding: 25px 30px;
+    margin: 0 auto;
+  }
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-col{}
+
+  &__links-wrap{}
+
+  &__link{
+    position: relative;
+
+    & + &{
+      margin-left: 25px;
+    }
+
+    & + &--calc{
+      margin-left: 63px;
+    }
+
+    &--calc{
+      &::before{
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -33px;
+        width: 22px;
+        height: 28px;
+        background: url("/img/header_calc.png") no-repeat center;
+      }
+    }
+
+    &--dealer{
+      &::before{
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: -37px;
+        width: 26px;
+        height: 21px;
+        background: url("/img/header_handshake.png") no-repeat center;
+      }
+    }
+  }
+
+  &__phones-list{
+    position: relative;
+    margin-top: 30px;
+    padding-left: 35px;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 26px;
+      height: 28px;
+      background: url("/img/header_phone.png") no-repeat center;
+    }
+  }
+
+  &__phones-item{
+    color: @main-black;
+    font-size: 18px;
+    line-height: 1;
+
+    & + &{
+      margin-top: 15px;
+    }
+  }
+
+  &__call-btn-wrap{
+    margin-top: 25px;
+  }
+
+  &__call-btn{}
+
+  &__center-col{
+    align-self: center;
+  }
+
+  &__home-link{}
+
+  &__logo{
+    width: 255px;
+    height: 71px;
+  }
+
+  &__under-logo{
+    font-size: 24px;
+    color: @main-blue;
+  }
+
+  &__right-col{
+    padding-right: 110px;
+  }
+
+  &__nav{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: #ffffff;
+
+    &::before{
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: ~'calc(100% - 40px)';
+      height: 100%;
+      box-shadow: 0 0 33px -15px #000000;
+    }
+  }
+
+  &__nav-list{
+    display: flex;
+    padding: 15px 0;
+  }
+
+  &__nav-item{
+    padding: 6px 20px;
+    line-height: 1;
+
+    & + &{
+      border-left: 1px solid @main-orange;
+    }
+  }
+
+  &__nav-link{
+    font-size: 18px;
+    color: @main-black;
+    white-space: nowrap;
+
+    &:hover{
+      color: @main-blue;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.small-info{
+  background: url("/img/small-info_bg.jpg") no-repeat center / cover;
+
+  &__container{
+    max-width: 1374px;
+    width: 100%;
+    padding: 40px 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__phone{
+    position: relative;
+    margin-left: 85px;
+    font-size: 30px;
+    line-height: 1;
+    color: #ffffff;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -80px;
+      width: 51px;
+      height: 49px;
+      background: url("/img/small-info_phone.png") no-repeat center / cover;
+    }
+  }
+
+  &__btn-wrap{
+    flex-grow: 1;
+    margin-top: 5px;
+    margin-left: 40px;
+  }
+
+  &__btn{}
+
+  &__link-wrap{
+    position: relative;
+    font-size: 30px;
+    line-height: 1;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -80px;
+      width: 51px;
+      height: 51px;
+    }
+
+    &--about{
+      &::before{
+        background: url("/img/small-info_window.png") no-repeat center / cover;
+      }
+    }
+
+    &--pay{
+      margin-left: 195px;
+
+      &::before{
+        background: url("/img/small-info_wallet.png") no-repeat center / cover;
+      }
+    }
+  }
+
+  &__link{}
+}

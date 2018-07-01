@@ -4,6 +4,7 @@
   text-decoration: none;
   font-size: 16px;
   font-family: @defaultFont;
+  box-sizing: border-box;
   &:focus, &:hover{
     outline: none
   }
@@ -14,10 +15,24 @@
 @import 'core/mixins';
 @import 'core/text';
 
-/*other folder*/
-@import 'other/magnific-popup';
+/*plugins*/
+@import 'plugins/slick/slick';
+@import 'plugins/slick/slick-theme';
+@import 'plugins/magnific-popup/magnific-popup';
+
+/*other*/
 @import 'other/popup';
-@import 'other/recaptcha';
+//@import 'other/recaptcha';
 
 /*desctop folder*/
 @import 'desktop/common';
+@import 'desktop/button';
+@import 'desktop/feedback-input';
+@import 'desktop/only';
+@import 'desktop/header';
+@import 'desktop/application';
+@import 'desktop/small-info';
+@import 'desktop/seo-text';
+@import 'desktop/footer';
+@import 'desktop/contacts-info';
+@import 'desktop/out-partners';
