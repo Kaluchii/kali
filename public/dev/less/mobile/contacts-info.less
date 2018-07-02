@@ -1,0 +1,101 @@
+@media all and (max-width: 1080px) {
+  .contacts-info{
+    &__title{
+      font-size: 18px;
+    }
+
+    &__text{
+      margin-top: 5px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media all and (max-width: 900px) {
+  .contacts-info{
+    &__container{
+      flex-wrap: wrap;
+    }
+
+    &__col{
+      &--left{
+        margin-bottom: 30px;
+        width: 100%;
+      }
+    }
+
+    &__socials{
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+
+    &__social{
+      &--vk{
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .contacts-info{
+    &__container{
+      padding: 25px 15px 20px;
+    }
+  }
+}
+
+@media all and (max-width: 580px) {
+  .contacts-info{
+    &__container{
+      flex-wrap: wrap;
+    }
+
+    &__col{
+      width: 100%;
+
+      &--left{
+        margin-bottom: 0;
+        width: 100%;
+      }
+
+      & + &{
+        margin-top: 20px;
+      }
+    }
+
+    &__title{
+      font-size: 16px;
+
+      &:nth-child(n+2){
+        margin-top: 8px;
+      }
+
+      &--big{
+        font-size: 18px;
+      }
+    }
+
+    &__text{
+      font-size: 16px;
+
+      &--big{
+        font-size: 18px;
+      }
+
+      &--phones{
+        text-align: left;
+      }
+    }
+
+    &__made-with-love{
+      max-width: none;
+      margin-top: 15px;
+      margin-left: 0;
+    }
+
+    &__made-logo{
+      width: 45px;
+    }
+  }
+}

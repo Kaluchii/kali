@@ -21,12 +21,12 @@
 @include('front.scripts')
 
     <div class="page-wrapper">
-        @yield('header')
+        {{--@yield('header')--}}
 
-        @yield('content')
+        {{--@yield('content')--}}
 
-        @yield('application')
-        @yield('about-windows')
+        {{--@yield('application')--}}
+        {{--@yield('about-windows')--}}
         @yield('small-info')
         @yield('seo-text')
         @yield('footer')

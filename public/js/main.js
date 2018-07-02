@@ -1,30 +1,25 @@
 $(document).ready(function(){
     var $window = $(window);
 
-    var partnersSlider = function() {
-        $(".js_partners_slick").slick({
-            infinite: true,
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            responsive: [
-                {
-                    breakpoint: 941,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                    }
+    $(".js_partners_slick").slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
                 }
-            ]
-        });
-    }();
+            }
+        ]
+    });
 
 
     $window.on('resize', function () {
         var $this = $(this);
         if ($this.width() < 768) {
-            $(".js_partners_slick").slick('unslick');
-        } else {
-            partnersSlider();
         }
     });
 
@@ -48,8 +43,8 @@ $(document).ready(function(){
             var myPlacemark = new ymaps.Placemark([latitude, longitude], {}, {
                 iconLayout: "default#image",
                 iconImageHref: "/img/map_bullet.png",
-                iconImageSize: [74, 102],
-                iconImageOffset: [-37, -102]
+                iconImageSize: [51, 70],
+                iconImageOffset: [-25, -70]
             });
             myMap.geoObjects.add(myPlacemark);
 

@@ -1,17 +1,29 @@
-@media all and (max-width: 1024px) {
+@media all and (max-width: 900px) {
   .our-partners{
     &__slider{
+      .slick-list{
+        width: ~'calc(100% - 70px)';
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .our-partners{
+    &__container{
+      padding: 20px 15px;
+    }
+
+    &__title{
+      display: none;
+    }
+
+    &__slider-wrap{
+      display: none;
+    }
+
+    &__just-list{
       display: flex;
-      flex-wrap: wrap;
-    }
-
-    &__item-wrap{
-      height: 40px;
-      padding: 5px;
-    }
-
-    &__item{
-      max-height: 100%;
     }
   }
 }

@@ -2,14 +2,14 @@
     <footer class="footer">
         <div class="footer__contacts-info contacts-info">
             <div class="contacts-info__container">
-                <div class="contacts-info__col">
-                    <p class="contacts-info__title">Kali в социальных сетях:</p>
+                <div class="contacts-info__col contacts-info__col--left">
+                    <p class="contacts-info__title contacts-info__title--big">Kali в социальных сетях:</p>
                     <div class="contacts-info__socials">
                         <a href="#" class="contacts-info__social contacts-info__social--inst"></a>
                         <a href="#" class="contacts-info__social contacts-info__social--vk"></a>
                     </div>
-                    <p class="contacts-info__title">График работы:</p>
-                    <p class="contacts-info__text">С понедельника по пятницу<br>с 9.00 до 17.30</p>
+                    <p class="contacts-info__title contacts-info__title--big">График работы:</p>
+                    <p class="contacts-info__text contacts-info__text--big">С понедельника по пятницу<br>с 9.00 до 17.30</p>
                 </div>
                 <div class="contacts-info__col">
                     <p class="contacts-info__title">Телефоны:</p>
@@ -44,6 +44,13 @@
                         <div class="our-partners__item-wrap"><img src="/dev_img/f_artec.png" alt="" class="our-partners__item"></div>
                         <div class="our-partners__item-wrap"><img src="/dev_img/f_wds.png" alt="" class="our-partners__item"></div>
                     </div>
+                </div>
+                <div class="our-partners__just-list">
+                    <img src="/dev_img/f_conch.png" alt="" class="our-partners__list-item">
+                    <img src="/dev_img/f_veratec.png" alt="" class="our-partners__list-item">
+                    <img src="/dev_img/f_alutech.png" alt="" class="our-partners__list-item">
+                    <img src="/dev_img/f_artec.png" alt="" class="our-partners__list-item">
+                    <img src="/dev_img/f_wds.png" alt="" class="our-partners__list-item">
                 </div>
             </div>
         </div>
