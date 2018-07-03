@@ -15,18 +15,22 @@
 {{--    {!! $scripts->after_body_open_field !!}--}}
 @include('front.header')
 @include('front.application')
-@include('front.small-info')
+@if(isset($is_main))
+    @include('front.index.about-windows')
+@else
+    @include('front.small-info')
+@endif
 @include('front.seo-text')
 @include('front.footer')
 @include('front.scripts')
 
     <div class="page-wrapper">
-        {{--@yield('header')--}}
+        @yield('header')
 
         {{--@yield('content')--}}
 
-        {{--@yield('application')--}}
-        {{--@yield('about-windows')--}}
+        @yield('application')
+        @yield('about-windows')
         @yield('small-info')
         @yield('seo-text')
         @yield('footer')

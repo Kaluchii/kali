@@ -1,0 +1,70 @@
+@media all and (max-width: 1100px) {
+  .application{
+    &__container{
+      padding: 60px 30px 80px;
+    }
+
+    &__title{
+      max-width: 600px;
+    }
+
+    &__form{
+      flex-direction: column;
+    }
+
+    &__input-wrap{
+      max-width: 240px;
+
+      & + &{
+        margin-top: 20px;
+        margin-left: 0;
+      }
+
+      & + &--btn{
+        margin-top: 45px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .application{
+    &__container{
+      padding: 30px 15px 55px;
+    }
+
+    &__title{
+      max-width: 400px;
+      font-size: 24px;
+    }
+  }
+}
+
+@media all and (max-width: 440px) {
+  .application{
+    &__container{
+      padding-top: 20px;
+
+      &::after{
+        display: none;
+      }
+    }
+
+    &__title{
+      max-width: 300px;
+      font-size: 18px;
+    }
+
+    &__form{
+      margin-top: 25px;
+    }
+
+    &__input-wrap{
+      max-width: none;
+    }
+
+    &__btn{
+      width: 100%;
+    }
+  }
+}

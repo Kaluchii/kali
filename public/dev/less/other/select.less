@@ -1,0 +1,54 @@
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  width: 100%;
+  padding: 9px 25px;
+  font-size: 18px;
+  border: 1px solid #afcaea;
+  border-radius: 4px;
+  color: @main-black;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: ~'calc(50% - 4px)';
+  right: 15px;
+  width: 13px;
+  height: 9px;
+  background: url("/img/select_arrow.png") no-repeat center;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #FFFFFF;
+  top: 100%;
+  right: 0;
+  z-index: 99;
+  border: 1px solid #afcaea;
+  border-radius: 4px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div {
+  color: @main-black;
+  padding: 5px 16px;
+  cursor: pointer;
+
+  & + div{
+    border-top: 1px solid #EEEEEE;
+  }
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: #afcaea;
+}

@@ -19,6 +19,18 @@
                     </div>
                 </div>
 
+                <div class="application__input-wrap">
+                    <div class="application__validation-wrap">
+                        <div class="custom-select">
+                            <select class="js_form_input" name="time">
+                                <option value="Время">Время</option>
+                                <option value="С 9 до 13">С 9 до 13</option>
+                                <option value="С 13 до 19">С 13 до 19</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="application__input-wrap application__input-wrap--btn">
                     <input type="submit" value="Оставить заявку" class="application__btn button button--orange js_send_form">
                 </div>
