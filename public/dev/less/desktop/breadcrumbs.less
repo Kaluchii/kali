@@ -1,0 +1,38 @@
+.breadcrumbs{
+  max-width: @site-width;
+  width: 100%;
+  padding: 20px 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+
+  &__link{
+    &--home{
+      position: relative;
+      margin-left: 27px;
+
+      &::before{
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: -27px;
+        height: 19px;
+        width: 19px;
+        background: url("/img/breadcrumbs_home.png") no-repeat center;
+      }
+    }
+  }
+
+  &__separator{
+    width: 15px;
+    height: 19px;
+    margin: 0 20px;
+    background: url("/img/breadcrumbs_arrow.png") no-repeat center / contain;
+  }
+
+  &__current{
+    color: #a5a5a5;
+  }
+}

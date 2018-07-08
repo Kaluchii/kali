@@ -12,6 +12,11 @@
 */
 
 Route::get('/',                 'FrontController@getIndex');
+Route::get('/services',         'FrontController@getServices');
+Route::get('/guarantee',         'FrontController@getGuarantee');
+Route::get('/sale',         'FrontController@getSale');
+Route::get('/prices',         'FrontController@getPrices');
+Route::get('/contacts',         'FrontController@getContacts');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');

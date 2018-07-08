@@ -27,7 +27,7 @@
     <div class="page-wrapper">
         @yield('header')
 
-        {{--@yield('content')--}}
+        @yield('content')
 
         @yield('application')
         @yield('about-windows')

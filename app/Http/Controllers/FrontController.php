@@ -28,4 +28,29 @@ class FrontController extends Controller
         return view('front.index.index', [
         ]);
     }
+
+    public function getServices(){
+        return view('front.services.services', [
+        ]);
+    }
+
+    public function getGuarantee(){
+        return view('front.guarantee.guarantee', [
+        ]);
+    }
+
+    public function getSale(){
+        return view('front.sale.sale', [
+        ]);
+    }
+
+    public function getPrices(){
+        return view('front.prices.prices', [
+        ]);
+    }
+
+    public function getContacts(){
+        return view('front.contacts.contacts', [
+        ]);
+    }
 }
