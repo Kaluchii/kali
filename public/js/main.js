@@ -23,6 +23,11 @@ $(document).ready(function(){
         }
     });
 
+    $('.js_menu_button').on('click', function () {
+        $(this).toggleClass('is-open');
+        $('.js_menu').slideToggle();
+    });
+
 
     /* Yandex map */
     var init = function () {

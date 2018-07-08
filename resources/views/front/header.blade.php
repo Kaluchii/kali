@@ -47,5 +47,36 @@
                 </ul>
             </nav>
         </div>
+        <div class="header__mobile mobile-header">
+            <div class="mobile-header__top">
+                <a href="/" class="mobile-header__home-link">
+                    <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="mobile-header__logo">
+                </a>
+                <p class="mobile-header__tag">ДОСТОЙНОЕ РЕШЕНИЕ</p>
+            </div>
+            <div class="mobile-header__navigation">
+                <div class="mobile-header__links-list">
+                    <a href="#" class="mobile-header__icon-link mobile-header__icon-link--phone-out"></a>
+                    <a href="#" class="mobile-header__icon-link mobile-header__icon-link--phone-in"></a>
+                    <a href="#" class="mobile-header__icon-link mobile-header__icon-link--calc"></a>
+                    <a href="#" class="mobile-header__icon-link mobile-header__icon-link--map"></a>
+                </div>
+                <div class="mobile-header__hamburger hamburger js_menu_button">
+                    <span class="hamburger__item hamburger__item--top"></span>
+                    <span class="hamburger__item hamburger__item--middle"></span>
+                    <span class="hamburger__item hamburger__item--bottom"></span>
+                </div>
+                <ul class="mobile-header__menu-list js_menu">
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">ПРОДУКЦИЯ</a></li>
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">ГАРАНТИИ</a></li>
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">ЦЕНЫ НА ОКНА</a></li>
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">ЦЕНЫ НА БАЛКОНЫ</a></li>
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">РАСПРОДАЖА</a></li>
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">КОМПЛЕКТУЮЩИЕ</a></li>
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">УСЛУГИ</a></li>
+                    <li class="mobile-header__menu-item"><a href="#" class="mobile-header__menu-link">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 @endsection

@@ -1,0 +1,114 @@
+@media all and (max-width: 1024px) {
+  .mobile-header{
+    &__top{
+      display: flex;
+      align-items: center;
+      padding: 15px;
+    }
+
+    &__home-link{}
+
+    &__logo{
+      width: 150px;
+      height: 35px;
+    }
+
+    &__tag{
+      margin-left: 15px;
+      padding-top: 5px;
+      font-size: 20px;
+      color: @main-blue;
+    }
+
+    &__navigation{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+    }
+
+    &__links-list{
+      display: flex;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    &__icon-link{
+      flex-grow: 1;
+
+      &--phone-out{
+        background: url("/img/mobile-header__phone-out.png") no-repeat center;
+      }
+
+      &--phone-in{
+        background: url("/img/mobile-header__phone-in.png") no-repeat center;
+      }
+
+      &--calc{
+        background: url("/img/mobile-header__calc.png") no-repeat center;
+      }
+
+      &--map{
+        background: url("/img/mobile-header__map.png") no-repeat center;
+      }
+    }
+
+    &__hamburger{}
+
+    &__menu-list{
+      display: none;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background-color: #fff;
+      border-top: 1px solid @main-orange;
+      border-bottom: 1px solid @main-orange;
+    }
+
+    &__menu-item{
+      font-size: 15px;
+      line-height: 1;
+
+      & + &{
+        border-top: 1px solid @main-orange;
+      }
+    }
+
+    &__menu-link{
+      display: block;
+      padding: 25px 0 25px 40px;
+      color: #303a4d;
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .mobile-header{
+    &__top{
+      padding: 13px 15px 5px;
+    }
+
+    &__logo{
+      width: 75px;
+      height: 20px;
+    }
+
+    &__tag{
+      margin-left: 12px;
+      padding-top: 0;
+      padding-bottom: 4px;
+      font-size: 15px;
+      letter-spacing: -.05em;
+    }
+
+    &__links-list{
+      max-width: 250px;
+    }
+
+    &__hamburger{
+      width: 54px;
+    }
+  }
+}
