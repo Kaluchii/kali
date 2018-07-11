@@ -2,7 +2,7 @@
 @section('content')
 {{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
     <div class="breadcrumbs">
-        <a href="/" class="breadcrumbs__link breadcrumbs__link--home">Главная</a>
+        <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
         <span class="breadcrumbs__separator"></span>
         <span class="breadcrumbs__current">Распродажа</span>
     </div>
@@ -23,16 +23,16 @@
         <div class="sale__text text-block"></div>
         <div class="sale__variants">
             <div class="sale__variant">
-                <img src="" alt="" class="sale__variant-img">
+                <img src="/dev_img/sale_1.jpg" alt="" class="sale__variant-img">
             </div>
             <div class="sale__variant">
-                <img src="" alt="" class="sale__variant-img">
+                <img src="/dev_img/sale_2.jpg" alt="" class="sale__variant-img">
             </div>
             <div class="sale__variant">
-                <img src="" alt="" class="sale__variant-img">
+                <img src="/dev_img/sale_3.jpg" alt="" class="sale__variant-img">
             </div>
             <div class="sale__variant">
-                <img src="" alt="" class="sale__variant-img">
+                <img src="/dev_img/sale_1.jpg" alt="" class="sale__variant-img">
             </div>
         </div>
     </div>

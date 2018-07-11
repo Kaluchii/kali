@@ -1,0 +1,25 @@
+@media all and (max-width: 768px) {
+  .breadcrumbs{
+    padding: 20px 15px;
+    font-size: 16px;
+
+    &__link{
+      &--home{
+        margin-left: 22px;
+
+        &::before{
+          top: 5px;
+          left: -22px;
+          height: 16px;
+          width: 16px;
+        }
+      }
+    }
+
+    &__separator{
+      width: 15px;
+      height: 19px;
+      margin: 0 12px;
+    }
+  }
+}

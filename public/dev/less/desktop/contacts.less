@@ -1,0 +1,125 @@
+.contacts{
+  max-width: @site-width;
+  width: 100%;
+  padding: 20px 30px 50px;
+  margin: 0 auto;
+
+  &__title{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: @main-black;
+  }
+
+  &__subtitle{
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: @main-black;
+  }
+
+  &__place-list{
+    margin-top: 45px;
+  }
+
+  &__place-item{
+    display: flex;
+    padding-bottom: 65px;
+
+    & + &{
+      padding-top: 45px;
+      border-top: 2px solid #d0d0d0;
+    }
+  }
+
+  &__place-info{
+    width: 67.2755%;
+  }
+
+  &__place-title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #548dd1;
+  }
+
+  &__cols-wrap{
+    display: flex;
+    margin-top: 15px;
+  }
+
+  &__col-1{
+    width: 56.06108%;
+  }
+
+  &__col-2{
+    width: 43.93891%;
+  }
+
+  &__info-item{
+    position: relative;
+    margin-top: 20px;
+    padding-left: 40px;
+    font-size: 22px;
+    color: @main-black;
+    line-height: 1.375;
+
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 26px;
+      height: 26px;
+    }
+
+    &--loc{
+      &::before{
+        background: url("/img/contacts_loc.png") no-repeat center / contain;
+      }
+    }
+
+    &--phone{
+      &::before{
+        background: url("/img/contacts_phone.png") no-repeat center / contain;
+      }
+    }
+
+    &--fax{
+      &::before{
+        background: url("/img/contacts_fax.png") no-repeat center / contain;
+      }
+    }
+
+    &--mob{
+      &::before{
+        background: url("/img/contacts_mob.png") no-repeat center / contain;
+      }
+    }
+
+    &--email{
+      &::before{
+        background: url("/img/contacts_email.png") no-repeat center / contain;
+      }
+    }
+
+    &--work-time{
+      &::before{
+        background: url("/img/contacts_clock.png") no-repeat center / contain;
+      }
+    }
+  }
+
+  &__info-work-time{
+    margin-top: 20px;
+    display: block;
+  }
+
+  &__place-map{
+    margin-left: auto;
+    flex-shrink: 2;
+    padding-top: 20px;
+    width: 32.7245%;
+    height: 300px;
+  }
+}
