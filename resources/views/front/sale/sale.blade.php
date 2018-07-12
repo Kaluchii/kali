@@ -22,18 +22,18 @@
     <div class="sale">
         <div class="sale__text text-block"></div>
         <div class="sale__variants">
-            <div class="sale__variant">
+            <a href="/dev_img/sale_1.jpg" data-fancybox="gallery" class="sale__variant">
                 <img src="/dev_img/sale_1.jpg" alt="" class="sale__variant-img">
-            </div>
-            <div class="sale__variant">
+            </a>
+            <a href="/dev_img/sale_2.jpg" data-fancybox="gallery" class="sale__variant">
                 <img src="/dev_img/sale_2.jpg" alt="" class="sale__variant-img">
-            </div>
-            <div class="sale__variant">
+            </a>
+            <a href="/dev_img/sale_3.jpg" data-fancybox="gallery" class="sale__variant">
                 <img src="/dev_img/sale_3.jpg" alt="" class="sale__variant-img">
-            </div>
-            <div class="sale__variant">
+            </a>
+            <a href="/dev_img/sale_1.jpg" data-fancybox="gallery" class="sale__variant">
                 <img src="/dev_img/sale_1.jpg" alt="" class="sale__variant-img">
-            </div>
+            </a>
         </div>
     </div>
 @endsection
