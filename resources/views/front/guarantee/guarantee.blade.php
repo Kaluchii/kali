@@ -2,16 +2,18 @@
 @section('content')
 {{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
     <div class="breadcrumbs">
-        <a href="/" class="breadcrumbs__link breadcrumbs__link--home">Главная</a>
+        <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
         <span class="breadcrumbs__separator"></span>
-        <span class="breadcrumbs__current">Распродажа</span>
+        <span class="breadcrumbs__current">Гарантии</span>
     </div>
 
     <div class="guarantee-banner">
         <div class="guarantee-banner__container">
             <div class="guarantee-banner__text-wrapper">
-                <p class="guarantee-banner__text">Гарантия на окна - весомое доказательство их качественности</p>
-                <a href="#" class="guarantee-banner__download link-blue">Скачать Инструкцию по эксплуатации<br>и Гарантийный талон >></a>
+                <p class="guarantee-banner__text">Гарантия на окна - весомое доказательство их&nbsp;качественности</p>
+                <div class="guarantee-banner__link-wrap">
+                    <a href="#" class="guarantee-banner__download link-blue">Скачать Инструкцию по&nbsp;эксплуатации<br>и Гарантийный талон >></a>
+                </div>
             </div>
         </div>
     </div>
