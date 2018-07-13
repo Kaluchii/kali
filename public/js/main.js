@@ -16,6 +16,13 @@ $(document).ready(function(){
         ]
     });
 
+    $(".js_reviews_slick").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true
+    });
+
 
     $window.on('resize', function () {
         var $this = $(this);

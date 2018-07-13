@@ -1,0 +1,53 @@
+.reviews{
+  &__slider-wrap{
+    padding: 28px 115px;
+    border: 3px solid #548dd2;
+  }
+
+  &__slider{}
+
+  &__item{}
+
+  &__name{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__city{
+    font-size: 22px;
+    line-height: 1;
+    color: #838282;
+  }
+
+  &__text{
+    margin-top: 5px;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .slick-prev, .slick-next{
+    z-index: 1;
+    width: 80px;
+    height: 100%;
+    opacity: 0.9;
+
+    &::after, &::before{
+      display: none;
+    }
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .slick-prev{
+    left: -115px;
+    background: url("/img/slider_arrow_grey_left.png") no-repeat center;
+  }
+
+  .slick-next{
+    right: -115px;
+    background: url("/img/slider_arrow_grey_right.png") no-repeat center;
+  }
+}
