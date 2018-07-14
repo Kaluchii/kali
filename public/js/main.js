@@ -23,6 +23,18 @@ $(document).ready(function(){
         adaptiveHeight: true
     });
 
+    //==== Форма "Заказать звонок"
+    $('.js_call_back').magnificPopup({
+        type: 'inline',
+        removalDelay: 500,
+        callbacks: {
+            beforeOpen: function () {
+                this.st.mainClass = 'mfp-zoom-in';
+            }
+        },
+        midClick: true
+    });
+
 
     $window.on('resize', function () {
         var $this = $(this);

@@ -12,9 +12,29 @@
   }
 
   &__item-container{
+    position: relative;
     display: flex;
     align-items: center;
     height: 100%;
+
+    &--link{
+      padding-right: 40px;
+      transition: .2s;
+
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40px;
+        background: url("/img/icon-cards_arrow.png") no-repeat center left;
+      }
+
+      &:hover{
+        box-shadow: 2px 4px 12px 1px #bfbfbf;
+      }
+    }
   }
 
   &__icon-wrap{
@@ -23,7 +43,7 @@
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    background-color: #548dd1;
+    background-color: @main-blue;
   }
 
   &__icon{

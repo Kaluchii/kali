@@ -49,6 +49,31 @@ class FrontController extends Controller
         ]);
     }
 
+    public function getAbout(){
+        return view('front.about.about', [
+        ]);
+    }
+
+    public function getProduction(){
+        return view('front.production.production', [
+        ]);
+    }
+
+    public function getProductionItem( $slug ){
+        return view('front.production.production_item', [
+        ]);
+    }
+
+    public function getComponents(){
+        return view('front.production.production', [
+        ]);
+    }
+
+    public function getComponentsItem( $slug ){
+        return view('front.components.components_item', [
+        ]);
+    }
+
     public function getContacts(){
         return view('front.contacts.contacts', [
         ]);

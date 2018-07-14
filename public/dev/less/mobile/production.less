@@ -1,0 +1,25 @@
+@media all and (max-width: 1024px) {
+  .production{
+    &__other{
+      margin-top: 60px;
+      padding-bottom: 20px;
+      font-size: 32px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .production{
+    padding: 35px 15px;
+
+    &__item{
+      & + &{
+        margin-top: 35px;
+      }
+    }
+
+    &__other{
+      font-size: 24px;
+    }
+  }
+}

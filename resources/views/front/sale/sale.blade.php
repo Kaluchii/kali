@@ -13,7 +13,7 @@
                 <p class="sale-banner__title">Распродажа</p>
                 <p class="sale-banner__text">Выберите готовый пакет -<br>и сэкономьте до <span class="sale-banner__percents">50 %</span></p>
                 <div class="sale-banner__btn-wrap">
-                    <a href="#" class="sale-banner__btn button button--sh-orange">Оставить заявку</a>
+                    <a href="#call_back_form" class="sale-banner__btn button button--sh-orange js_call_back">Оставить заявку</a>
                 </div>
             </div>
         </div>

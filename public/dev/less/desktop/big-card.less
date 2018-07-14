@@ -1,0 +1,43 @@
+.big-card{
+  display: flex;
+  align-items: stretch;
+  box-shadow: 2px 2px 12px 1px #CCCCCC;
+
+  &__img{
+    flex-shrink: 0;
+    width: 22.67884%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__text-wrap{
+    padding: 40px 40px 45px 65px;
+    color: @main-black;
+  }
+
+  &__title{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__preview-description{
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  &__btns-wrap{
+    margin-top: 35px;
+    display: flex;
+  }
+
+  &__btn-wrap{
+    & + &{
+      margin-left: 45px;
+    }
+  }
+
+  &__btn{}
+}

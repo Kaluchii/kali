@@ -1,0 +1,75 @@
+@media all and (max-width: 1270px) {
+  .production-banner{
+    &__container{
+      height: 420px;
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .production-banner{
+    background-position: ~'calc(10% - 180px)  50%';
+
+    &__content-wrapper{
+      max-width: 470px;
+    }
+
+    &__text{
+      font-size: 32px;
+    }
+
+    &__firm-list{
+      margin-top: 30px;
+    }
+
+    &__firm-item{
+      & + &{
+        margin-left: 25px;
+      }
+    }
+
+    &__firm-logo{
+      max-height: 35px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .production-banner{
+    &__container{
+      height: 320px;
+      padding: 20px 15px 35px;
+    }
+
+    &__content-wrapper{
+      max-width: 340px;
+    }
+
+    &__text{
+      margin-top: 20px;
+      font-size: 28px;
+    }
+
+    &__firm-logo{
+      max-height: 25px;
+    }
+  }
+}
+
+@media all and (max-width: 420px) {
+  .production-banner{
+    background-position: 5% 50%;
+
+    &__container{
+      height: 260px;
+    }
+
+    &__text{
+      font-size: 24px;
+    }
+
+    &__firm-list{
+      margin-top: 25px;
+    }
+  }
+}

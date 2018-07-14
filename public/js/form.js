@@ -75,13 +75,13 @@ $(document).ready(function(){
         }
     }
 
-    $('.form-input').on('change', function () {
+    $('.js_form_input').on('change', function () {
         return fieldCheck( $(this) );
     });
-    $('.form-input').on('focusout', function () {
+    $('.js_form_input').on('focusout', function () {
         $(this).parent().removeClass('filling');
     });
-    $('.form-input').on('input', function () {
+    $('.js_form_input').on('input', function () {
         $(this).parent().addClass('filling');
     });
 

@@ -5,6 +5,26 @@
       width: ~'calc(50% - 15px)';
     }
 
+    &__item-container{
+      &--link{
+        padding-right: 30px;
+
+        &::after{
+          width: 30px;
+          background-size: 13.5px 36px;
+        }
+      }
+    }
+
+    &__icon-wrap{
+      width: 60px;
+    }
+
+    &__icon{
+      width: 30px;
+      height: 30px;
+    }
+
     &__text{
       font-size: 18px;
     }
@@ -19,13 +39,13 @@
       min-height: 60px;
     }
 
-    &__icon-wrap{
-      width: 60px;
-    }
+    &__item-container{
+      &--link{
 
-    &__icon{
-      width: 30px;
-      height: 30px;
+        &::after{
+          background-size: 13.5px 24px;
+        }
+      }
     }
   }
 }

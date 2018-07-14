@@ -12,11 +12,17 @@
 */
 
 Route::get('/',                 'FrontController@getIndex');
+Route::get('/about',         'FrontController@getAbout');
 Route::get('/services',         'FrontController@getServices');
 Route::get('/guarantee',         'FrontController@getGuarantee');
 Route::get('/sale',         'FrontController@getSale');
-Route::get('/prices',         'FrontController@getPrices');
+Route::get('/windows-price',         'FrontController@getPrices');
+Route::get('/balconies-price',         'FrontController@getPrices');
 Route::get('/contacts',         'FrontController@getContacts');
+Route::get('/production',         'FrontController@getProduction');
+Route::get('/production/{slug}',      'FrontController@getProductionItem');
+Route::get('/components',         'FrontController@getComponents');
+Route::get('/components/{slug}',      'FrontController@getComponentsItem');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');

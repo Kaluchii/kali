@@ -14,7 +14,7 @@
 
                 <div class="application__input-wrap">
                     <div class="application__validation-wrap feedback-input">
-                        <input type="tel" placeholder="+7 (...) ... .. .." class="feedback-input__field js_form_input" maxlength="25" data-mask="+7 (000) 000-00-00" name="phone">
+                        <input type="tel" placeholder="+7 (...) ... .. .." data-require="true" class="feedback-input__field js_form_input" maxlength="25" data-mask="+7 (000) 000-00-00" name="phone">
                         <div class="feedback-input__tooltip-wrap"><p class="feedback-input__tooltip">Телефонный номер для связи</p></div>
                     </div>
                 </div>

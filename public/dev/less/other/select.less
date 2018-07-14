@@ -1,6 +1,12 @@
 /*the container must be positioned relative:*/
 .custom-select {
   position: relative;
+
+  &:hover{
+    .select-selected{
+      border-color: @main-orange;
+    }
+  }
 }
 .custom-select select {
   display: none; /*hide original SELECT element:*/
@@ -14,6 +20,12 @@
   color: @main-black;
   background-color: #FFFFFF;
   cursor: pointer;
+  transition: .3s;
+
+  &.select-arrow-active{
+    border-color: @main-orange;
+    box-shadow: 0 0 15px 1px @main-orange;
+  }
 }
 /*style the arrow inside the select element:*/
 .select-selected:after {

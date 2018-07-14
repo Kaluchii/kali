@@ -2,7 +2,7 @@
 @section('content')
     {{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
     <div class="breadcrumbs">
-        <a href="/" class="breadcrumbs__link breadcrumbs__link--home">Главная</a>
+        <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
         <span class="breadcrumbs__separator"></span>
         <span class="breadcrumbs__current">Цены на балконы</span>
     </div>
@@ -14,9 +14,9 @@
         <div class="prices__categories">
             <p class="prices__categories-title">Г - Образные балконы</p>
             <div class="prices__variant">
-                <div class="prices__img-wrap">
-                    <img src="" alt="" class="prices__img">
-                </div>
+                <a href="/dev_img/balcon_1.png" class="prices__img-wrap" data-fancybox>
+                    <img src="/dev_img/balcon_1.png" alt="" class="prices__img">
+                </a>
                 <div class="prices__text-wrap text-block">
                     <p><br></p>
                     <table class="table table-bordered">
@@ -56,9 +56,9 @@
                 </div>
             </div>
             <div class="prices__variant">
-                <div class="prices__img-wrap">
-                    <img src="" alt="" class="prices__img">
-                </div>
+                <a href="/dev_img/balcon_2.png" class="prices__img-wrap" data-fancybox>
+                    <img src="/dev_img/balcon_2.png" alt="" class="prices__img">
+                </a>
                 <div class="prices__text-wrap text-block">
                     <p><br></p>
                     <table class="table table-bordered">
@@ -100,7 +100,7 @@
             <p class="prices__categories-title">П - Образные балконы</p>
             <div class="prices__variant">
                 <div class="prices__img-wrap">
-                    <img src="" alt="" class="prices__img">
+                    <img src="/dev_img/balcon_3.png" alt="" class="prices__img">
                 </div>
                 <div class="prices__text-wrap text-block">
                     <p><br></p>
@@ -142,7 +142,7 @@
             </div>
             <div class="prices__variant">
                 <div class="prices__img-wrap">
-                    <img src="" alt="" class="prices__img">
+                    <img src="/dev_img/balcon_4.png" alt="" class="prices__img">
                 </div>
                 <div class="prices__text-wrap text-block">
                     <p><br></p>

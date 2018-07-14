@@ -1,0 +1,28 @@
+.production{
+  max-width: @site-width;
+  width: 100%;
+  padding: 75px 30px;
+  margin: 0 auto;
+
+  &__list{}
+
+  &__item{
+    & + &{
+      margin-top: 45px;
+    }
+  }
+
+  &__other{
+    margin-top: 90px;
+    padding-bottom: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    border-bottom: 2px solid #d8d0ce;
+    color: @main-black;
+  }
+
+  &__other-list{
+    margin-top: 5px;
+  }
+}

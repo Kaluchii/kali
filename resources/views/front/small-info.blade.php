@@ -3,7 +3,7 @@
         <div class="small-info__container">
             <div class="small-info__phone">+ 7 (727) 294 86 51</div>
             <div class="small-info__btn-wrap">
-                <button href="#" class="small-info__btn button button--white-border">Связаться с нами</button>
+                <button href="#call_back_form" class="small-info__btn button button--white-border js_call_back">Связаться с нами</button>
             </div>
             <div class="small-info__link-wrap small-info__link-wrap--about">
                 <a href="#" class="small-info__link link-white">О компании</a>
