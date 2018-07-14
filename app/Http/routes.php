@@ -22,7 +22,8 @@ Route::get('/contacts',         'FrontController@getContacts');
 Route::get('/production',         'FrontController@getProduction');
 Route::get('/production/{slug}',      'FrontController@getProductionItem');
 Route::get('/components',         'FrontController@getComponents');
-Route::get('/components/{slug}',      'FrontController@getComponentsItem');
+Route::get('/components/{slug}',      'FrontController@getComponentsCategory');
+Route::get('/components/{slug}/{id}',      'FrontController@getComponentsItem');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');

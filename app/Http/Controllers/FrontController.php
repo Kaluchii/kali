@@ -65,7 +65,12 @@ class FrontController extends Controller
     }
 
     public function getComponents(){
-        return view('front.production.production', [
+        return view('front.components.components', [
+        ]);
+    }
+
+    public function getComponentsCategory( $slug ){
+        return view('front.components.components_category', [
         ]);
     }
 
