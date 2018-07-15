@@ -1,14 +1,59 @@
-@media all and (max-width: 768px) {
+@media all and (max-width: 1000px) {
   .components{
-    padding: 0 15px 60px;
+    &__goods-item{
+      width: 23%;
+    }
+  }
+}
 
+@media all and (max-width: 1024px) {
+  .components{
     &__title{
       font-size: 36px;
     }
 
     &__subtitle{
-      margin-top: 10px;
       font-size: 24px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .components{
+    padding: 0 15px 60px;
+
+    &__title{
+      font-size: 28px;
+    }
+
+    &__subtitle{
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    &__goods-item{
+      width: 31.3333%;
+    }
+  }
+}
+
+@media all and (max-width: 530px) {
+  .components{
+    &__goods-item{
+      width: 48%;
+    }
+  }
+}
+
+@media all and (max-width: 360px) {
+  .components{
+    &__goods-list{
+      margin-left: 0;
+    }
+
+    &__goods-item{
+      margin-left: 0;
+      width: 100%;
     }
   }
 }

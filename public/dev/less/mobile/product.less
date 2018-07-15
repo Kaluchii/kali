@@ -1,1 +1,38 @@
-.product{}
+@media all and (max-width: 1270px) {
+  .product{
+    padding: 25px 15px 15px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .product{
+    &__name{
+      font-size: 16px;
+    }
+
+    &__article{
+      font-size: 14px;
+    }
+
+    &__bottom{
+      margin-top: 10px;
+    }
+
+    &__price{
+      font-size: 16px;
+    }
+
+    &__btn{
+      font-size: 16px;
+    }
+  }
+}
+
+@media all and (max-width: 360px) {
+  .product{
+    &__img-wrap{
+      margin: 5px auto 0;
+      max-width: 160px;
+    }
+  }
+}
