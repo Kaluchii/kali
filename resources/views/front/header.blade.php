@@ -7,6 +7,12 @@
     </div>
     <header class="header">
         <div class="header__container">
+            <script>
+                if (window.location.pathname == '/') {
+                    document.getElementsByClassName('header__container')[0].className += ' header__container--absolute'
+                    document.getElementsByClassName('header')[0].className += ' header--absolute'
+                }
+            </script>
             <div class="header__top">
                 <div class="header__left-col">
                     <div class="header__links-wrap">

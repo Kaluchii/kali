@@ -1,0 +1,183 @@
+@media all and (max-width: 1500px) {
+  .slider{
+    margin-top: -55px;
+
+    &__info-wrap{
+      top: 160px;
+    }
+  }
+}
+
+@media all and (max-width: 1380px) {
+  .slider{
+    .slick-prev{
+      left: 30px;
+    }
+
+    .slick-next{
+      right: 30px;
+    }
+  }
+}
+
+@media all and (max-width: 1270px) {
+  .slider{
+    &__info-wrap{
+      top: 60px;
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .slider{
+    margin-top: 0;
+
+    &__info-wrap{
+      top: 50px;
+    }
+
+    &__title{
+      max-width: 410px;
+      font-size: 36px;
+    }
+
+    &__facts{
+      max-width: 410px;
+    }
+
+    &__fact{
+      margin-top: 10px;
+      padding-left: 30px;
+      font-size: 20px;
+      color: #333;
+
+      &::before{
+        height: 7px;
+        width: 7px;
+      }
+    }
+
+    &__btn-wrap{
+      margin-top: 35px;
+    }
+  }
+}
+
+@media all and (max-width: 960px) {
+  .slider{
+    &__img{
+      min-height: 500px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .slider{
+    &__title{
+      max-width: 370px;
+      font-size: 28px;
+    }
+
+    &__facts{
+      max-width: 370px;
+    }
+
+    &__fact{
+      font-size: 18px;
+    }
+
+    &__btn-wrap{
+      margin-top: 25px;
+    }
+
+    &__img{
+      min-height: 400px;
+    }
+
+    .slick-dots{
+      display: none !important;
+    }
+
+    .slick-prev, .slick-next{
+      height: 22px;
+      width: 22px;
+
+      &::before{
+        width: 6px;
+        height: 10px;
+      }
+    }
+
+    .slick-prev{
+      bottom: 5px;
+      left: 15px;
+
+      &::before{
+        margin-left: 7px;
+      }
+    }
+
+    .slick-next{
+      bottom: 5px;
+      right: 15px;
+
+      &::before{
+        margin-left: 9px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 620px) {
+  .slider{
+    &__title{
+      max-width: 205px;
+      font-size: 18px;
+    }
+
+    &__facts{
+      margin-top: 10px;
+      max-width: 205px;
+    }
+
+    &__fact{
+      margin-top: 8px;
+      padding-left: 15px;
+      font-size: 14px;
+      line-height: 1;
+
+      &::before{
+        top: 5px;
+        left: 0;
+        height: 5px;
+        width: 5px;
+      }
+    }
+
+    &__btn-wrap{
+      margin-top: 10px;
+    }
+
+    &__btn{
+      padding: 7px 21px;
+      font-size: 14px;
+    }
+
+    &__img{
+      min-height: 300px;
+    }
+  }
+}
+
+@media all and (max-width: 420px) {
+  .slider{
+    &__info-wrap{
+      top: 15px;
+    }
+
+    &__img{
+      min-height: 260px;
+    }
+  }
+}

@@ -1,9 +1,32 @@
 .header{
+  position: relative;
+  z-index: 2;
+
+  &--absolute{
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 245px;
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
   &__container{
     max-width: @site-width;
     width: 100%;
     padding: 25px 30px;
     margin: 0 auto;
+
+    &--absolute{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
   }
 
   &__mobile{

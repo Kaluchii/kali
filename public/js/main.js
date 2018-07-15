@@ -23,6 +23,15 @@ $(document).ready(function(){
         adaptiveHeight: true
     });
 
+    $(".js_main_slick").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        dots: true,
+        speed: 1000
+    });
+
     //==== Форма "Заказать звонок"
     $('.js_call_back').magnificPopup({
         type: 'inline',
