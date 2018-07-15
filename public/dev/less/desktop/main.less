@@ -1,0 +1,142 @@
+.main{
+  max-width: @site-width;
+  width: 100%;
+  padding: 50px 30px 30px;
+  margin: 0 auto;
+
+  &__title-text{}
+
+  &__facts-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px 0 45px;
+    border-top: 2px solid @main-orange;
+    border-bottom: 2px solid @main-orange;
+  }
+
+  &__facts-item{
+    margin-top: 40px;
+    display: flex;
+    width: 33.333%;
+
+    &:nth-child(3n+3){
+      justify-content: flex-end;
+    }
+
+    &:nth-child(3n+2){
+      justify-content: center;
+    }
+  }
+
+  &__fact-item-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 310px;
+  }
+
+  &__fact-img-wrap{
+    max-width: 51px;
+    flex-shrink: 0;
+  }
+
+  &__fact-img{
+    display: block;
+  }
+
+  &__fact-text{
+    width: 100%;
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 1.2;
+    color: @main-black;
+  }
+
+  &__profile-list{
+    margin-top: 40px;
+    margin-left: -2%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__profile-item{
+    position: relative;
+    margin-top: 50px;
+    margin-left: 2%;
+    width: 18%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px 0 65px;
+    background: url("/img/main-profile_bg.jpg") no-repeat center bottom / 100% 109px;
+    color: #ffffff;
+    text-align: center;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background: url("/img/main-profile_bg_hover.jpg") no-repeat center / cover;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    &:hover{
+      &::after{
+        opacity: 1;
+      }
+
+      .main{
+        &__profile-price{
+          z-index: 2;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__profile-img-wrap{
+    padding: 5px;
+    line-height: 0;
+  }
+
+  &__profile-img{}
+
+  &__profile-name{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    font-size: 22px;
+    line-height: 1.1;
+  }
+
+  &__profile-price{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    opacity: 0;
+    transition: opacity .4s;
+  }
+
+  &__examples{
+    margin-top: 90px;
+
+    & + &{
+      margin-top: 35px;
+      padding-top: 50px;
+      border-top: 1px solid #e8e8e8;
+    }
+  }
+}

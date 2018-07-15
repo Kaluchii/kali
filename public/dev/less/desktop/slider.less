@@ -1,3 +1,13 @@
+.slick-initialized{
+  .slider{
+    &__img{
+      &:nth-child(n+2){
+        display: block;
+      }
+    }
+  }
+}
+
 .slider{
   position: relative;
   max-width: 1920px;
@@ -5,7 +15,11 @@
 
   &__list{}
 
-  &__img{}
+  &__img{
+    &:nth-child(n+2){
+      display: none;
+    }
+  }
 
   &__info-wrap{
     position: absolute;
