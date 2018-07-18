@@ -57,7 +57,7 @@
 
 @media all and (max-width: 768px) {
   .main{
-    padding: 30px 15px 0;
+    padding: 30px 15px;
 
     &__facts-list{
       justify-content: space-between;
@@ -90,6 +90,15 @@
 
     &__profile-name{
       font-size: 18px;
+    }
+
+    &__examples{
+      margin-top: 40px;
+
+      & + &{
+        padding-top: 15px;
+        border-top: none;
+      }
     }
   }
 }
