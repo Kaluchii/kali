@@ -109,23 +109,23 @@
             <div class="examples__types">
                 <label class="examples__type">
                     <input type="radio" checked name="windows" class="examples__type-input">
-                    <span class="examples__text">CONCH 60 3-ех камерный</span>
+                    <span class="examples__text examples__text--type">CONCH 60 3-ех камерный</span>
                 </label>
                 <label class="examples__type">
                     <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text">CONCH 60 4-ех камерный</span>
+                    <span class="examples__text examples__text--type">CONCH 60 4-ех камерный</span>
                 </label>
                 <label class="examples__type">
                     <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text">CONCH 70 5-ти камерный</span>
+                    <span class="examples__text examples__text--type">CONCH 70 5-ти камерный</span>
                 </label>
                 <label class="examples__type">
                     <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text">Veratec</span>
+                    <span class="examples__text examples__text--type">Veratec</span>
                 </label>
                 <label class="examples__type">
                     <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text">WDS</span>
+                    <span class="examples__text examples__text--type">WDS</span>
                 </label>
             </div>
             <ul class="examples__list">
@@ -174,15 +174,15 @@
             <div class="examples__types">
                 <label class="examples__type">
                     <input type="radio" checked name="balcony" class="examples__type-input">
-                    <span class="examples__text">CONCH трехкамерный 60 серия</span>
+                    <span class="examples__text examples__text--type">CONCH трехкамерный 60 серия</span>
                 </label>
                 <label class="examples__type">
                     <input type="radio" name="balcony" class="examples__type-input">
-                    <span class="examples__text">Veratec трехкамерный</span>
+                    <span class="examples__text examples__text--type">Veratec трехкамерный</span>
                 </label>
                 <label class="examples__type">
                     <input type="radio" name="balcony" class="examples__type-input">
-                    <span class="examples__text">ARtec трехкамерный</span>
+                    <span class="examples__text examples__text--type">ARtec трехкамерный</span>
                 </label>
             </div>
             <ul class="examples__list">

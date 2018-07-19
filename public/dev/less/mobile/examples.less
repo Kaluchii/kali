@@ -66,9 +66,82 @@
       font-size: 18px;
     }
 
+    &__category{
+      margin-right: 0;
+      display: block;
+
+      & + &{
+        margin-top: 3px;
+
+         &::before{
+           display: none;
+         }
+       }
+    }
+
+    &__category-input{
+      &:checked{
+        & + .examples__text{
+          background: linear-gradient(to left, @main-black, @main-black 100%);
+          background-position: 0 100%;
+          background-size: 10px 1px;
+          background-repeat: repeat-x;
+        }
+      }
+    }
+
     &__types{
       margin-top: 15px;
       font-size: 18px;
+    }
+
+    &__type{
+      margin-right: 0;
+      display: block;
+      padding-left: 30px;
+
+      &::before{
+        display: none;
+      }
+
+      & + &{
+        margin-top: 10px;
+      }
+    }
+
+    &__type-input{
+      &:checked{
+        & + .examples__text{
+          &::after{
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -25px;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: @main-orange;
+          }
+        }
+      }
+    }
+
+    .examples__text{
+      position: relative;
+
+      &--type{
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -30px;
+          height: 20px;
+          width: 20px;
+          border: 1px solid #CCCCCC;
+          border-radius: 50%;
+          padding-right: 0;
+        }
+      }
     }
 
     &__list{
