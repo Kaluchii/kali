@@ -1,5 +1,6 @@
 @extends('front.layout')
 @section('content')
+@include('front.index.about-windows')
 {{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
     <div class="slider">
         <div class="slider__list js_main_slick">
