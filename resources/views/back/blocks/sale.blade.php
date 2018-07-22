@@ -34,7 +34,7 @@
                         <label>Текст</label>
                         <textarea class="form-control text-editor"
                                   data-name="text"
-                                  data-type="string"
+                                  data-type="text"
                                   data-block="sale"
                                   data-id="0">{{$block->text_field}}</textarea>
                     </div>

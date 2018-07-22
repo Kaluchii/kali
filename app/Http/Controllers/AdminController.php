@@ -29,6 +29,8 @@ class AdminController extends Controller
         $this->extract->tuneSelection('reviews_list')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('windows_price_list')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('balcony_price_list')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('firms_list_1')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('firms_list_2')->sortBy('sorter','DESC');
     }
 
     public function getIndex(){
@@ -132,10 +134,50 @@ class AdminController extends Controller
     }
 
 
-    public function getProduction(){
+    public function getProduction1(){
         $block = $this->extract->getBlock('products');
-        return view('back.blocks.products', [
+        return view('back.blocks.products_1', [
             'block' => $block
+        ]);
+    }
+
+
+    public function getProduction1Item( $id ){
+        $item = $this->extract->getGroupItem('products_list_1', $id);
+        return view('back.groups.products_list_1.products_list_1', [
+            'item' => $item
+        ]);
+    }
+
+
+    public function getProduction2(){
+        $block = $this->extract->getBlock('products');
+        return view('back.blocks.products_2', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getProduction2Item( $id ){
+        $item = $this->extract->getGroupItem('products_list_2', $id);
+        return view('back.groups.products_list_2.products_list_2', [
+            'item' => $item
+        ]);
+    }
+
+
+    public function getProduction3(){
+        $block = $this->extract->getBlock('products');
+        return view('back.blocks.products_3', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getProduction3Item( $id ){
+        $item = $this->extract->getGroupItem('other_products_list', $id);
+        return view('back.groups.other_products_list.other_products_list', [
+            'item' => $item
         ]);
     }
 
@@ -156,10 +198,26 @@ class AdminController extends Controller
     }
 
 
+    public function getWindowsCategory( $id ){
+        $item = $this->extract->getGroupItem('windows_price_categories', $id);
+        return view('back.groups.windows_price_categories.windows_price_categories', [
+            'item' => $item
+        ]);
+    }
+
+
     public function getBalconies(){
         $block = $this->extract->getBlock('balcony_price');
         return view('back.blocks.balcony_price', [
             'block' => $block
+        ]);
+    }
+
+
+    public function getBalconiesCategory( $id ){
+        $item = $this->extract->getGroupItem('balcony_price_categories', $id);
+        return view('back.groups.balcony_price_categories.balcony_price_categories', [
+            'item' => $item
         ]);
     }
 
@@ -176,6 +234,22 @@ class AdminController extends Controller
         $block = $this->extract->getBlock('components');
         return view('back.blocks.components', [
             'block' => $block
+        ]);
+    }
+
+
+    public function getComponentsCategory( $id ){
+        $item = $this->extract->getGroupItem('components_categories', $id);
+        return view('back.groups.components_categories.components_categories', [
+            'item' => $item
+        ]);
+    }
+
+
+    public function getComponentsItem( $other, $id ){
+        $item = $this->extract->getGroupItem('components_list', $id);
+        return view('back.groups.components_list.components_list', [
+            'item' => $item
         ]);
     }
 

@@ -152,8 +152,8 @@ return [
             'components_categories' => [
                 'string' => ['category_name']
             ],
-            'components_list' => [// Использовать 'title' для заголовка
-                'string' => ['article'],
+            'components_list' => [
+                'string' => ['component_name', 'article'],
                 'float' => ['price'],
                 'text' => ['text'],
                 'image' => ['img'],
@@ -180,7 +180,7 @@ return [
         'string' => ['sub_title'],
         'groups' => [
             'balcony_price_categories' => [
-                'string' => ['category_name']
+                'string' => ['category_name'],
             ],
             'balcony_price_list' => [
                 'text' => ['text'],
@@ -193,14 +193,13 @@ return [
     'products' => [
         'string' => ['banner_1_title', 'banner_2_title'],
         'groups' => [
-            'balcony_price_categories' => [
-                'string' => ['category_name']
-            ],
             'products_list_1' => [
+                'string' => ['product_name'],
                 'text' => ['text', 'preview_text'],
                 'image' => ['img'],
             ],
             'products_list_2' => [
+                'string' => ['product_name'],
                 'text' => ['text', 'preview_text'],
                 'image' => ['img'],
             ],

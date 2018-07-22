@@ -119,7 +119,7 @@
                         <label>Текстовый блок 1</label>
                         <textarea class="form-control text-editor"
                                   data-name="text"
-                                  data-type="string"
+                                  data-type="text"
                                   data-block="guarantee"
                                   data-id="0">{{$block->text_field}}</textarea>
                     </div>
@@ -144,7 +144,7 @@
                         <label>Текстовый блок 2</label>
                         <textarea class="form-control text-editor"
                                   data-name="text2"
-                                  data-type="string"
+                                  data-type="text"
                                   data-block="guarantee"
                                   data-id="0">{{$block->text2_field}}</textarea>
                     </div>
@@ -152,7 +152,7 @@
                         <label>Текст над отзывами</label>
                         <textarea class="form-control text textarea"
                                   data-name="reviews_title"
-                                  data-type="string"
+                                  data-type="text"
                                   data-block="guarantee"
                                   data-id="0">{{$block->reviews_title_field}}</textarea>
                     </div>

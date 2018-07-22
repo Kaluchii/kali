@@ -25,6 +25,18 @@
                     <li><a href="/adm/home-seo"><i class="fa fa-circle-o"></i> <span>Метаданные</span></a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#"><i class="fa fa-angle-double-right"></i> <span>Продукция</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/adm/production_cat_1"><i class="fa fa-circle-o"></i> <span>Категория 1</span></a></li>
+                    <li><a href="/adm/production_cat_2"><i class="fa fa-circle-o"></i> <span>Категория 2</span></a></li>
+                    <li><a href="/adm/production_cat_3"><i class="fa fa-circle-o"></i> <span>Другая продукция</span></a></li>
+                </ul>
+            </li>
             <li>
                 <a href="/adm/production">
                     <i class="fa fa-circle-o"></i> <span>Продукция</span>
