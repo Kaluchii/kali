@@ -36,6 +36,31 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/',         'AdminController@getIndex');
 
 
+    Route::get('/all',                      'AdminController@getAll');
+    Route::get('/home-slider',                     'AdminController@getSlider');
+    Route::get('/home-facts',                   'AdminController@getFacts');
+    Route::get('/home-examples',                    'AdminController@getExamples');
+    Route::get('/home-windows',              'AdminController@getHomeWindows');
+    Route::get('/home-windows/{id}',              'AdminController@getHomeWindowsItem');
+    Route::get('/home-balconies',         'AdminController@getHomeBalconies');
+    Route::get('/home-balconies/{id}',         'AdminController@getHomeBalconiesCategory');
+    Route::get('/home-balconies/{other}/{id}',         'AdminController@getHomeBalconiesItem');
+    Route::get('/home-advantages',                 'AdminController@getAdvantages');
+    Route::get('/home-info',            'AdminController@getHomeInfo');
+    Route::get('/home-seo',   'AdminController@getHomeMeta');
+    Route::get('/production',             'AdminController@getProduction');
+    Route::get('/guarantee',        'AdminController@getGuarantee');
+    Route::get('/windows-price',                  'AdminController@getWindows');
+    Route::get('/balconies-price',             'AdminController@getBalconies');
+    Route::get('/sale',                 'AdminController@getSale');
+    Route::get('/components',                'AdminController@getComponents');
+    Route::get('/services',           'AdminController@getServices');
+    Route::get('/about',                   'AdminController@getAbout');
+    Route::get('/contacts',              'AdminController@getContacts');
+    Route::get('/post',                     'AdminController@getPost');
+    Route::get('/scripts',                     'AdminController@getScripts');
+
+
 
     // Таксономия проекта. Визуальная зависимость данных.
     Route::get('/taxonomy', 'Back\TaxonomyController@showTaxonomy');

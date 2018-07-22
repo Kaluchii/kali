@@ -34,6 +34,7 @@ return [
     ],
 
     'facts' => [
+        'text' => ['text'],
         'groups' => [
             'facts_list' => [
                 'image' => ['img'],
@@ -46,6 +47,7 @@ return [
         'groups' => [
             'examples_list' => [
                 'image' => ['img'],
+                'float' => ['price'],
                 'string' => ['text']
             ],
         ]
@@ -54,9 +56,43 @@ return [
     'advantages' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
         'groups' => [
-            'advantages_list' => [// Использовать 'title' для заголовка
+            'advantages_list' => [
                 'image' => ['img'],
-                'string' => ['text']
+                'string' => ['advantage_title', 'text']
+            ],
+        ]
+    ],
+
+    'main_dop_text' => [
+        'text' => ['text'],
+    ],
+
+    'main_windows_price' => [// Использовать 'title' для заголовка
+        'groups' => [
+            'main_windows_types' => [
+                'string' => ['type_name']
+            ],
+            'main_windows_price_list' => [
+                'image' => ['img'],
+                'float' => ['price', 'full_price'],
+                'main_windows_types' => ['superior']
+            ],
+        ]
+    ],
+
+    'main_balcony_price' => [// Использовать 'title' для заголовка
+        'groups' => [
+            'main_balcony_categories' => [
+                'string' => ['category_name']
+            ],
+            'main_balcony_types' => [
+                'string' => ['type_name'],
+                'main_balcony_categories' => ['superior']
+            ],
+            'main_balcony_list' => [
+                'image' => ['img'],
+                'float' => ['price', 'full_price'],
+                'main_balcony_types' => ['superior']
             ],
         ]
     ],
@@ -65,12 +101,14 @@ return [
         'string' => ['sub_title'],
         'groups' => [
             'contacts_list' => [// Использовать 'title' для заголовка
-                'image' => ['address_icon', 'phones_icon', 'fax_icon', 'mob_icon',
-                    'email_icon', 'work_time_icon'],
                 'string' => ['longitude', 'latitude', 'address', 'phones', 'fax', 'mob',
                             'email', 'work_time']
             ],
         ]
+    ],
+
+    'about' => [// Использовать 'title' для заголовка
+        'text' => ['text']
     ],
 
     'services' => [// Использовать 'title' для заголовка
@@ -94,21 +132,13 @@ return [
     ],
 
     'guarantee' => [// Использовать 'title' для заголовка
-        'file' => ['instruction', 'guarantee']
-    ],
-
-    'guarantee_facts' => [
+        'text' => ['text', 'text2', 'reviews_title'],
+        'file' => ['instruction', 'guarantee'],
         'groups' => [
             'guarantee_facts_list' => [
                 'image' => ['img'],
                 'string' => ['text']
             ],
-        ]
-    ],
-
-    'reviews' => [
-        'string' => ['text'],
-        'groups' => [
             'reviews_list' => [
                 'text' => ['text'],
                 'string' => ['reviewer_name', 'city']
@@ -124,7 +154,7 @@ return [
             ],
             'components_list' => [// Использовать 'title' для заголовка
                 'string' => ['article'],
-                'int' => ['price'],
+                'float' => ['price'],
                 'text' => ['text'],
                 'image' => ['img'],
                 'components_categories' => ['superior']
@@ -180,15 +210,27 @@ return [
             'firms_list_2' => [
                 'image' => ['img'],
             ],
-        ]
-    ],
-
-    'other_products' => [// Использовать 'title' для заголовка
-        'groups' => [
             'other_products_list' => [
                 'string' => ['product_name'],
                 'text' => ['text'],
                 'image' => ['img'],
+            ],
+        ]
+    ],
+
+    'calculator' => [// Использовать 'title' для заголовка
+        'string' => ['sub_title', 'under_price'],
+        'groups' => [
+            'product_categories' => [
+                'string' => ['category_name'],
+                'image' => ['img'],
+            ],
+            'product_types' => [
+                'string' => ['type_name'],
+                'image' => ['img'],
+                'int' => ['imposts_count'],
+                'float' => ['price'],
+                'product_categories' => ['superior']
             ],
         ]
     ],

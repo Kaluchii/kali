@@ -191,14 +191,14 @@
                     <div class="examples__img-wrap">
                         <img src="/dev_img/example_window_5.png" alt="" class="examples__img">
                     </div>
-                    <div class="examples__price">85 925 <span class="tenge">d</span>/окно</div>
+                    <div class="examples__price">85 925 <span class="tenge">d</span>/балкон</div>
                     <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">111 350 <span class="tenge">d</span></span></p>
                 </li>
                 <li class="examples__item">
                     <div class="examples__img-wrap">
                         <img src="/dev_img/example_window_6.png" alt="" class="examples__img">
                     </div>
-                    <div class="examples__price">87 925 <span class="tenge">d</span>/окно</div>
+                    <div class="examples__price">87 925 <span class="tenge">d</span>/балкон</div>
                     <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">167 850 <span class="tenge">d</span></span></p>
                 </li>
             </ul>

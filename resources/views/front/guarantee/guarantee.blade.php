@@ -12,7 +12,7 @@
             <div class="guarantee-banner__text-wrapper">
                 <p class="guarantee-banner__text">Гарантия на окна - весомое доказательство их&nbsp;качественности</p>
                 <div class="guarantee-banner__link-wrap">
-                    <a href="#" class="guarantee-banner__download link-blue">Скачать Инструкцию по&nbsp;эксплуатации<br>и Гарантийный талон >></a>
+                    Скачать <a href="#" class="guarantee-banner__download link-blue">Инструкцию по&nbsp;эксплуатации</a><br>и <a href="#" class="guarantee-banner__download link-blue">Гарантийный талон >></a>
                 </div>
             </div>
         </div>

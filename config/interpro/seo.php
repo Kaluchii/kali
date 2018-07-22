@@ -3,11 +3,27 @@
 return [
     'fields'=>
         [
-            'seotitle',
-            'seodescription',
-            'seokeywords'
+            'seo_title',
+            'seo_description',
+            'seo_keywords'
         ],
     'owners'=>
         [
+            'slider',
+            'contacts',
+            'about',
+            'services',
+            'sale',
+            'guarantee',
+            'components',
+            'components_categories',
+            'components_list',
+            'windows_price',
+            'balcony_price',
+            'products',
+            'products_list_1',
+            'products_list_2',
+            'other_products_list',
+            'calculator',
         ]
 ];
