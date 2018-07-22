@@ -9,10 +9,10 @@
 
     @include('front.styles')
     @yield('styles')
-    {{--{!! $scripts->before_head_close_field !!}--}}
+    {!! $scripts->before_head_close_field !!}
 </head>
 <body>
-{{--    {!! $scripts->after_body_open_field !!}--}}
+    {!! $scripts->after_body_open_field !!}
 @include('front.header')
 @include('front.application')
 @if(isset($is_main))
@@ -20,7 +20,6 @@
 @else
     @include('front.small-info')
 @endif
-@include('front.seo-text')
 @include('front.footer')
 @include('front.scripts')
 
@@ -44,7 +43,7 @@
 
     @yield('scripts')
 
-{{--    {!! $scripts->before_body_close_field !!}--}}
+    {!! $scripts->before_body_close_field !!}
 
 </body>
 </html>

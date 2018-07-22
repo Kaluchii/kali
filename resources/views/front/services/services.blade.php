@@ -1,64 +1,27 @@
 @extends('front.layout')
 @section('content')
-{{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
+    @include('front.meta', ['title' => $services->seo_title, 'description' => $services->seo_description, 'keywords' => $services->seo_keywords, 'spare' => $services->title])
     <div class="breadcrumbs">
         <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
         <span class="breadcrumbs__separator"></span>
-        <span class="breadcrumbs__current">Услуги</span>
+        <span class="breadcrumbs__current">{{$services->title}}</span>
     </div>
 
     <div class="services">
-        <h1 class="services__title">Услуги</h1>
-        <h2 class="services__subtitle">Компания “Kali” предлагает следующий спектр услуг:</h2>
+        <h1 class="services__title">{{$services->title}}</h1>
+        <h2 class="services__subtitle">{{$services->sub_title}}</h2>
         <ul class="services__list icon-cards">
-            <li class="icon-cards__item">
-                <div class="icon-cards__item-container">
-                    <div class="icon-cards__icon-wrap">
-                        <img src="/dev_img/services_1.png" alt="" class="icon-cards__icon">
+            @foreach($services->services_list_group as $item)
+                <li class="icon-cards__item">
+                    <div class="icon-cards__item-container">
+                        <div class="icon-cards__icon-wrap">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="icon-cards__icon">
+                        </div>
+                        <p class="icon-cards__text">{{$item->text}}</p>
                     </div>
-                    <p class="icon-cards__text">Окна, двери, витражи из ПВХ - профилей. (КНР, Турция, Германия)</p>
-                </div>
-            </li>
-            <li class="icon-cards__item">
-                <div class="icon-cards__item-container">
-                    <div class="icon-cards__icon-wrap">
-                        <img src="/dev_img/services_9.png" alt="" class="icon-cards__icon">
-                    </div>
-                    <p class="icon-cards__text">Однокамерные, двукамерные стеклопакеты</p>
-                </div>
-            </li>
-            <li class="icon-cards__item">
-                <div class="icon-cards__item-container">
-                    <div class="icon-cards__icon-wrap">
-                        <img src="/dev_img/services_2.png" alt="" class="icon-cards__icon">
-                    </div>
-                    <p class="icon-cards__text">Изготовление пластиковых окон</p>
-                </div>
-            </li>
-            <li class="icon-cards__item">
-                <div class="icon-cards__item-container">
-                    <div class="icon-cards__icon-wrap">
-                        <img src="/dev_img/services_10.png" alt="" class="icon-cards__icon">
-                    </div>
-                    <p class="icon-cards__text">Энергосберегающие стеклопакеты</p>
-                </div>
-            </li>
-            <li class="icon-cards__item">
-                <div class="icon-cards__item-container">
-                    <div class="icon-cards__icon-wrap">
-                        <img src="/dev_img/services_3.png" alt="" class="icon-cards__icon">
-                    </div>
-                    <p class="icon-cards__text">Изготовление изделий из алюминиевых профилей. (Беларусь)</p>
-                </div>
-            </li>
-            <li class="icon-cards__item">
-                <div class="icon-cards__item-container">
-                    <div class="icon-cards__icon-wrap">
-                        <img src="/dev_img/services_11.png" alt="" class="icon-cards__icon">
-                    </div>
-                    <p class="icon-cards__text">Стеклопакет с декоративной рассечкой</p>
-                </div>
-            </li>
+                </li>
+            @endforeach
         </ul>
     </div>
+    @include('front.seo-text', ['seo_text' => $services->seo_text])
 @endsection

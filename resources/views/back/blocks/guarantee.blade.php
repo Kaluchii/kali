@@ -11,11 +11,21 @@
             <div class="tab-pane active" id="tab_g1">
                 <div class="box-body">
                     <div class="form-group">
-                        <label>Заголовок на баннере</label>
+                        <label>Название страницы</label>
                         <input class="form-control string"
                                type="text" placeholder=""
                                value="{{$block->title_field}}"
                                data-name="title"
+                               data-type="string"
+                               data-block="guarantee"
+                               data-id="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Заголовок на баннере</label>
+                        <input class="form-control string"
+                               type="text" placeholder=""
+                               value="{{$block->banner_text_field}}"
+                               data-name="banner_text"
                                data-type="string"
                                data-block="guarantee"
                                data-id="0">

@@ -1,57 +1,40 @@
 @extends('front.layout')
 @section('content')
-{{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
+    @include('front.meta', ['title' => $contacts->seo_title, 'description' => $contacts->seo_description, 'keywords' => $contacts->seo_keywords, 'spare' => $contacts->title])
     <div class="breadcrumbs">
         <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
         <span class="breadcrumbs__separator"></span>
-        <span class="breadcrumbs__current">Контакты</span>
+        <span class="breadcrumbs__current">{{$contacts->title}}</span>
     </div>
 
     <div class="contacts">
-        <h1 class="contacts__title">Контакты</h1>
-        <h2 class="contacts__subtitle">Наши офисы работают с понедельника по пятницу с 9:00 до 17:30</h2>
+        <h1 class="contacts__title">{{$contacts->title}}</h1>
+        <h2 class="contacts__subtitle">{{$contacts->sub_title}}</h2>
         <div class="contacts__place-list">
-            <div class="contacts__place-item">
-                <div class="contacts__place-info">
-                    <p class="contacts__place-title">Центральный офис</p>
-                    <div class="contacts__cols-wrap">
-                        <div class="contacts__col-1">
-                            <div class="contacts__info-item contacts__info-item--loc">Казахстан, г. Алматы, ул. Омарова 45 б</div>
-                            <div class="contacts__info-item contacts__info-item--phone">Телефоны: 8 (727) 294 86 51, 294 86 50</div>
-                            <div class="contacts__info-item contacts__info-item--fax">Факс: 8 (727) 252 20 33</div>
-                            <div class="contacts__info-item contacts__info-item--mob">Моб: 8 777 256 09 07</div>
-                            <div class="contacts__info-item contacts__info-item--email">Email: kali_ltd@mail.ru</div>
-                        </div>
-                        <div class="contacts__col-2">
-                            <div class="contacts__info-item contacts__info-item--work-time">График работы:
-                                <span class="contacts__info-work-time">Понедельник - пятница<br>с 9:00 до 17:30</span>
+            @php $i = 0 @endphp
+            @foreach($contacts->contacts_list_group as $item)
+                <div class="contacts__place-item">
+                    <div class="contacts__place-info">
+                        <p class="contacts__place-title">{{$item->place_name}}</p>
+                        <div class="contacts__cols-wrap">
+                            <div class="contacts__col-1">
+                                <div class="contacts__info-item contacts__info-item--loc">{{$item->address}}</div>
+                                <div class="contacts__info-item contacts__info-item--phone">Телефоны: {{$item->phones}}</div>
+                                <div class="contacts__info-item contacts__info-item--fax">Факс: {{$item->fax}}</div>
+                                <div class="contacts__info-item contacts__info-item--mob">Моб: {{$item->mob}}</div>
+                                <div class="contacts__info-item contacts__info-item--email">Email: {{$item->email}}</div>
+                            </div>
+                            <div class="contacts__col-2">
+                                <div class="contacts__info-item contacts__info-item--work-time">График работы:
+                                    <span class="contacts__info-work-time">{!! $item->work_time !!}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="contacts__place-map js_map" id="contact_map_{{++$i}}" data-latitude="{{$item->latitude}}" data-longitude="{{$item->longitude}}"></div>
                 </div>
-                <div class="contacts__place-map js_map" id="contact_map_1" data-latitude="43.259511" data-longitude="76.939174"></div>
-            </div>
-
-            <div class="contacts__place-item">
-                <div class="contacts__place-info">
-                    <p class="contacts__place-title">Комфорт</p>
-                    <div class="contacts__cols-wrap">
-                        <div class="contacts__col-1">
-                            <div class="contacts__info-item contacts__info-item--loc">Казахстан, г. Алматы, ул. Омарова 45 б</div>
-                            <div class="contacts__info-item contacts__info-item--phone">Телефоны: 8 (727) 294 86 51, 294 86 50</div>
-                            <div class="contacts__info-item contacts__info-item--fax">Факс: 8 (727) 252 20 33</div>
-                            <div class="contacts__info-item contacts__info-item--mob">Моб: 8 777 256 09 07</div>
-                            <div class="contacts__info-item contacts__info-item--email">Email: kali_ltd@mail.ru</div>
-                        </div>
-                        <div class="contacts__col-2">
-                            <div class="contacts__info-item contacts__info-item--work-time">График работы:
-                                <span class="contacts__info-work-time">Понедельник - пятница<br>с 9:00 до 17:30</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contacts__place-map js_map" id="contact_map_2" data-latitude="43.259511" data-longitude="76.939174"></div>
-            </div>
+            @endforeach
         </div>
     </div>
+    @include('front.seo-text', ['seo_text' => $contacts->seo_text])
 @endsection

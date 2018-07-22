@@ -13,17 +13,17 @@
 
 Route::get('/',                 'FrontController@getIndex');
 Route::get('/about',         'FrontController@getAbout');
-Route::get('/services',         'FrontController@getServices');
+Route::get('/ru/185-uslugi.html',         'FrontController@getServices');
 Route::get('/guarantee',         'FrontController@getGuarantee');
 Route::get('/sale',         'FrontController@getSale');
-Route::get('/windows-price',         'FrontController@getPrices');
-Route::get('/balconies-price',         'FrontController@getPrices');
+Route::get('/windows-price',         'FrontController@getWindowsPrices');
+Route::get('/balconies-price',         'FrontController@getBalconiesPrices');
 Route::get('/contacts',         'FrontController@getContacts');
-Route::get('/production',         'FrontController@getProduction');
-Route::get('/production/{slug}',      'FrontController@getProductionItem');
+Route::get('/products',         'FrontController@getProducts');
+Route::get('/products/{slug}',      'FrontController@getProductsItem');
 Route::get('/components',         'FrontController@getComponents');
 Route::get('/components/{slug}',      'FrontController@getComponentsCategory');
-Route::get('/components/{slug}/{id}',      'FrontController@getComponentsItem');
+Route::get('/components/{other}/{slug}',      'FrontController@getComponentsItem');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');

@@ -118,6 +118,14 @@
                                   data-block="components_categories"
                                   data-id="{{$item->id_field}}">{{$item->seo_description_field}}</textarea>
                     </div>
+                    <div class="form-group">
+                        <label>SEO-текст</label>
+                        <textarea class="form-control text-editor"
+                                  data-name="seo_text"
+                                  data-type="seo"
+                                  data-block="components_categories"
+                                  data-id="{{$item->id_field}}">{{$item->seo_text_field}}</textarea>
+                    </div>
                 </div>
             </div>
         </div>

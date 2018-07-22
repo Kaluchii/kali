@@ -1,17 +1,19 @@
 @extends('front.layout')
 @section('content')
-{{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
+    @include('front.meta', ['title' => $component->seo_title, 'description' => $component->seo_description, 'keywords' => $component->seo_keywords, 'spare' => $component->component_name])
     <div class="breadcrumbs">
         <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
         <span class="breadcrumbs__separator"></span>
-        <a href="/components" class="breadcrumbs__link link-black">Комплектующие</a>
+        <a href="/components" class="breadcrumbs__link link-black">{{$component->superior_item->superior_item->title}}</a>
         <span class="breadcrumbs__separator"></span>
-        <a href="#" class="breadcrumbs__link link-black">Профиль CONCH 60-70</a>
+        <a href="/components/{{$component->superior_item->slug}}" class="breadcrumbs__link link-black">{{$component->superior_item->category_name}}</a>
         <span class="breadcrumbs__separator"></span>
-        <span class="breadcrumbs__current">Профиль стойкий AYPC.110.0302</span>
+        <span class="breadcrumbs__current">{{$component->component_name}}</span>
     </div>
 
     <div class="components">
-        <h1 class="components__title">Профиль стойкий AYPC.110.0302</h1>
+        <h1 class="components__title">{{$component->component_name}}</h1>
+        <div class="components__text text-block">{!! $component->text !!}</div>
     </div>
+@include('front.seo-text', ['seo_text' => $component->seo_text])
 @endsection

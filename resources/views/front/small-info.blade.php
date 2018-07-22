@@ -1,7 +1,7 @@
 @section('small-info')
     <div class="small-info">
         <div class="small-info__container">
-            <div class="small-info__phone">+ 7 (727) 294 86 51</div>
+            <div class="small-info__phone">{{$all_site->contact_us_phone}}</div>
             <div class="small-info__btn-wrap">
                 <button href="#call_back_form" class="small-info__btn button button--white-border js_call_back">Связаться с нами</button>
             </div>

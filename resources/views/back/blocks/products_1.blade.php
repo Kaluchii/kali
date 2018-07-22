@@ -11,6 +11,16 @@
             <div class="tab-pane active" id="tab_g1">
                 <div class="box-body">
                     <div class="form-group">
+                        <label>Название страницы</label>
+                        <input class="form-control string"
+                               type="text" placeholder=""
+                               value="{{$block->title_field}}"
+                               data-name="title"
+                               data-type="string"
+                               data-block="products"
+                               data-id="0">
+                    </div>
+                    <div class="form-group">
                         <label>Заголовок на баннере категории 1</label>
                         <input class="form-control string"
                                type="text" placeholder=""
@@ -121,6 +131,14 @@
                                   data-type="seo"
                                   data-block="products"
                                   data-id="0">{{$block->seo_description_field}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>SEO-текст</label>
+                        <textarea class="form-control text-editor"
+                                  data-name="seo_text"
+                                  data-type="seo"
+                                  data-block="products"
+                                  data-id="0">{{$block->seo_text_field}}</textarea>
                     </div>
                 </div>
             </div>

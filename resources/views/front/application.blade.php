@@ -24,8 +24,9 @@
                         <div class="custom-select">
                             <select class="js_form_input" name="time">
                                 <option value="Время">Время</option>
-                                <option value="С 9 до 13">С 9 до 13</option>
-                                <option value="С 13 до 19">С 13 до 19</option>
+                                @foreach($all_site->times_for_call_group as $item)
+                                    <option value="{{$item->text}}">{{$item->text}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

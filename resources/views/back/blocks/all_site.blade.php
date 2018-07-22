@@ -27,6 +27,16 @@
                        data-id="0">
             </div>
             <div class="form-group">
+                <label>Номер телефона в кнопке в мобильной версии</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$block->mob_phones_field}}"
+                       data-name="mob_phones"
+                       data-type="string"
+                       data-block="all_site"
+                       data-id="0">
+            </div>
+            <div class="form-group">
                 <label>Номер телефона в блоке "Связаться с нами"</label>
                 <input class="form-control string"
                        type="text" placeholder=""
@@ -79,6 +89,26 @@
                           data-type="string"
                           data-block="all_site"
                           data-id="0">{{$block->bottom_mob_phones_field}}</textarea>
+            </div>
+            <div class="form-group">
+                <label>Широта расположения метки на карте (подвал)</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$block->latitude_field}}"
+                       data-name="latitude"
+                       data-type="string"
+                       data-block="all_site"
+                       data-id="0">
+            </div>
+            <div class="form-group">
+                <label>Долгота расположения метки на карте (подвал)</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$block->longitude_field}}"
+                       data-name="longitude"
+                       data-type="string"
+                       data-block="all_site"
+                       data-id="0">
             </div>
         </div>
     </div>

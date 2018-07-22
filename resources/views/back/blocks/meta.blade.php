@@ -34,6 +34,14 @@
                           data-block="slider"
                           data-id="0">{{$block->seo_description_field}}</textarea>
             </div>
+            <div class="form-group">
+                <label>SEO-текст</label>
+                <textarea class="form-control text-editor"
+                          data-name="seo_text"
+                          data-type="seo"
+                          data-block="slider"
+                          data-id="0">{{$block->seo_text_field}}</textarea>
+            </div>
         </div>
     </div>
 @endsection

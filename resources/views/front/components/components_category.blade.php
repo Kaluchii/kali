@@ -1,121 +1,33 @@
 @extends('front.layout')
 @section('content')
-{{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
+    @include('front.meta', ['title' => $category->seo_title, 'description' => $category->seo_description, 'keywords' => $category->seo_keywords, 'spare' => $category->category_name])
     <div class="breadcrumbs">
         <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
         <span class="breadcrumbs__separator"></span>
-        <a href="/components" class="breadcrumbs__link link-black">Комплектующие</a>
+        <a href="/components" class="breadcrumbs__link link-black">{{$category->superior_item->title}}</a>
         <span class="breadcrumbs__separator"></span>
-        <span class="breadcrumbs__current">Профиль CONCH 60-70</span>
+        <span class="breadcrumbs__current">{{$category->category_name}}</span>
     </div>
 
     <div class="components">
-        <h1 class="components__title">Профиль CONCH 60-70</h1>
+        <h1 class="components__title">{{$category->category_name}}</h1>
         <ul class="components__goods-list">
+            @foreach($category->components_list_group as $item)
             <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_1.png" alt="" class="product__img">
+                <p class="product__name">{{$item->component_name}}</p>
+                <a href="/components/{{$category->slug}}/{{$item->slug}}" class="product__img-wrap">
+                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="product__img">
                 </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
+                <p class="product__article">Артикул: {{$item->article}}</p>
                 <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
+                    <p class="product__price">{{number_format($item->price, 0, '', ' ')}} тг</p>
                     <div class="product__btn-wrap">
-                        <a href="" class="product__btn button button--blue-border">Подробнее</a>
+                        <a href="/components/{{$category->slug}}/{{$item->slug}}" class="product__btn button button--blue-border">Подробнее</a>
                     </div>
                 </div>
             </li>
-            <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_2.png" alt="" class="product__img">
-                </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
-                <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
-                    <div class="product__btn-wrap">
-                        <a href="" class="product__btn button button--blue-border">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_3.png" alt="" class="product__img">
-                </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
-                <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
-                    <div class="product__btn-wrap">
-                        <a href="" class="product__btn button button--blue-border">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_4.png" alt="" class="product__img">
-                </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
-                <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
-                    <div class="product__btn-wrap">
-                        <a href="#" class="product__btn button button--blue-border">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_2.png" alt="" class="product__img">
-                </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
-                <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
-                    <div class="product__btn-wrap">
-                        <a href="" class="product__btn button button--blue-border">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_4.png" alt="" class="product__img">
-                </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
-                <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
-                    <div class="product__btn-wrap">
-                        <a href="" class="product__btn button button--blue-border">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_3.png" alt="" class="product__img">
-                </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
-                <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
-                    <div class="product__btn-wrap">
-                        <a href="" class="product__btn button button--blue-border">Подробнее</a>
-                    </div>
-                </div>
-            </li>
-            <li class="components__goods-item product">
-                <p class="product__name">Профиль стойкий AYPC.110.0302</p>
-                <a href="#" class="product__img-wrap">
-                    <img src="/dev_img/product_1.png" alt="" class="product__img">
-                </a>
-                <p class="product__article">Артикул: AYPC.110.0302</p>
-                <div class="product__bottom">
-                    <p class="product__price">1 188 тг</p>
-                    <div class="product__btn-wrap">
-                        <a href="" class="product__btn button button--blue-border">Подробнее</a>
-                    </div>
-                </div>
-            </li>
+            @endforeach
         </ul>
     </div>
+    @include('front.seo-text', ['seo_text' => $category->seo_text])
 @endsection

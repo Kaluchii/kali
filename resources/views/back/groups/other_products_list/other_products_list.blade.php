@@ -31,7 +31,7 @@
                                data-id="{{$item->id_field}}">
                     </div>
                     <div class="form-group">
-                        <label>Превью (~300х300 пикселей)</label>
+                        <label>Иконка (51х51 пикселей)</label>
                         <div class="dropzone">
                             <div class="file-input">
                                 <div class="file-preview">
@@ -113,6 +113,14 @@
                                   data-type="seo"
                                   data-block="other_products_list"
                                   data-id="{{$item->id_field}}">{{$item->seo_description_field}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>SEO-текст</label>
+                        <textarea class="form-control text-editor"
+                                  data-name="seo_text"
+                                  data-type="seo"
+                                  data-block="other_products_list"
+                                  data-id="{{$item->id_field}}">{{$item->seo_text_field}}</textarea>
                     </div>
                 </div>
             </div>

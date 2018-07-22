@@ -38,11 +38,6 @@
                 </ul>
             </li>
             <li>
-                <a href="/adm/production">
-                    <i class="fa fa-circle-o"></i> <span>Продукция</span>
-                </a>
-            </li>
-            <li>
                 <a href="/adm/guarantee">
                     <i class="fa fa-circle-o"></i> <span>Гарантии</span>
                 </a>

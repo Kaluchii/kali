@@ -42,13 +42,13 @@
             </div>
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="/production" class="header__nav-link">ПРОДУКЦИЯ</a></li>
+                    <li class="header__nav-item"><a href="/products" class="header__nav-link">ПРОДУКЦИЯ</a></li>
                     <li class="header__nav-item"><a href="/guarantee" class="header__nav-link">ГАРАНТИИ</a></li>
                     <li class="header__nav-item"><a href="/windows-price" class="header__nav-link">ЦЕНЫ НА ОКНА</a></li>
                     <li class="header__nav-item"><a href="/balconies-price" class="header__nav-link">ЦЕНЫ НА БАЛКОНЫ</a></li>
                     <li class="header__nav-item"><a href="/sale" class="header__nav-link">РАСПРОДАЖА</a></li>
                     <li class="header__nav-item"><a href="/components" class="header__nav-link">КОМПЛЕКТУЮЩИЕ</a></li>
-                    <li class="header__nav-item"><a href="/services" class="header__nav-link">УСЛУГИ</a></li>
+                    <li class="header__nav-item"><a href="/ru/185-uslugi.html" class="header__nav-link">УСЛУГИ</a></li>
                     <li class="header__nav-item"><a href="/contacts" class="header__nav-link">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
@@ -73,13 +73,13 @@
                     <span class="hamburger__item hamburger__item--bottom"></span>
                 </div>
                 <ul class="mobile-header__menu-list js_menu">
-                    <li class="mobile-header__menu-item"><a href="/production" class="mobile-header__menu-link">ПРОДУКЦИЯ</a></li>
+                    <li class="mobile-header__menu-item"><a href="/products" class="mobile-header__menu-link">ПРОДУКЦИЯ</a></li>
                     <li class="mobile-header__menu-item"><a href="/guarantee" class="mobile-header__menu-link">ГАРАНТИИ</a></li>
                     <li class="mobile-header__menu-item"><a href="/windows-price" class="mobile-header__menu-link">ЦЕНЫ НА ОКНА</a></li>
                     <li class="mobile-header__menu-item"><a href="/balconies-price" class="mobile-header__menu-link">ЦЕНЫ НА БАЛКОНЫ</a></li>
                     <li class="mobile-header__menu-item"><a href="/sale" class="mobile-header__menu-link">РАСПРОДАЖА</a></li>
                     <li class="mobile-header__menu-item"><a href="/components" class="mobile-header__menu-link">КОМПЛЕКТУЮЩИЕ</a></li>
-                    <li class="mobile-header__menu-item"><a href="/services" class="mobile-header__menu-link">УСЛУГИ</a></li>
+                    <li class="mobile-header__menu-item"><a href="/ru/185-uslugi.html" class="mobile-header__menu-link">УСЛУГИ</a></li>
                     <li class="mobile-header__menu-item"><a href="/about" class="mobile-header__menu-link">О КОМПАНИИ</a></li>
                     <li class="mobile-header__menu-item"><a href="/contacts" class="mobile-header__menu-link">КОНТАКТЫ</a></li>
                 </ul>

@@ -7,6 +7,16 @@
 
     <div class="box-body">
         <div class="form-group">
+            <label>Название</label>
+            <input class="form-control string"
+                   type="text" placeholder=""
+                   value="{{$item->place_name_field}}"
+                   data-name="place_name"
+                   data-type="string"
+                   data-block="contacts_list"
+                   data-id="{{$item->id_field}}">
+        </div>
+        <div class="form-group">
             <label>Адрес</label>
             <input class="form-control string"
                    type="text" placeholder=""
