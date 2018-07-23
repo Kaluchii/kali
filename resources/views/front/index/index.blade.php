@@ -43,7 +43,7 @@
                 <div class="main__profile-img-wrap">
                     <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="main__profile-img">
                 </div>
-                <p class="main__profile-name">{{$item->text}}</p>
+                <p class="main__profile-name">{!! $item->text !!}</p>
                 <p class="main__profile-price">от {{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/м²</p>
             </li>
             @endforeach
@@ -153,13 +153,13 @@
             <h2 class="advantages__title">{{$advantages->title}}</h2>
             <p class="advantages__subtitle">{{$advantages->sub_title}}</p>
             <ul class="advantages__list">
-                @foreach($examples->examples_list_group as $item)
+                @foreach($advantages->advantages_list_group as $item)
                 <li class="advantages__item">
                     <div class="advantages__item-img-wrap">
                         <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="advantages__item-img">
                     </div>
                     <div class="advantages__item-text-wrap">
-                        {{--<p class="advantages__item-name">{{$item->advantage_title}}</p>--}}
+                        <p class="advantages__item-name">{{$item->advantage_title}}</p>
                         <p class="advantages__item-text">{{$item->text}}</p>
                     </div>
                 </li>
