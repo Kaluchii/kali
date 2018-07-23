@@ -8,13 +8,11 @@
     <div class="box-body">
         <div class="form-group">
             <label>Название</label>
-            <input class="form-control string"
-                   type="text" placeholder=""
-                   value="{{$item->text_field}}"
-                   data-name="text"
-                   data-type="string"
-                   data-block="examples_list"
-                   data-id="{{$item->id_field}}">
+            <textarea class="form-control text textarea--small" data-reg="true"
+                      data-name="text"
+                      data-type="string"
+                      data-block="contacts_list"
+                      data-id="{{$item->id_field}}">{{$item->text_field}}</textarea>
         </div>
         <div class="form-group">
             <label>Цена от</label>

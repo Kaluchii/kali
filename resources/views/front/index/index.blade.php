@@ -1,21 +1,20 @@
 @extends('front.layout')
 @section('content')
-@include('front.index.about-windows')
-{{--    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords])--}}
+    @include('front.index.about-windows', ['text' => $main_dop_text->text])
+    @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords, 'spare' => 'Изготовление пластиковых окон, дверей и витражей'])
     <div class="slider">
         <div class="slider__list js_main_slick">
-            <img src="/dev_img/slider_img.jpg" alt="" class="slider__img">
-            <img src="/dev_img/slider_img.jpg" alt="" class="slider__img">
-            <img src="/dev_img/slider_img.jpg" alt="" class="slider__img">
-            <img src="/dev_img/slider_img.jpg" alt="" class="slider__img">
+            @foreach($slider->slides_group as $item)
+                <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="slider__img">
+            @endforeach
         </div>
         <div class="slider__info-wrap">
             <div class="slider__info">
-                <h1 class="slider__title">Пластиковые окна Kali</h1>
+                <h1 class="slider__title">{{$slider->title}}</h1>
                 <ul class="slider__facts">
-                    <li class="slider__fact">Единственный дистрибьютор заводского профиля CONCH</li>
-                    <li class="slider__fact">Собственное производство полного цикла</li>
-                    <li class="slider__fact">19 лет на рынке</li>
+                @foreach($slider->slider_facts_group as $item)
+                    <li class="slider__fact">{{$item->text}}</li>
+                @endforeach
                 </ul>
                 <div class="slider__btn-wrap">
                     <a href="#call_back_form" class="slider__btn button button--sh-orange js_call_back">Оставить заявку</a>
@@ -27,83 +26,27 @@
     <div class="main">
         <div class="main__title-text text-block"></div>
         <ul class="main__facts-list">
+            @foreach($facts->facts_list_group as $item)
             <li class="main__facts-item">
                 <div class="main__fact-item-container">
                     <div class="main__fact-img-wrap">
-                        <img src="/dev_img/facts_1.png" alt="" class="main__fact-img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="main__fact-img">
                     </div>
-                    <p class="main__fact-text">Гарантия на профиль</p>
+                    <p class="main__fact-text">{{$item->text}}</p>
                 </div>
             </li>
-            <li class="main__facts-item">
-                <div class="main__fact-item-container">
-                    <div class="main__fact-img-wrap">
-                        <img src="/dev_img/facts_2.png" alt="" class="main__fact-img">
-                    </div>
-                    <p class="main__fact-text">Качественная установка и&nbsp;вызов замерщика</p>
-                </div>
-            </li>
-            <li class="main__facts-item">
-                <div class="main__fact-item-container">
-                    <div class="main__fact-img-wrap">
-                        <img src="/dev_img/facts_3.png" alt="" class="main__fact-img">
-                    </div>
-                    <p class="main__fact-text">Бесплатная консультация и&nbsp;рассчет</p>
-                </div>
-            </li>
-            <li class="main__facts-item">
-                <div class="main__fact-item-container">
-                    <div class="main__fact-img-wrap">
-                        <img src="/dev_img/facts_4.png" alt="" class="main__fact-img">
-                    </div>
-                    <p class="main__fact-text">Новый профиль CONCH 70&nbsp;серии</p>
-                </div>
-            </li>
-            <li class="main__facts-item">
-                <div class="main__fact-item-container">
-                    <div class="main__fact-img-wrap">
-                        <img src="/dev_img/facts_5.png" alt="" class="main__fact-img">
-                    </div>
-                    <p class="main__fact-text">Доставка по городу и&nbsp;в&nbsp;область</p>
-                </div>
-            </li>
+            @endforeach
         </ul>
         <ul class="main__profile-list">
+            @foreach($examples->examples_list_group as $item)
             <li class="main__profile-item">
                 <div class="main__profile-img-wrap">
-                    <img src="/dev_img/profile_1.png" alt="" class="main__profile-img">
+                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="main__profile-img">
                 </div>
-                <p class="main__profile-name">CONCH 60 <br> 3-ех камерный</p>
-                <p class="main__profile-price">от 20 000 <span class="tenge">d</span>/м²</p>
+                <p class="main__profile-name">{{$item->text}}</p>
+                <p class="main__profile-price">от {{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/м²</p>
             </li>
-            <li class="main__profile-item">
-                <div class="main__profile-img-wrap">
-                    <img src="/dev_img/profile_2.png" alt="" class="main__profile-img">
-                </div>
-                <p class="main__profile-name">CONCH 60 <br> 4-ех камерный</p>
-                <p class="main__profile-price">от 20 000 <span class="tenge">d</span>/м²</p>
-            </li>
-            <li class="main__profile-item">
-                <div class="main__profile-img-wrap">
-                    <img src="/dev_img/profile_3.png" alt="" class="main__profile-img">
-                </div>
-                <p class="main__profile-name">CONCH 70 <br> 5-ти камерный</p>
-                <p class="main__profile-price">от 20 000 <span class="tenge">d</span>/м²</p>
-            </li>
-            <li class="main__profile-item">
-                <div class="main__profile-img-wrap">
-                    <img src="/dev_img/profile_4.png" alt="" class="main__profile-img">
-                </div>
-                <p class="main__profile-name">Veratec</p>
-                <p class="main__profile-price">от 30 000 <span class="tenge">d</span>/м²</p>
-            </li>
-            <li class="main__profile-item">
-                <div class="main__profile-img-wrap">
-                    <img src="/dev_img/profile_5.png" alt="" class="main__profile-img">
-                </div>
-                <p class="main__profile-name">WSD</p>
-                <p class="main__profile-price">от 45 000 <span class="tenge">d</span>/м²</p>
-            </li>
+            @endforeach
         </ul>
         <div class="main__examples examples">
             <h3 class="examples__title">Цены на пластиковые окна</h3>
@@ -207,61 +150,22 @@
 
     <div class="advantages">
         <div class="advantages__container">
-            <h2 class="advantages__title">Преимущества</h2>
-            <p class="advantages__subtitle">Благодаря сложной, многоэлементной конструкции металлопластиковые окна обладают
-                массой преимуществ:</p>
+            <h2 class="advantages__title">{{$advantages->title}}</h2>
+            <p class="advantages__subtitle">{{$advantages->sub_title}}</p>
             <ul class="advantages__list">
+                @foreach($examples->examples_list_group as $item)
                 <li class="advantages__item">
                     <div class="advantages__item-img-wrap">
-                        <img src="/dev_img/advantage_1.png" alt="" class="advantages__item-img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="advantages__item-img">
                     </div>
                     <div class="advantages__item-text-wrap">
-                        <p class="advantages__item-name">Энергоэкономичность.</p>
-                        <p class="advantages__item-text">Пластиковые изделия обладают отличными теплоизоляционными свойствами, что способствует меньшим затратам энергии.</p>
+                        <p class="advantages__item-name">{{$item->advantage_title}}</p>
+                        <p class="advantages__item-text">{{$item->text}}</p>
                     </div>
                 </li>
-                <li class="advantages__item">
-                    <div class="advantages__item-img-wrap">
-                        <img src="/dev_img/advantage_2.png" alt="" class="advantages__item-img">
-                    </div>
-                    <div class="advantages__item-text-wrap">
-                        <p class="advantages__item-name">Звукоизоляционность.</p>
-                        <p class="advantages__item-text">Наличие воздушных камер предотвращает проникновение каких-либо посторонних шумов извне. Поэтому, пластиковые
-                            окна Астана и ее жители считают правильны решением при обустройстве своих квартир и домов.</p>
-                    </div>
-                </li>
-                <li class="advantages__item">
-                    <div class="advantages__item-img-wrap">
-                        <img src="/dev_img/advantage_3.png" alt="" class="advantages__item-img">
-                    </div>
-                    <div class="advantages__item-text-wrap">
-                        <p class="advantages__item-name">Долговечность.</p>
-                        <p class="advantages__item-text">Эксплуатационный срок металлопластиковых устройств весьма продолжителен. Многие фирмы пластиковых окон
-                            гарантируют сорокалетний срок службы своей высокотехнологичной продукции, при этом их изделия сохраняют внешний
-                            первоначальный вид.</p>
-                    </div>
-                </li>
-                <li class="advantages__item">
-                    <div class="advantages__item-img-wrap">
-                        <img src="/dev_img/advantage_4.png" alt="" class="advantages__item-img">
-                    </div>
-                    <div class="advantages__item-text-wrap">
-                        <p class="advantages__item-name">Удобство при обслуживании.</p>
-                        <p class="advantages__item-text">Пластиковые окна Казахстан и его домохозяйки оценили за их практичность, доступность при уходе. Пластик и стеклопакет
-                            достаточно иногда протереть, что вернет им первозданный вид.</p>
-                    </div>
-                </li>
-                <li class="advantages__item">
-                    <div class="advantages__item-img-wrap">
-                        <img src="/dev_img/advantage_5.png" alt="" class="advantages__item-img">
-                    </div>
-                    <div class="advantages__item-text-wrap">
-                        <p class="advantages__item-name">Привлекательный внешний вид.</p>
-                        <p class="advantages__item-text">Вы решились купить пластиковые окна – в результате этого получите не только отличные по своему виду изделия, но
-                            и улучшите комфортность своего проживания.</p>
-                    </div>
-                </li>
+                @endforeach
             </ul>
         </div>
     </div>
+    @include('front.seo-text', ['seo_text' => $slider->seo_text])
 @endsection
