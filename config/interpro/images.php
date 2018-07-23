@@ -18,6 +18,14 @@ return [
         'resizes' => ['preview']
     ],
 
+    'main_windows_price_list.img' => [
+        'resizes' => ['preview']
+    ],
+
+    'main_balcony_list.img' => [
+        'resizes' => ['preview']
+    ],
+
     'advantages_list.img' => [
         'resizes' => ['preview']
     ],
