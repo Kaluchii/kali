@@ -13,7 +13,7 @@
 
 Route::get('/',                 'FrontController@getIndex');
 Route::get('/about',         'FrontController@getAbout');
-Route::get('/ru/185-uslugi.html',         'FrontController@getServices');
+Route::get('/services',         'FrontController@getServices');
 Route::get('/guarantee',         'FrontController@getGuarantee');
 Route::get('/sale',         'FrontController@getSale');
 Route::get('/windows-price',         'FrontController@getWindowsPrices');

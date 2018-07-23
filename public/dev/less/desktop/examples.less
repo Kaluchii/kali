@@ -49,10 +49,11 @@
 
   &__type{
     margin-right: 7px;
+    display: inline-block;
     cursor: pointer;
     user-select: none;
 
-    & + &{
+    & + &:not(.examples__type--first){
       &::before{
         content: '/';
         padding-right: 7px;

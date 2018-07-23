@@ -23,7 +23,7 @@
                     <div class="application__validation-wrap">
                         <div class="custom-select">
                             <select class="js_form_input" name="time">
-                                <option value="Время">Время</option>
+                                <option value="">Время</option>
                                 @foreach($all_site->times_for_call_group as $item)
                                     <option value="{{$item->text}}">{{$item->text}}</option>
                                 @endforeach

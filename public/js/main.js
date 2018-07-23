@@ -44,6 +44,29 @@ $(document).ready(function(){
         midClick: true
     });
 
+    $('.js_windows_type').on('click', function (e) {
+        e.stopPropagation();
+        $('.js_window').hide();
+        $('.js_window[data-parent-id='+ $(this).data('id') +']').show();
+    });
+
+    $('.js_balcony_category').on('click', function (e) {
+        e.stopPropagation();
+        $('.js_balcony_type').hide();
+        $('.js_balcony_type[data-parent-id='+ $(this).data('id') +']').show();
+        $('.js_balcony_types').find('.js_balcony_type').filter(':visible:first').addClass('examples__type--first').trigger('click');
+    });
+
+    $('.js_balcony_type').on('click', function (e) {
+        e.stopPropagation();
+        $('.js_balcony').hide();
+        $('.js_balcony[data-parent-id='+ $(this).data('id') +']').show();
+    });
+
+    // $('#js_windows_types').quicksand( $('#js_windows_list li'), function() {
+    //     // callback code
+    // });
+
 
     $window.on('resize', function () {
         var $this = $(this);

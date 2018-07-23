@@ -48,60 +48,77 @@
             </li>
             @endforeach
         </ul>
+
+
         <div class="main__examples examples">
             <h3 class="examples__title">{{$main_windows_price->title}}</h3>
-            <div class="examples__types">
+            <div class="examples__types js_windows_types">
                 @php $isFirst = true @endphp
                 @foreach($main_windows_price->main_windows_types_group as $item)
-                <label class="examples__type">
+                <label class="examples__type js_windows_type" data-id="{{$item->id}}">
                     <input type="radio" @if($isFirst)checked @endif @php $isFirst = false @endphp name="windows" class="examples__type-input">
                     <span class="examples__text examples__text--type">{{$item->type_name}}</span>
                 </label>
                 @endforeach
             </div>
-            <ul class="examples__list">
-                <li class="examples__item">
-                    <div class="examples__img-wrap">
-                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="examples__img">
-                    </div>
-                    <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/окно</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
-                </li>
+            <ul class="examples__list js_windows_list">
+                @php $isFirst = true @endphp
+                @foreach($main_windows_price->main_windows_types_group as $type)
+                    @foreach($type->main_windows_price_list_group as $item)
+                    <li class="examples__item js_window" data-parent-id="{{$type->id}}" @if(!$isFirst)style="display:none" @endif>
+                        <div class="examples__img-wrap">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="examples__img">
+                        </div>
+                        <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/окно</div>
+                        <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
+                    </li>
+                    @endforeach
+                    @php $isFirst = false @endphp
+                @endforeach
             </ul>
         </div>
+
         <div class="main__examples examples">
             <h3 class="examples__title">{{$main_balcony_price->title}}</h3>
             <div class="examples__categories">
                 @php $isFirst = true @endphp
                 @foreach($main_balcony_price->main_balcony_categories_group as $item)
-                    <label class="examples__category">
+                    <label class="examples__category js_balcony_category" data-id="{{$item->id}}">
                         <input type="radio" @if($isFirst)checked @endif @php $isFirst = false @endphp name="balcony_cat" class="examples__category-input">
                         <span class="examples__text">{{$item->category_name}}</span>
                     </label>
                 @endforeach
             </div>
-            <div class="examples__types">
-                <label class="examples__type">
-                    <input type="radio" checked name="balcony" class="examples__type-input">
-                    <span class="examples__text examples__text--type">CONCH трехкамерный 60 серия</span>
-                </label>
-                <label class="examples__type">
-                    <input type="radio" name="balcony" class="examples__type-input">
-                    <span class="examples__text examples__text--type">Veratec трехкамерный</span>
-                </label>
-                <label class="examples__type">
-                    <input type="radio" name="balcony" class="examples__type-input">
-                    <span class="examples__text examples__text--type">ARtec трехкамерный</span>
-                </label>
+            <div class="examples__types js_balcony_types">
+                @php $isFirstElement = true;
+                     $isFirstType = true;
+                @endphp
+                @foreach($main_balcony_price->main_balcony_categories_group as $category)
+                    @foreach($category->main_balcony_types_group as $item)
+                    <label class="examples__type js_balcony_type" data-id="{{$item->id}}" data-parent-id="{{$category->id}}" @if(!$isFirstType)style="display:none" @endif>
+                        <input type="radio" @if($isFirstElement)checked @endif @php $isFirstElement = false @endphp name="balcony" class="examples__type-input">
+                        <span class="examples__text examples__text--type">{{$item->type_name}}</span>
+                    </label>
+                    @endforeach
+                    @php $isFirstType = false @endphp
+                @endforeach
             </div>
             <ul class="examples__list">
-                <li class="examples__item">
+                @php $isFirst = true @endphp
+                @foreach($main_balcony_price->main_balcony_categories_group as $category)
+                @foreach($category->main_balcony_types_group as $type)
+                @foreach($type->main_balcony_list_group as $item)
+                <li class="examples__item js_balcony" data-parent-id="{{$type->id}}" @if(!$isFirst)style="display:none" @endif>
                     <div class="examples__img-wrap">
                         <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="examples__img">
                     </div>
                     <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/балкон</div>
                     <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
                 </li>
+                @endforeach
+                @php $isFirst = false @endphp
+                @endforeach
+                @endforeach
             </ul>
         </div>
     </div>

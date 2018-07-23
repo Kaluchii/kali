@@ -30,33 +30,34 @@ class FrontController extends Controller
 
 
     public function getIndex(){
-      $this->extract->tuneSelection('main_windows_types')->like('show', true)->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('main_balcony_categories')->like('show', true)->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('main_balcony_types')->like('show', true)->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('slides')->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('slider_facts')->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('facts_list')->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('examples_list')->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('advantages_list')->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('main_windows_price_list')->sortBy('sorter','ASC');
-      $this->extract->tuneSelection('main_balcony_list')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('main_windows_types')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('main_balcony_categories')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('main_balcony_types')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('slides')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('slider_facts')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('facts_list')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('examples_list')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('advantages_list')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('main_windows_price_list')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('main_balcony_list')->sortBy('sorter','ASC');
 
-      $slider = $this->extract->getBlock('slider');
-      $facts = $this->extract->getBlock('facts');
-      $examples = $this->extract->getBlock('examples');
-      $advantages = $this->extract->getBlock('advantages');
-      $main_dop_text = $this->extract->getBlock('main_dop_text');
-      $main_windows_price = $this->extract->getBlock('main_windows_price');
-      $main_balcony_price = $this->extract->getBlock('main_balcony_price');
-      return view('front.index.index', [
-        'slider' => $slider,
-        'facts' => $facts,
-        'examples' => $examples,
-        'advantages' => $advantages,
-        'main_dop_text' => $main_dop_text,
-        'main_windows_price' => $main_windows_price,
-        'main_balcony_price' => $main_balcony_price,
-      ]);
+        $slider = $this->extract->getBlock('slider');
+        $facts = $this->extract->getBlock('facts');
+        $examples = $this->extract->getBlock('examples');
+        $advantages = $this->extract->getBlock('advantages');
+        $main_dop_text = $this->extract->getBlock('main_dop_text');
+        $main_windows_price = $this->extract->getBlock('main_windows_price');
+        $main_balcony_price = $this->extract->getBlock('main_balcony_price');
+
+        return view('front.index.index', [
+            'slider' => $slider,
+            'facts' => $facts,
+            'examples' => $examples,
+            'advantages' => $advantages,
+            'main_dop_text' => $main_dop_text,
+            'main_windows_price' => $main_windows_price,
+            'main_balcony_price' => $main_balcony_price,
+        ]);
     }
 
     public function getServices(){
