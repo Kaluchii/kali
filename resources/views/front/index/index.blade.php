@@ -159,7 +159,7 @@
                         <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="advantages__item-img">
                     </div>
                     <div class="advantages__item-text-wrap">
-                        <p class="advantages__item-name">{{$item->advantage_title}}</p>
+                        {{--<p class="advantages__item-name">{{$item->advantage_title}}</p>--}}
                         <p class="advantages__item-text">{{$item->text}}</p>
                     </div>
                 </li>
