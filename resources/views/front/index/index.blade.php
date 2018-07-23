@@ -49,71 +49,36 @@
             @endforeach
         </ul>
         <div class="main__examples examples">
-            <h3 class="examples__title">Цены на пластиковые окна</h3>
+            <h3 class="examples__title">{{$main_windows_price->title}}</h3>
             <div class="examples__types">
+                @php $isFirst = true @endphp
+                @foreach($main_windows_price->main_windows_types_group as $item)
                 <label class="examples__type">
-                    <input type="radio" checked name="windows" class="examples__type-input">
-                    <span class="examples__text examples__text--type">CONCH 60 3-ех камерный</span>
+                    <input type="radio" @if($isFirst)checked @endif @php $isFirst = false @endphp name="windows" class="examples__type-input">
+                    <span class="examples__text examples__text--type">{{$item->type_name}}</span>
                 </label>
-                <label class="examples__type">
-                    <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text examples__text--type">CONCH 60 4-ех камерный</span>
-                </label>
-                <label class="examples__type">
-                    <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text examples__text--type">CONCH 70 5-ти камерный</span>
-                </label>
-                <label class="examples__type">
-                    <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text examples__text--type">Veratec</span>
-                </label>
-                <label class="examples__type">
-                    <input type="radio" name="windows" class="examples__type-input">
-                    <span class="examples__text examples__text--type">WDS</span>
-                </label>
+                @endforeach
             </div>
             <ul class="examples__list">
                 <li class="examples__item">
                     <div class="examples__img-wrap">
-                        <img src="/dev_img/example_window_1.png" alt="" class="examples__img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="examples__img">
                     </div>
-                    <div class="examples__price">33 925 <span class="tenge">d</span>/окно</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">67 850 <span class="tenge">d</span></span></p>
-                </li>
-                <li class="examples__item">
-                    <div class="examples__img-wrap">
-                        <img src="/dev_img/example_window_2.png" alt="" class="examples__img">
-                    </div>
-                    <div class="examples__price">33 925 <span class="tenge">d</span>/окно</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">67 850 <span class="tenge">d</span></span></p>
-                </li>
-                <li class="examples__item">
-                    <div class="examples__img-wrap">
-                        <img src="/dev_img/example_window_3.png" alt="" class="examples__img">
-                    </div>
-                    <div class="examples__price">33 925 <span class="tenge">d</span>/окно</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">67 850 <span class="tenge">d</span></span></p>
-                </li>
-                <li class="examples__item">
-                    <div class="examples__img-wrap">
-                        <img src="/dev_img/example_window_4.png" alt="" class="examples__img">
-                    </div>
-                    <div class="examples__price">33 925 <span class="tenge">d</span>/окно</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">67 850 <span class="tenge">d</span></span></p>
+                    <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/окно</div>
+                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
                 </li>
             </ul>
         </div>
         <div class="main__examples examples">
-            <h3 class="examples__title">Цены на балконы</h3>
+            <h3 class="examples__title">{{$main_balcony_price->title}}</h3>
             <div class="examples__categories">
-                <label class="examples__category">
-                    <input type="radio" checked name="balcony_cat" class="examples__category-input">
-                    <span class="examples__text">Г - Образные балконы</span>
-                </label>
-                <label class="examples__category">
-                    <input type="radio" name="balcony_cat" class="examples__category-input">
-                    <span class="examples__text">П - Образные балконы</span>
-                </label>
+                @php $isFirst = true @endphp
+                @foreach($main_balcony_price->main_balcony_categories_group as $item)
+                    <label class="examples__category">
+                        <input type="radio" @if($isFirst)checked @endif @php $isFirst = false @endphp name="balcony_cat" class="examples__category-input">
+                        <span class="examples__text">{{$item->category_name}}</span>
+                    </label>
+                @endforeach
             </div>
             <div class="examples__types">
                 <label class="examples__type">
@@ -132,17 +97,10 @@
             <ul class="examples__list">
                 <li class="examples__item">
                     <div class="examples__img-wrap">
-                        <img src="/dev_img/example_window_5.png" alt="" class="examples__img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="examples__img">
                     </div>
-                    <div class="examples__price">85 925 <span class="tenge">d</span>/балкон</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">111 350 <span class="tenge">d</span></span></p>
-                </li>
-                <li class="examples__item">
-                    <div class="examples__img-wrap">
-                        <img src="/dev_img/example_window_6.png" alt="" class="examples__img">
-                    </div>
-                    <div class="examples__price">87 925 <span class="tenge">d</span>/балкон</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">167 850 <span class="tenge">d</span></span></p>
+                    <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/балкон</div>
+                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
                 </li>
             </ul>
         </div>
