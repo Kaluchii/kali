@@ -12,7 +12,7 @@
                 <div class="box-body">
                     <div class="form-group">
                         <label>Название</label>
-                        <input class="form-control string"
+                        <input class="form-control string js-slug-source"
                                type="text" placeholder=""
                                value="{{$item->component_name_field}}"
                                data-name="component_name"
@@ -22,7 +22,7 @@
                     </div>
                     <div class="form-group">
                         <label>Вид ссылки в адресной строке</label>
-                        <input class="form-control string"
+                        <input class="form-control string slug"
                                type="text" placeholder=""
                                value="{{$item->slug_field}}"
                                data-name="slug"
