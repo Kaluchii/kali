@@ -26,8 +26,15 @@ var texteditor = (function () {
                     ['style', ['style', 'bold', 'italic', 'clear']],
                     ['insert', ['picture', 'link', 'table']],
                     ['paragraph', ['ul', 'ol', 'paragraph']],
+                    ['color', ['color']],
+                    ['hr', ['hr']],
                     ['misc', ['fullscreen', 'codeview', 'cleaner']]
                 ],
+                styleTags : ['p', 'h2', 'h3', 'h4', 'h5'],
+                insertTableMaxSize: {
+                    col: 15,
+                    row: 50
+                },
                 cleaner:{
                     notTime: 2400, // Time to display Notifications.
                     action: 'button', // both|button|paste 'button' only cleans via toolbar button, 'paste' only clean when pasting content, both does both options.
