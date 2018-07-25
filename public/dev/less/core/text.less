@@ -12,6 +12,8 @@
   }
 
   p{
+    margin: 20px 0;
+
     strong, b{
       font-weight: 600;
     }
@@ -20,26 +22,31 @@
     font-style: italic;
   }
   h1{
+    margin: 35px 0;
     font-size: 48px;
     font-weight: 600;
     line-height: 1.1;
   }
   h2{
+    margin: 40px 0;
     font-size: 40px;
     font-weight: 600;
     line-height: 1.1;
   }
   h3{
+    margin: 35px 0;
     font-size: 36px;
     font-weight: 600;
     line-height: 1.1;
   }
   h4{
+    margin: 30px 0;
     font-size: 30px;
     font-weight: 600;
     line-height: 1.1;
   }
   h5{
+    margin: 25px 0;
     font-size: 26px;
     font-weight: 600;
     line-height: 1.1;
@@ -54,21 +61,28 @@
     list-style-type: disc;
     margin-left: 15px;
     li{
-      margin-left: 5px;
+      margin-left: 8px;
       list-style-type: disc;
-      margin-bottom: 5px;
       line-height: 1.5;
       font-size: inherit;
+
+      & + &{
+        margin-top: 13px;
+      }
     }
   }
   ol{
     list-style-type: decimal;
     margin-left: 15px;
     li{
-      margin-left: 5px;
+      margin-left: 8px;
       list-style-type: decimal;
       line-height: 1.5;
       font-size: inherit;
+
+      & + &{
+        margin-top: 13px;
+      }
     }
   }
   a{
