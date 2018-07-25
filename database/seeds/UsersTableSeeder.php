@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
         \Illuminate\Support\Facades\DB::table('users')->insert([
             'name' => 'UserAdmin',
             'email' => 'admin@kali.kz',
-            'password' => bcrypt('G7nJ59AffF2'),
+            'password' => bcrypt(''),
         ]);
     }
 }
