@@ -230,7 +230,7 @@ return [
                 'string' => ['type_name'],
                 'image' => ['img'],
                 'int' => ['imposts_count'],
-                'float' => ['price'],
+                'float' => ['furniture_price'],
                 'product_categories' => ['superior']
             ],
             'profiles' => [
