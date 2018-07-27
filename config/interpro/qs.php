@@ -233,6 +233,21 @@ return [
                 'float' => ['price'],
                 'product_categories' => ['superior']
             ],
+            'profiles' => [
+                'float' => ['price', 'price_color']
+            ],
+            'double_glazed_windows' => [
+                'float' => ['price']
+            ],
+            'mosquito_net' => [
+                'float' => ['price', 'price_color']
+            ],
+            'outflow' => [
+                'float' => ['price']
+            ],
+            'window_sill' => [
+                'float' => ['price', 'price_color']
+            ],
         ]
     ],
 
