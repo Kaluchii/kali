@@ -19,12 +19,15 @@
 }
 .select-selected {
   width: 100%;
-  padding: 9px 25px;
+  padding: 9px 40px 9px 25px;
   font-size: 18px;
   border: 1px solid #afcaea;
   border-radius: 4px;
   color: @main-black;
   background-color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   cursor: pointer;
   transition: .3s;
 
@@ -68,5 +71,6 @@
   display: none;
 }
 .select-items div:hover, .same-as-selected {
-  background-color: #afcaea;
+  background-color: @main-orange;
+  color: #ffffff !important;
 }

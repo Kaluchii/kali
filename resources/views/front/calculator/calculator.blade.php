@@ -16,24 +16,24 @@
         <div class="calculator__form-wrap">
             <div class="calculator__window-name">Двухсекционное окно с простым открыванием</div>
             <div class="calculator__form">
-                <div class="calculator__col-1">
+                <div class="calculator__row-1">
                     <div class="calculator__size">
                         <div class="calculator__size-field-wrap">
-                            <input type="text" id="window-width" class="calculator__size-field js_window_width" value="1360">
+                            <input type="text" data-mask="0000" id="window-width" class="calculator__size-field js_window_width" value="1360">
                             <label class="calculator__size-field-label" for="window-width">мм</label>
                         </div>
                         <div class="calculator__size-field-wrap">
-                            <input type="text" id="window-height" class="calculator__size-field js_window_height" value="1150">
+                            <input type="text" data-mask="0000" id="window-height" class="calculator__size-field js_window_height" value="1150">
                             <label class="calculator__size-field-label" for="window-height">мм</label>
                         </div>
                     </div>
                     <div class="calculator__window-img-wrap">
-                        <img src="#" alt="" class="calculator__img">
+                        <img src="/dev_img/example_window_2.png" alt="" class="calculator__img">
                     </div>
                 </div>
-                <div class="calculator__col-2">
+                <div class="calculator__row-2">
                     <div class="calculator__fields">
-                        <div class="calculator__fields-col-1">
+                        <div class="calculator__fields-col">
                             <div class="calculator__field">
                                 <label class="calculator__field-name">Цвет</label>
                                 <div class="calculator__field-input custom-select">
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="calculator__fields-col-2">
+                        <div class="calculator__fields-col">
                             <div class="calculator__field">
                                 <label class="calculator__field-name">Подоконник</label>
                                 <div class="calculator__field-input custom-select">
@@ -92,21 +92,21 @@
                                 </div>
                             </div>
                             <div class="calculator__field">
-                                <label class="calculator__field-name">
+                                <label class="calculator__field-name calculator__field-name--checkbox">
                                     <input type="checkbox" class="calculator__checkbox-input">
                                     <span class="calculator__checkbox-text">Москитная сетка</span>
                                 </label>
                             </div>
+                            <div class="calculator__btn-wrap">
+                                <button class="calculator__btn button button--orange-border-sqare">Рассчитать стоимость</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="calculator__btn-wrap">
-                        <button class="calculator__btn button">Рассчитать стоимость</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="calculator__window-price">Цена выбранного окна <span class="js_window_price">135 700</span> тенге</div>
-        <p class="calculator__important-text"></p>
+        <div class="calculator__window-price">Цена выбранного окна <span class="calculator__price-num js_window_price">135 700</span>&nbsp;тенге</div>
+        <p class="calculator__important-text">{{$calculator->under_price}}</p>
     </div>
     @include('front.seo-text', ['seo_text' => $calculator->seo_text])
 @endsection

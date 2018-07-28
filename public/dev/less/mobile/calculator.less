@@ -7,12 +7,68 @@
     &__subtitle{
       font-size: 24px;
     }
+
+    &__window-name{
+      font-size: 20px;
+    }
+
+    &__field-input{
+      width: 290px;
+    }
+
+    &__field-name{
+      width: 120px;
+      font-size: 18px;
+
+      &--checkbox{
+        width: auto;
+      }
+    }
+
+    &__checkbox-text{
+      &::before{
+        top: 1px;
+      }
+
+      &::after{
+        top: 6px;
+      }
+    }
+
+    &__window-price{
+      font-size: 26px;
+    }
+
+    &__important-text{
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 950px) {
+  .calculator{
+    &__field{
+      flex-direction: column;
+      align-items: flex-start;
+      height: 70px;
+    }
+
+    &__field-name{
+      &--checkbox{
+        margin-top: 39px;
+      }
+    }
+
+    &__field-input{
+      margin-top: 7px;
+    }
   }
 }
 
 @media all and (max-width: 768px) {
   .calculator{
-    padding: 0 15px 60px;
+    padding: 0 15px 45px;
 
     &__title{
       font-size: 28px;
@@ -21,6 +77,86 @@
     &__subtitle{
       margin-top: 10px;
       font-size: 20px;
+    }
+
+    &__window-name{
+      font-size: 18px;
+    }
+
+    &__img{
+      max-height: 190px;
+    }
+
+    &__window-price{
+      padding: 20px 25px;
+      font-size: 22px;
+    }
+
+    &__important-text{
+      margin-top: 25px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media all and (max-width: 680px) {
+  .calculator{
+    &__img{
+      max-height: 170px;
+    }
+
+    &__fields-col{
+      width: 47.5%;
+
+      & + &{
+        margin-left: 5%;
+        padding-left: 0;
+      }
+    }
+
+    &__field-input{
+      width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 530px) {
+  .calculator{
+    &__img{
+      max-height: 140px;
+    }
+
+    &__fields{
+      flex-direction: column;
+    }
+
+    &__fields-col{
+      width: 100%;
+      max-width: 320px;
+
+      & + &{
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+
+    &__field{
+      height: auto;
+    }
+
+    &__field-name{
+      &--checkbox{
+        margin-top: 15px;
+      }
+    }
+
+    &__window-price{
+      padding: 20px 25px;
+      font-size: 20px;
+    }
+
+    &__important-text{
+      font-size: 14px;
     }
   }
 }

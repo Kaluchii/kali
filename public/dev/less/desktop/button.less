@@ -49,7 +49,20 @@
     }
   }
 
-  &--orange-border-sqare{}
+  &--orange-border-sqare{
+    border: 1px solid @main-orange;
+    border-radius: 4px;
+    color: @main-blue;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: 600;
+
+    &:hover, &:focus{
+      color: #ffffff;
+      border-color: @main-orange;
+      background-color: @main-orange;
+    }
+  }
 
   &--white-border{
     padding: 11px 35px;
