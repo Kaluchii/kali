@@ -77,6 +77,23 @@
                     <i class="fa fa-circle-o"></i> <span>Контакты</span>
                 </a>
             </li>
+            <li class="treeview">
+                <a href="#"><i class="fa fa-angle-double-right"></i> <span>Калькулятор</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/adm/calculator"><i class="fa fa-circle-o"></i> <span>Категории изделий</span></a></li>
+                    <li><a href="/adm/calculator-components/colors"><i class="fa fa-circle-o"></i> <span>Цвета изделий</span></a></li>
+                    <li><a href="/adm/calculator-components/profiles"><i class="fa fa-circle-o"></i> <span>Профили</span></a></li>
+                    <li><a href="/adm/calculator-components/glaz"><i class="fa fa-circle-o"></i> <span>Стеклопакеты</span></a></li>
+                    <li><a href="/adm/calculator-components/sill"><i class="fa fa-circle-o"></i> <span>Подоконники</span></a></li>
+                    <li><a href="/adm/calculator-components/outflow"><i class="fa fa-circle-o"></i> <span>Отливы</span></a></li>
+                    {{--<li><a href="/adm/calculator-components/slope"><i class="fa fa-circle-o"></i> <span>Откосы</span></a></li>--}}
+                    <li><a href="/adm/calculator-components/net"><i class="fa fa-circle-o"></i> <span>Москитные сетки</span></a></li>
+                </ul>
+            </li>
             <li>
                 <a href="/adm/post">
                     <i class="fa fa-circle-o"></i> <span>Настройки почты</span>

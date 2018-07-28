@@ -24,6 +24,7 @@ Route::get('/products/{slug}',      'FrontController@getProductsItem');
 Route::get('/components',         'FrontController@getComponents');
 Route::get('/components/{slug}',      'FrontController@getComponentsCategory');
 Route::get('/components/{other}/{slug}',      'FrontController@getComponentsItem');
+Route::get('/calculator',                   'FrontController@getCalculator');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');
@@ -66,6 +67,16 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/services',           'AdminController@getServices');
     Route::get('/about',                   'AdminController@getAbout');
     Route::get('/contacts',              'AdminController@getContacts');
+    Route::get('/calculator',                    'AdminController@getCalculator');
+    Route::get('/calculator/{id}',                    'AdminController@getCalculatorCategory');
+    Route::get('/calculator/{other}/{id}',            'AdminController@getCalculatorType');
+    Route::get('/calculator-components/net',         'AdminController@getCalculatorComponentsNet');
+    Route::get('/calculator-components/colors',         'AdminController@getCalculatorComponentsColors');
+    Route::get('/calculator-components/profiles',         'AdminController@getCalculatorComponentsProfiles');
+    Route::get('/calculator-components/glaz',         'AdminController@getCalculatorComponentsGlaz');
+    Route::get('/calculator-components/outflow',         'AdminController@getCalculatorComponentsOutflow');
+    Route::get('/calculator-components/sill',         'AdminController@getCalculatorComponentsSill');
+    Route::get('/calculator-components/slope',         'AdminController@getCalculatorComponentsSlope');
     Route::get('/post',                     'AdminController@getPost');
     Route::get('/scripts',                     'AdminController@getScripts');
 

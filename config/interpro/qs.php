@@ -220,7 +220,8 @@ return [
     ],
 
     'calculator' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title', 'under_price'],
+        'string' => ['sub_title'],
+        'text' => ['under_price'],
         'groups' => [
             'product_categories' => [
                 'string' => ['category_name'],
@@ -230,22 +231,36 @@ return [
                 'string' => ['type_name'],
                 'image' => ['img'],
                 'int' => ['imposts_count'],
-                'float' => ['furniture_price'],
+                'float' => ['furniture_price', 'furniture_price_color'],
                 'product_categories' => ['superior']
             ],
+        ]
+    ],
+
+    'for_calculator' => [
+        'float' => ['net_price', 'net_price_color'],
+        'groups' => [
+            'colors' => [
+                'string' => ['color_name'],
+            ],
             'profiles' => [
+                'string' => ['component_name'],
                 'float' => ['price', 'price_color']
             ],
             'double_glazed_windows' => [
+                'string' => ['component_name'],
                 'float' => ['price']
             ],
-            'mosquito_net' => [
-                'float' => ['price', 'price_color']
-            ],
             'outflow' => [
+                'string' => ['component_name'],
                 'float' => ['price']
             ],
             'window_sill' => [
+                'string' => ['component_name'],
+                'float' => ['price', 'price_color']
+            ],
+            'slope' => [
+                'string' => ['component_name'],
                 'float' => ['price', 'price_color']
             ],
         ]

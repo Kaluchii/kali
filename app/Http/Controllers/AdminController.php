@@ -31,6 +31,12 @@ class AdminController extends Controller
         $this->extract->tuneSelection('balcony_price_list')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('firms_list_1')->sortBy('sorter','DESC');
         $this->extract->tuneSelection('firms_list_2')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('colors')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('profiles')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('double_glazed_windows')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('outflow')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('window_sill')->sortBy('sorter','DESC');
+        $this->extract->tuneSelection('slope')->sortBy('sorter','DESC');
     }
 
     public function getIndex(){
@@ -273,6 +279,86 @@ class AdminController extends Controller
     public function getContacts(){
         $block = $this->extract->getBlock('contacts');
         return view('back.blocks.contacts', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculator(){
+        $block = $this->extract->getBlock('calculator');
+        return view('back.blocks.calculator', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculatorCategory( $id ){
+        $item = $this->extract->getGroupItem('product_categories', $id);
+        return view('back.groups.product_categories.product_categories', [
+            'item' => $item
+        ]);
+    }
+
+
+    public function getCalculatorType( $other, $id ){
+        $item = $this->extract->getGroupItem('product_types', $id);
+        return view('back.groups.product_types.product_types', [
+            'item' => $item
+        ]);
+    }
+
+
+    public function getCalculatorComponentsNet(){
+        $block = $this->extract->getBlock('for_calculator');
+        return view('back.blocks.for_calculator_net', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculatorComponentsColors(){
+        $block = $this->extract->getBlock('for_calculator');
+        return view('back.blocks.for_calculator_colors', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculatorComponentsProfiles(){
+        $block = $this->extract->getBlock('for_calculator');
+        return view('back.blocks.for_calculator_profiles', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculatorComponentsGlaz(){
+        $block = $this->extract->getBlock('for_calculator');
+        return view('back.blocks.for_calculator_glazes', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculatorComponentsOutflow(){
+        $block = $this->extract->getBlock('for_calculator');
+        return view('back.blocks.for_calculator_outflow', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculatorComponentsSill(){
+        $block = $this->extract->getBlock('for_calculator');
+        return view('back.blocks.for_calculator_sill', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getCalculatorComponentsSlope(){
+        $block = $this->extract->getBlock('for_calculator');
+        return view('back.blocks.for_calculator_slope', [
             'block' => $block
         ]);
     }

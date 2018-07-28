@@ -172,4 +172,13 @@ class FrontController extends Controller
             'contacts' => $contacts
         ]);
     }
+
+    public function getCalculator(){
+        $calculator = $this->extract->getBlock('calculator');
+        $calculator_components = $this->extract->getBlock('for_calculator');
+        return view('front.calculator.calculator', [
+            'calculator' => $calculator,
+            'calculator_components' => $calculator_components,
+        ]);
+    }
 }
