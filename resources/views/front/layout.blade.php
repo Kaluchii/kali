@@ -9,7 +9,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1d8ed5">
 
     <meta name="mobile-web-app-capable" content="yes">
