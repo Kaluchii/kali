@@ -63,6 +63,40 @@ $(document).ready(function(){
         $('.js_balcony[data-parent-id='+ $(this).data('id') +']').show();
     });
 
+
+    // Calculator
+
+    $('.js_calc_category').on('click', function () {
+        var popup = $(this).find('.js_calc_type_list');
+        if ( $(this).hasClass('is-open') ) {
+            $(this).removeClass('is-open');
+            popup.removeAttr('style');
+        } else {
+            $('.js_calc_type_list').removeAttr('style');
+            $('.js_calc_category').removeClass('is-active is-open');
+            $(this).addClass('is-active is-open');
+
+            var $calculator = $('.calculator'),
+                maxWidth;
+            console.log(popup.parent().offset().left, $calculator.width() - ( popup.parent().offset().left + popup.parent().width() ));
+            if ( popup.parent().offset().left > $calculator.width() - (popup.parent().offset().left + popup.parent().width()) ) {
+                popup.css({right: '0', left: 'auto'});
+                maxWidth = $calculator.width() - ($calculator.width() - ((popup.offset().left - $calculator.offset().left) + popup.outerWidth())) - parseInt($calculator.css('padding-left'));
+                popup.css({'max-width': maxWidth});
+                popup.addClass('calculator__types-list--right-align');
+            } else {
+                popup.css({left: '0', right: 'auto'});
+                maxWidth = $calculator.width() - (popup.offset().left - $calculator.offset().left) + parseInt($calculator.css('padding-left'));
+                popup.css({'max-width': maxWidth});
+                popup.removeClass('calculator__types-list--right-align');
+            }
+        }
+    });
+
+    $('.js_calc_type').on('click', function () {
+    });
+
+
     // $('#js_windows_types').quicksand( $('#js_windows_list li'), function() {
     //     // callback code
     // });

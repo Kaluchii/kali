@@ -12,6 +12,85 @@
         <h2 class="calculator__subtitle">{{$calculator->sub_title}}</h2>
         @foreach($calculator->product_categories_group as $item)
         @endforeach
+        <div class="calculator__categories-list">
+            <div class="calculator__category-item js_calc_category">
+                <div class="calculator__category-name">Односекционные окна</div>
+                <div class="calculator__category-img-wrap">
+                    <img src="/dev_img/example_window_4.png" alt="" class="calculator__category-img">
+                </div>
+                <div class="calculator__types-list js_calc_type_list">
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_4.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_4.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_4.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_4.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_4.png" alt="" class="calculator__type-img">
+                    </div>
+                </div>
+            </div>
+            <div class="calculator__category-item js_calc_category">
+                <div class="calculator__category-name">Двухсекционные окна</div>
+                <div class="calculator__category-img-wrap">
+                    <img src="/dev_img/example_window_1.png" alt="" class="calculator__category-img">
+                </div>
+                <div class="calculator__types-list js_calc_type_list">
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_2.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_1.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_2.png" alt="" class="calculator__type-img">
+                    </div>
+                </div>
+            </div>
+            <div class="calculator__category-item js_calc_category">
+                <div class="calculator__category-name">Трехсекционные окна</div>
+                <div class="calculator__category-img-wrap">
+                    <img src="/dev_img/example_window_3.png" alt="" class="calculator__category-img">
+                </div>
+                <div class="calculator__types-list js_calc_type_list js_calc_type_list1">
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_3.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_3.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_3.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_3.png" alt="" class="calculator__type-img">
+                    </div>
+                </div>
+            </div>
+            <div class="calculator__category-item js_calc_category">
+                <div class="calculator__category-name">Балконы</div>
+                <div class="calculator__category-img-wrap">
+                    <img src="/dev_img/example_window_5.png" alt="" class="calculator__category-img">
+                </div>
+                <div class="calculator__types-list js_calc_type_list">
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_5.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_6.png" alt="" class="calculator__type-img">
+                    </div>
+                    <div class="calculator__types-item js_calc_type">
+                        <img src="/dev_img/example_window_6.png" alt="" class="calculator__type-img">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="calculator__form-wrap">
             <div class="calculator__window-name">Двухсекционное окно с простым открыванием</div>

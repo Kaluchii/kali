@@ -19,7 +19,110 @@
     color: @main-black;
   }
 
+  &__categories-list{
+    margin-top: 10px;
+    margin-left: -40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__category-item{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+
+    &.is-active{
+      .calculator__category-name{
+        &::after{
+          display: block;
+        }
+      }
+    }
+
+    &.is-open{
+      .calculator__types-list{
+        display: flex;
+      }
+    }
+  }
+
+  &__category-name{
+    position: relative;
+    margin-left: 30px;
+    height: 36px;
+    max-width: 145px;
+    font-size: 18px;
+    line-height: 1;
+    color: @main-black;
+    cursor: pointer;
+    user-select: none;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -30px;
+      height: 20px;
+      width: 20px;
+      border: 1px solid #CCCCCC;
+      border-radius: 50%;
+      padding-right: 0;
+    }
+
+    &::after{
+      content: '';
+      display: none;
+      position: absolute;
+      top: 5px;
+      left: -25px;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: @main-orange;
+    }
+  }
+
+  &__category-img-wrap{
+    padding-top: 5px;
+    cursor: pointer;
+  }
+
+  &__category-img{
+    max-height: 155px;
+  }
+
+  &__types-list{
+    display: none;
+    position: absolute;
+    top: ~'calc(100% + 10px)';
+    z-index: 2;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    max-width: 600px;
+    width: 2000px;;
+    padding: 5px 15px 20px 30px;
+    background-color: #f7f7f7;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+
+    &--right-align{
+      justify-content: flex-end;
+    }
+  }
+
+  &__types-item{
+    margin-top: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  &__type-img{
+    height: 80px;
+  }
+
   &__form-wrap{
+    margin-top: 50px;
     padding: 25px 0 35px;
     border-top: 3px solid @main-orange;
     border-bottom: 3px solid @main-orange;

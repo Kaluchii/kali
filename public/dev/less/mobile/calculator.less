@@ -8,6 +8,14 @@
       font-size: 24px;
     }
 
+    &__categories-list{
+      margin-left: -25px;
+    }
+
+    &__category-item{
+      margin-left: 25px;
+    }
+
     &__window-name{
       font-size: 20px;
     }
@@ -79,6 +87,30 @@
       font-size: 20px;
     }
 
+    &__categories-list{
+      margin-top: 0;
+    }
+
+    &__category-item{
+      margin-top: 30px;
+    }
+
+    &__category-name{
+      font-size: 16px;
+
+      &::before{
+        top: -2px;
+      }
+
+      &::after{
+        top: 3px;
+      }
+    }
+
+    &__category-img{
+      max-height: 135px;
+    }
+
     &__window-name{
       font-size: 18px;
     }
@@ -101,6 +133,22 @@
 
 @media all and (max-width: 680px) {
   .calculator{
+    &__categories-list{
+      margin-left: -20px;
+    }
+
+    &__category-item{
+      margin-left: 20px;
+    }
+
+    &__category-name{
+      max-width: 130px;
+    }
+
+    &__category-img{
+      max-height: 115px;
+    }
+
     &__img{
       max-height: 170px;
     }
