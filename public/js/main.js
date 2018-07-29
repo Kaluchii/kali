@@ -143,7 +143,7 @@ $(document).ready(function(){
 
         totalPrice = (width * 2 + height * 2 + height * impostsCount) * profileCost + furniturePrice +
             (width * height * glassCost) + (flapWidth * 2 + height * 2) * flapsCount * profileCost +
-            (flapWidth * 2 + height * 2) * flapsCount * netCost +
+            (flapWidth * height) * flapsCount * netCost +
             (width + 0.015) * sillCost + (width + 0.01) * outflowCost;
 
         $('.js_window_price').text(parseInt(totalPrice).toLocaleString('ru')).addClass('is-load');

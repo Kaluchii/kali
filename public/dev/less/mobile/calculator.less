@@ -207,6 +207,17 @@
       font-size: 20px;
     }
 
+    &__price-num{
+      position: relative;
+      white-space: nowrap;
+
+      &::after{
+        top: ~'calc(50% - 11px)';
+        height: 30px;
+        background: url("/img/load.svg") no-repeat center / 33px, @main-blue;
+      }
+    }
+
     &__important-text{
       font-size: 14px;
     }
