@@ -20,6 +20,7 @@ class FrontController extends Controller
         $this->extract->tuneSelection('top_phones')->sortBy('sorter','ASC');
         $this->extract->tuneSelection('times_for_call')->sortBy('sorter','ASC');
         $this->extract->tuneSelection('partners')->sortBy('sorter','ASC');
+
         $all_site = $this->extract->getBlock('all_site');
         $scripts = $this->extract->getBlock('scripts');
         view()->share([
@@ -60,48 +61,59 @@ class FrontController extends Controller
         ]);
     }
 
+
     public function getServices(){
         $this->extract->tuneSelection('services_list')->sortBy('sorter','ASC');
+
         $services = $this->extract->getBlock('services');
         return view('front.services.services', [
             'services' => $services
         ]);
     }
 
+
     public function getGuarantee(){
         $this->extract->tuneSelection('guarantee_facts_list')->sortBy('sorter','ASC');
         $this->extract->tuneSelection('reviews_list')->sortBy('sorter','ASC');
+
         $guarantee = $this->extract->getBlock('guarantee');
         return view('front.guarantee.guarantee', [
             'guarantee' => $guarantee
         ]);
     }
 
+
     public function getSale(){
         $this->extract->tuneSelection('services_list')->sortBy('sorter','ASC');
+
         $sale = $this->extract->getBlock('sale');
         return view('front.sale.sale', [
             'sale' => $sale
         ]);
     }
 
+
     public function getWindowsPrices(){
         $this->extract->tuneSelection('windows_price_categories')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('windows_price_list')->sortBy('sorter','ASC');
+
         $prices = $this->extract->getBlock('windows_price');
         return view('front.prices.windows_prices', [
             'prices' => $prices
         ]);
     }
 
+
     public function getBalconiesPrices(){
         $this->extract->tuneSelection('balcony_price_categories')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('balcony_price_list')->sortBy('sorter','ASC');
+
         $prices = $this->extract->getBlock('balcony_price');
         return view('front.prices.balconies_prices', [
             'prices' => $prices
         ]);
     }
+
 
     public function getAbout(){
         $about = $this->extract->getBlock('about');
@@ -110,15 +122,18 @@ class FrontController extends Controller
         ]);
     }
 
+
     public function getProducts(){
         $this->extract->tuneSelection('products_list_1')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('products_list_2')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('other_products_list')->like('show', true)->sortBy('sorter','ASC');
+
         $products = $this->extract->getBlock('products');
         return view('front.products.products', [
             'products' => $products
         ]);
     }
+
 
     public function getProductsItem( $slug ){
         $product = $this->extract->getBySlug('products_list_1', $slug);
@@ -136,16 +151,20 @@ class FrontController extends Controller
         ]);
     }
 
+
     public function getComponents(){
         $this->extract->tuneSelection('components_categories')->like('show', true)->sortBy('sorter','ASC');
+
         $components = $this->extract->getBlock('components');
         return view('front.components.components', [
             'components' => $components
         ]);
     }
 
+
     public function getComponentsCategory( $slug ){
         $this->extract->tuneSelection('components_list')->like('show', true)->sortBy('sorter','ASC');
+
         $category = $this->extract->getBySlug('components_categories', $slug);
         if (is_null($category)) {
             return response(view('errors.404'), 404);
@@ -154,6 +173,7 @@ class FrontController extends Controller
             'category' => $category
         ]);
     }
+
 
     public function getComponentsItem( $other, $slug ){
         $component = $this->extract->getBySlug('components_list', $slug);
@@ -165,15 +185,27 @@ class FrontController extends Controller
         ]);
     }
 
+
     public function getContacts(){
         $this->extract->tuneSelection('contacts_list')->sortBy('sorter','ASC');
+
         $contacts = $this->extract->getBlock('contacts');
         return view('front.contacts.contacts', [
             'contacts' => $contacts
         ]);
     }
 
+
     public function getCalculator(){
+        $this->extract->tuneSelection('product_categories')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('product_types')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('colors')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('profiles')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('double_glazed_windows')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('outflow')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('window_sill')->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('slope')->sortBy('sorter','ASC');
+
         $calculator = $this->extract->getBlock('calculator');
         $calculator_components = $this->extract->getBlock('for_calculator');
         return view('front.calculator.calculator', [

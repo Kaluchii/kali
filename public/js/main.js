@@ -67,39 +67,55 @@ $(document).ready(function(){
     // Calculator
 
     $('.js_calc_category').on('click', function () {
-        var popup = $(this).find('.js_calc_type_list');
+        var $popup = $(this).find('.js_product_list');
         if ( $(this).hasClass('is-open') ) {
             $(this).removeClass('is-open');
-            popup.removeAttr('style');
+            $popup.removeAttr('style');
         } else {
-            $('.js_calc_type_list').removeAttr('style');
+            $('.js_product_list').removeAttr('style');
             $('.js_calc_category').removeClass('is-active is-open');
             $(this).addClass('is-active is-open');
 
             var $calculator = $('.calculator'),
-                maxWidth;
-            console.log(popup.parent().offset().left, $calculator.width() - ( popup.parent().offset().left + popup.parent().width() ));
-            if ( popup.parent().offset().left > $calculator.width() - (popup.parent().offset().left + popup.parent().width()) ) {
-                popup.css({right: '0', left: 'auto'});
-                maxWidth = $calculator.width() - ($calculator.width() - ((popup.offset().left - $calculator.offset().left) + popup.outerWidth())) - parseInt($calculator.css('padding-left'));
-                popup.css({'max-width': maxWidth});
-                popup.addClass('calculator__types-list--right-align');
+                maxWidth,
+                listWidth = parseFloat($popup.css('padding-left')) + parseFloat($popup.css('padding-right'));
+            $(this).find('.js_product').each(function () {
+                listWidth += $(this)[0].getBoundingClientRect().width + parseInt($(this).css('margin-right'));
+            });
+
+            if ( ($popup.parent().offset().left - $calculator.offset().left) > $calculator.width() - (($popup.parent().offset().left - $calculator.offset().left) + $popup.parent().width()) ) {
+                $popup.css({right: '0', left: 'auto'});
+                maxWidth = $calculator.width() - ($calculator.width() - (($popup.offset().left - $calculator.offset().left) + $popup.outerWidth())) - parseInt($calculator.css('padding-left'));
+                $popup.css({'max-width': maxWidth, width: listWidth});
+                $popup.addClass('calculator__types-list--right-align');
             } else {
-                popup.css({left: '0', right: 'auto'});
-                maxWidth = $calculator.width() - (popup.offset().left - $calculator.offset().left) + parseInt($calculator.css('padding-left'));
-                popup.css({'max-width': maxWidth});
-                popup.removeClass('calculator__types-list--right-align');
+                $popup.css({left: '0', right: 'auto'});
+                maxWidth = $calculator.width() - ($popup.offset().left - $calculator.offset().left) + parseInt($calculator.css('padding-left'));
+                $popup.css({'max-width': maxWidth, width: listWidth});
+                $popup.removeClass('calculator__types-list--right-align');
             }
         }
     });
 
-    $('.js_calc_type').on('click', function () {
+    $('.js_product').on('click', function () {
+        var productId = $(this).data('id');
+
+        $('.js_product').removeClass('is-active-product');
+        $(this).addClass('is-active-product');
+
+        $('.js_window_img').attr('src', productsObj[productId].imgUrl);
     });
 
 
-    // $('#js_windows_types').quicksand( $('#js_windows_list li'), function() {
-    //     // callback code
-    // });
+    function calculate() {
+        var isColored = $('.js_window_color').val() == '1',
+            profile = $('.js_window_profile').val(),
+            glass = $('.js_window_glass').val(),
+            outflow = $('.js_window_outflow').val(),
+            sill = $('.js_window_sill').val(),
+            hasNet = $('.js_window_net').is(':checked'),
+            profileCost, glassCost, outflowCost, sillCost, netCost;
+    }
 
 
     $window.on('resize', function () {

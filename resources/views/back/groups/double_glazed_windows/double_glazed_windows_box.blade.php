@@ -17,7 +17,7 @@
                    data-id="{{$item->id_field}}">
         </div>
         <div class="form-group">
-            <label>Стоимость</label>
+            <label>Стоимость 1м²</label>
             <input class="form-control float"
                    type="number" placeholder=""
                    value="{{$item->price_field}}"

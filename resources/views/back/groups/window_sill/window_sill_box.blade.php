@@ -17,7 +17,7 @@
                    data-id="{{$item->id_field}}">
         </div>
         <div class="form-group">
-            <label>Стоимость белого подоконника</label>
+            <label>Стоимость 1м белого подоконника</label>
             <input class="form-control float"
                    type="number" placeholder=""
                    value="{{$item->price_field}}"
@@ -27,7 +27,7 @@
                    data-id="{{$item->id_field}}">
         </div>
         <div class="form-group">
-            <label>Стоимость цветного подоконника</label>
+            <label>Стоимость 1м цветного подоконника</label>
             <input class="form-control float"
                    type="number" placeholder=""
                    value="{{$item->price_color_field}}"
