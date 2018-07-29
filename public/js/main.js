@@ -104,24 +104,58 @@ $(document).ready(function(){
         $(this).addClass('is-active-product');
 
         $('.js_window_img').attr('src', productsObj[productId].imgUrl);
+
+        calculate();
+    });
+
+    $('.js_calculate_price').on('click', function () {
+        calculate();
     });
 
 
     function calculate() {
         var isColored = $('.js_window_color').val() == '1',
-            profile = $('.js_window_profile').val(),
-            glass = $('.js_window_glass').val(),
-            outflow = $('.js_window_outflow').val(),
-            sill = $('.js_window_sill').val(),
+            profileId = $('.js_window_profile').val(),
+            glassId = $('.js_window_glass').val(),
+            outflowId = $('.js_window_outflow').val(),
+            sillId = $('.js_window_sill').val(),
             hasNet = $('.js_window_net').is(':checked'),
-            profileCost, glassCost, outflowCost, sillCost, netCost;
+            currProduct = productsObj[$('.is-active-product').data('id')],
+            width = $('.js_window_width').val() / 1000,
+            height = $('.js_window_height').val() / 1000,
+            profileCost, glassCost, outflowCost, sillCost, netCost, furniturePrice,
+            impostsCount, flapsCount, flapWidth, totalPrice;
+
+        profileCost = isColored ? +componentsObj['profiles'][profileId]['price_color'] : +componentsObj['profiles'][profileId]['price'];
+        glassCost = +componentsObj['glass'][glassId]['price'];
+        outflowCost = +componentsObj['outflow'][outflowId]['price'];
+        sillCost = isColored ? +componentsObj['window_sill'][sillId]['price_color'] : +componentsObj['window_sill'][sillId]['price'];
+        if (hasNet) {
+            netCost = isColored ? +componentsObj['net_price_color'] : +componentsObj['net_price'];
+        } else {
+            netCost = 0;
+        }
+        furniturePrice = isColored ? +currProduct['furniture_price_color'] : +currProduct['furniture_price'];
+        impostsCount = +currProduct['imposts_count'];
+        flapsCount = +currProduct['flaps_count'];
+
+        flapWidth = width / (impostsCount + 1);
+
+        totalPrice = (width * 2 + height * 2 + height * impostsCount) * profileCost + furniturePrice +
+            (width * height * glassCost) + (flapWidth * 2 + height * 2) * flapsCount * profileCost +
+            (flapWidth * 2 + height * 2) * flapsCount * netCost +
+            (width + 0.015) * sillCost + (width + 0.01) * outflowCost;
+
+        $('.js_window_price').text(parseInt(totalPrice)).addClass('is-load');
+        setTimeout(function () {
+            $('.js_window_price').removeClass('is-load')
+        }, 1000);
     }
 
 
-    $window.on('resize', function () {
-        var $this = $(this);
-        if ($this.width() < 768) {
-        }
+    $window.on('load', function () {
+        $('.js_product').first().trigger('click');
+        $('.js_product').first().trigger('click');
     });
 
     $('.js_menu_button').on('click', function () {

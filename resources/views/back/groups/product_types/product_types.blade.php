@@ -27,6 +27,16 @@
                        data-id="{{$item->id_field}}">
             </div>
             <div class="form-group">
+                <label>Количество створок в даном изделии</label>
+                <input class="form-control int"
+                       type="number" placeholder=""
+                       value="{{$item->flaps_count_field}}"
+                       data-name="flaps_count"
+                       data-type="int"
+                       data-block="product_types"
+                       data-id="{{$item->id_field}}">
+            </div>
+            <div class="form-group">
                 <label>Стоимость белой фурнитуры для данного изделия</label>
                 <input class="form-control float"
                        type="number" placeholder=""

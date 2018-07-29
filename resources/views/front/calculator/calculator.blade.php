@@ -13,6 +13,7 @@
         <h1 class="calculator__title">{{$calculator->title}}</h1>
         <h2 class="calculator__subtitle">{{$calculator->sub_title}}</h2>
         <div class="calculator__categories-list">
+            @php $i = 0 @endphp
             @foreach($calculator->product_categories_group as $category)
                 <div class="calculator__category-item js_calc_category">
                     <div class="calculator__category-name">{{$category->category_name}}</div>
@@ -21,7 +22,7 @@
                     </div>
                     <div class="calculator__types-list js_product_list">
                         @foreach($category->product_types_group as $item)
-                        <div class="calculator__types-item js_product" data-id="{{$item->id}}">
+                        <div class="calculator__types-item js_product @if($i++ == 0) is-active-product @endif" data-id="{{$item->id}}">
                             <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="calculator__type-img">
                         </div>
                         @endforeach
@@ -128,14 +129,14 @@
                                 </label>
                             </div>
                             <div class="calculator__btn-wrap">
-                                <button class="calculator__btn button button--orange-border-sqare">Рассчитать стоимость</button>
+                                <button class="calculator__btn button button--orange-border-sqare js_calculate_price">Рассчитать стоимость</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="calculator__window-price">Цена выбранного окна <span class="calculator__price-num js_window_price">135 700</span>&nbsp;тенге</div>
+        <div class="calculator__window-price">Цена выбранного окна <span class="calculator__price-num js_window_price"></span>&nbsp;тенге</div>
         <p class="calculator__important-text">{{$calculator->under_price}}</p>
     </div>
     @include('front.seo-text', ['seo_text' => $calculator->seo_text])

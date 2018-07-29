@@ -230,7 +230,7 @@ return [
             'product_types' => [
                 'string' => ['type_name'],
                 'image' => ['img'],
-                'int' => ['imposts_count'],
+                'int' => ['imposts_count', 'flaps_count'],
                 'float' => ['furniture_price', 'furniture_price_color'],
                 'product_categories' => ['superior']
             ],

@@ -63,6 +63,7 @@
                 name: '{{$product->type_name}}',
                 imgUrl: '{{$product->img->link}}?{{$product->img->cache_index}}',
                 imposts_count: '{{$product->imposts_count}}',
+                flaps_count: '{{$product->flaps_count}}',
                 furniture_price: '{{$product->furniture_price}}',
                 furniture_price_color: '{{$product->furniture_price_color}}',
                 parent_id: '{{$category->id}}'

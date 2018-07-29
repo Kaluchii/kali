@@ -328,7 +328,26 @@
   }
 
   &__price-num{
+    position: relative;
     white-space: nowrap;
+
+    &::after{
+      content: '';
+      display: none;
+      position: absolute;
+      top: ~'calc(50% - 25px)';
+      left: 0;
+      z-index: 2;
+      height: 50px;
+      width: 100%;
+      background: url("/img/load.svg") no-repeat center, @main-blue;
+    }
+
+    &.is-load{
+      &::after{
+        display: block;
+      }
+    }
   }
 
   .select-items{
