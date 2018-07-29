@@ -110,6 +110,12 @@ $(document).ready(function(){
 
     $('.js_calculate_price').on('click', function () {
         calculate();
+        console.log($window.scrollTop(), $window.scrollTop() + $window.height(),$('.js_window_price').offset().top - $window.height() + 70);
+        if ( $window.scrollTop() < $('.js_window_price').offset().top - $window.height() + 70 ) {
+            $('html, body').stop().animate({
+                scrollTop: $('.js_window_price').offset().top - $window.height() + 70
+            }, 700);
+        }
     });
 
 
