@@ -75,13 +75,13 @@ $(document).ready(function(){
         }
     }
 
-    $('.form-input').on('change', function () {
+    $('.js_form_input').on('change', function () {
         return fieldCheck( $(this) );
     });
-    $('.form-input').on('focusout', function () {
+    $('.js_form_input').on('focusout', function () {
         $(this).parent().removeClass('filling');
     });
-    $('.form-input').on('input', function () {
+    $('.js_form_input').on('input', function () {
         $(this).parent().addClass('filling');
     });
 
@@ -125,33 +125,6 @@ $(document).ready(function(){
         );
     }
 
-    window.onSubmitReCaptcha = function (token) {
-        active = false;
-        sendButton.addClass('load');
-
-        console.log('Captcha test start');
-        var cResponse = {'g-recaptcha-response': grecaptcha.getResponse()};
-
-        var capchaTest = ajaxDataSend('POST', '/captcha', cResponse);
-
-        capchaTest.success(function(data){
-            if( data.error ){
-                alert('Проверка не пройдена!');
-                sendButton.removeClass('load');
-                active = true;
-            }else{
-                console.log('CaptchaTest success');
-                sendForm();
-            }
-        });
-        capchaTest.error(function(data){
-            alert('При отправке сообщения произошла ошибка');
-            console.log('CaptchaTest error');
-            sendButton.removeClass('load');
-            active = true;
-        });
-    };
-
 
     var unical, sendButton, selector;
     var active = true;
@@ -159,19 +132,20 @@ $(document).ready(function(){
     function finalValidation() {
         if( active ){
             sendButton = $(this);
-            unical = sendButton.closest('.form-id').attr('id');
-            selector = '#'+unical+' .form-input';
+            unical = sendButton.closest('.js_form_id').attr('id');
+            selector = '#'+unical+' .js_form_input';
 
             var validForm  = fieldsCheck( selector );
 
             if ( validForm ){
-                grecaptcha.reset();
-                grecaptcha.execute();
+                active = false;
+                sendButton.addClass('load');
+                sendForm();
             }
         }
     }
 
-    $('.send-form').on('click', finalValidation);
+    $('.js_send_form').on('click', finalValidation);
 
 
     function sendForm() {
