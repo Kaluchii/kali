@@ -104,6 +104,7 @@ $(document).ready(function(){
         $(this).addClass('is-active-product');
 
         $('.js_window_img').attr('src', productsObj[productId].imgUrl);
+        $('.js_window_name').text(productsObj[productId].name);
 
         calculate();
     });

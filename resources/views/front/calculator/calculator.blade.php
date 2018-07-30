@@ -32,7 +32,7 @@
         </div>
 
         <div class="calculator__form-wrap">
-            <div class="calculator__window-name js_window_name">Двухсекционное окно с простым открыванием</div>
+            <div class="calculator__window-name js_window_name"></div>
             <div class="calculator__form">
                 <div class="calculator__row-1">
                     <div class="calculator__size">
