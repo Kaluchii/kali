@@ -24,7 +24,7 @@
             @foreach($guarantee->guarantee_facts_list_group as $item)
                 <div class="guarantee__factor">
                     <div class="guarantee__factor-img-wrap">
-                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="guarantee__factor-img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="guarantee__factor-img">
                     </div>
                     <p class="guarantee__factor-text">{{$item->text}}</p>
                 </div>

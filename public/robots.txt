@@ -1,2 +1,26 @@
 User-agent: *
-Disallow:/
+Disallow: /adm
+Disallow: /node
+Disallow: /m/
+Disallow: /mobile/
+Disallow: /?width
+Disallow: /*?width
+Disallow: */*?width
+Disallow: /?inline
+Disallow: /*?inline
+Disallow: */*?inline
+Sitemap: https://www.kali.kz/sitemap.xml
+
+User-agent: Yandex
+Disallow: /adm
+Disallow: /node
+Disallow: /m/
+Disallow: /mobile/
+Disallow: /?width
+Disallow: /*?width
+Disallow: */*?width
+Disallow: /?inline
+Disallow: /*?inline
+Disallow: */*?inline
+Host: https://www.kali.kz
+Sitemap: https://www.kali.kz/sitemap.xml

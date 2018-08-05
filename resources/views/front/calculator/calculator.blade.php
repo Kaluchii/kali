@@ -18,12 +18,12 @@
                 <div class="calculator__category-item js_calc_category">
                     <div class="calculator__category-name">{{$category->category_name}}</div>
                     <div class="calculator__category-img-wrap">
-                        <img src="{{$category->img->link}}?{{$category->img->cache_index}}" alt="{{$category->img->alt}}" class="calculator__category-img">
+                        <img src="{{$category->img->link}}?{{$category->img->cache_index}}" alt="{{$category->img->alt}}" title="{{$category->img->alt}}" class="calculator__category-img">
                     </div>
                     <div class="calculator__types-list js_product_list">
                         @foreach($category->product_types_group as $item)
                         <div class="calculator__types-item js_product @if($i++ == 0) is-active-product @endif" data-id="{{$item->id}}">
-                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="calculator__type-img">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="calculator__type-img">
                         </div>
                         @endforeach
                     </div>

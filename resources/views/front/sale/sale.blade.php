@@ -24,7 +24,7 @@
         <div class="sale__variants">
             @foreach($sale->sale_list_group as $item)
                 <a href="{{$item->img->link}}?{{$item->img->cache_index}}" data-fancybox="gallery" class="sale__variant">
-                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="sale__variant-img">
+                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="sale__variant-img">
                 </a>
             @endforeach
         </div>

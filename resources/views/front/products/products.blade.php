@@ -14,7 +14,7 @@
                 <div class="production-banner__firm-list production-banner__firm-list--plast">
                     @foreach($products->firms_list_1_group as $item)
                     <div class="production-banner__firm-item">
-                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="production-banner__firm-logo">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="production-banner__firm-logo">
                     </div>
                     @endforeach
                 </div>
@@ -51,7 +51,7 @@
                 <div class="production-banner__firm-list">
                     @foreach($products->firms_list_2_group as $item)
                         <div class="production-banner__firm-item">
-                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="production-banner__firm-logo">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="production-banner__firm-logo">
                         </div>
                     @endforeach
                 </div>
@@ -85,7 +85,7 @@
                 <li class="icon-cards__item">
                     <a href="/products/{{$item->slug}}" class="icon-cards__item-container icon-cards__item-container--link">
                         <div class="icon-cards__icon-wrap">
-                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="icon-cards__icon">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="icon-cards__icon">
                         </div>
                         <p class="icon-cards__text">{{$item->product_name}}</p>
                     </a>

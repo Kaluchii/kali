@@ -3,10 +3,18 @@
 <head>
     @if($app->environment('local'))
         <meta name="robots" content="noindex, nofollow" />
+    @else
+        <meta name="robots" content="index,follow" />
     @endif
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="HandheldFriendly" content="true">
+    <meta name="googlebot" content="NOODP" />
+    <meta name="publisher" content="Пластиковые окна Kali"/>
+    <meta name="author" content="Пластиковые окна Kali"/>
+    <meta name="copyright" content="Пластиковые окна Kali" />
+    <meta name="revisit-after" content="2 days" />
+    <meta name="Cache-Control" content="no-cache, must-revalidate"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <link rel="manifest" href="/manifest.webmanifest">
@@ -23,6 +31,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="msapplication-starturl" content="/">
 
+    <link rel="shortcut icon" href="/img/icons/ie-favicon.ico"/>
     <link rel="shortcut icon" sizes="48x48" href="/img/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/icons/apple-touch-icon-60x60.png">

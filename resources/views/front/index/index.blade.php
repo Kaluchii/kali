@@ -5,7 +5,7 @@
     <div class="slider">
         <div class="slider__list js_main_slick">
             @foreach($slider->slides_group as $item)
-                <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="slider__img">
+                <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="slider__img">
             @endforeach
         </div>
         <div class="slider__info-wrap">
@@ -30,7 +30,7 @@
             <li class="main__facts-item">
                 <div class="main__fact-item-container">
                     <div class="main__fact-img-wrap">
-                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="main__fact-img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="main__fact-img">
                     </div>
                     <p class="main__fact-text">{{$item->text}}</p>
                 </div>
@@ -41,7 +41,7 @@
             @foreach($examples->examples_list_group as $item)
             <li class="main__profile-item">
                 <div class="main__profile-img-wrap">
-                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="main__profile-img">
+                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="main__profile-img">
                 </div>
                 <p class="main__profile-name">{!! $item->text !!}</p>
                 <p class="main__profile-price">от {{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/м²</p>
@@ -67,7 +67,7 @@
                     @foreach($type->main_windows_price_list_group as $item)
                     <li class="examples__item js_window" data-parent-id="{{$type->id}}" @if(!$isFirst)style="display:none" @endif>
                         <div class="examples__img-wrap">
-                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="examples__img">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="examples__img">
                         </div>
                         <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/окно</div>
                         <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
@@ -110,7 +110,7 @@
                 @foreach($type->main_balcony_list_group as $item)
                 <li class="examples__item js_balcony" data-parent-id="{{$type->id}}" @if(!$isFirst)style="display:none" @endif>
                     <div class="examples__img-wrap">
-                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="examples__img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="examples__img">
                     </div>
                     <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/балкон</div>
                     <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
@@ -131,7 +131,7 @@
                 @foreach($advantages->advantages_list_group as $item)
                 <li class="advantages__item">
                     <div class="advantages__item-img-wrap">
-                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="advantages__item-img">
+                        <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="advantages__item-img">
                     </div>
                     <div class="advantages__item-text-wrap">
                         <p class="advantages__item-name">{{$item->advantage_title}}</p>

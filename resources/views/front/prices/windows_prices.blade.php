@@ -15,7 +15,7 @@
                 @foreach($category->windows_price_list_group as $item)
                     <div class="prices__variant">
                         <a href="{{$item->img->link}}?{{$item->img->cache_index}}" class="prices__img-wrap" data-fancybox>
-                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="prices__img">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="prices__img">
                         </a>
                         <div class="prices__text-wrap text-block">{!! $item->text !!}</div>
                     </div>

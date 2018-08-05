@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Ошибка</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <title>404 Ошибка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>

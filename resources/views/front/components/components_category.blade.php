@@ -16,7 +16,7 @@
             <li class="components__goods-item product">
                 <p class="product__name">{{$item->component_name}}</p>
                 <a href="/components/{{$category->slug}}/{{$item->slug}}" class="product__img-wrap">
-                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="product__img">
+                    <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="product__img">
                 </a>
                 <p class="product__article">Артикул: {{$item->article}}</p>
                 <div class="product__bottom">

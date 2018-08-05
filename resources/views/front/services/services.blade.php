@@ -15,7 +15,7 @@
                 <li class="icon-cards__item">
                     <div class="icon-cards__item-container">
                         <div class="icon-cards__icon-wrap">
-                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" class="icon-cards__icon">
+                            <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="icon-cards__icon">
                         </div>
                         <p class="icon-cards__text">{{$item->text}}</p>
                     </div>

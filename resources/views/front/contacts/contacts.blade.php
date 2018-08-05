@@ -13,16 +13,16 @@
         <div class="contacts__place-list">
             @php $i = 0 @endphp
             @foreach($contacts->contacts_list_group as $item)
-                <div class="contacts__place-item">
+                <div class="contacts__place-item" itemscope itemtype="http://schema.org/Organization">
                     <div class="contacts__place-info">
-                        <p class="contacts__place-title">{{$item->place_name}}</p>
+                        <p class="contacts__place-title" itemprop="name">{{$item->place_name}}</p>
                         <div class="contacts__cols-wrap">
                             <div class="contacts__col-1">
-                                <div class="contacts__info-item contacts__info-item--loc">{{$item->address}}</div>
-                                <div class="contacts__info-item contacts__info-item--phone">Телефоны: {{$item->phones}}</div>
-                                <div class="contacts__info-item contacts__info-item--fax">Факс: {{$item->fax}}</div>
-                                <div class="contacts__info-item contacts__info-item--mob">Моб: {{$item->mob}}</div>
-                                <div class="contacts__info-item contacts__info-item--email">Email: {{$item->email}}</div>
+                                <div class="contacts__info-item contacts__info-item--loc" itemprop="address">{{$item->address}}</div>
+                                <div class="contacts__info-item contacts__info-item--phone" itemprop="telephone">Телефоны: {{$item->phones}}</div>
+                                <div class="contacts__info-item contacts__info-item--fax" itemprop="faxNumber">Факс: {{$item->fax}}</div>
+                                <div class="contacts__info-item contacts__info-item--mob" itemprop="telephone">Моб: {{$item->mob}}</div>
+                                <div class="contacts__info-item contacts__info-item--email" itemprop="email">Email: {{$item->email}}</div>
                             </div>
                             <div class="contacts__col-2">
                                 <div class="contacts__info-item contacts__info-item--work-time">График работы:

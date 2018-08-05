@@ -125,9 +125,9 @@ gulp.task('image', function () {
     gulp.src(dev_img + '**.' + image_ext)
         .pipe(plumber())
         .pipe(imagemin({
-            progressive      : false,
+            progressive      : true,
             interlaced       : true,
-            optimizationLevel: 7
+            optimizationLevel: 9
         }))
         .pipe(rename(function (path) {
             path.basename = changeCase.lowerCase(path.basename); // Запись файлов в нижнем регистре вместе с расширением
