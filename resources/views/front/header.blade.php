@@ -38,7 +38,7 @@
                         <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" itemprop="logo" class="header__logo">
                     </span>
                     @else
-                    <a href="/" class="header__home-link">
+                    <a href="/" class="header__home-link" itemprop="url">
                         <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" itemprop="logo" class="header__logo">
                     </a>
                     @endif
@@ -71,7 +71,7 @@
                     <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="mobile-header__logo">
                 </span>
                 @else
-                <a href="/" class="mobile-header__home-link">
+                <a href="/" class="mobile-header__home-link" itemprop="url">
                     <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="mobile-header__logo">
                 </a>
                 @endif
