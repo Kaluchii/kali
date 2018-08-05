@@ -1,13 +1,22 @@
 @extends('front.layout')
 @section('content')
     @include('front.meta', ['title' => $category->seo_title, 'description' => $category->seo_description, 'keywords' => $category->seo_keywords, 'spare' => $category->category_name])
-    <div class="breadcrumbs">
-        <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black">Главная</a>
-        <span class="breadcrumbs__separator"></span>
-        <a href="/components" class="breadcrumbs__link link-black">{{$category->superior_item->title}}</a>
-        <span class="breadcrumbs__separator"></span>
-        <span class="breadcrumbs__current">{{$category->category_name}}</span>
-    </div>
+    <ul class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black" itemprop="item"><span class="breadcrumbs__link-text" itemprop="name">Главная</span></a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumbs__separator"></li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="/components" class="breadcrumbs__link link-black" itemprop="item"><span class="breadcrumbs__link-text" itemprop="name">{{$category->superior_item->title}}</span></a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumbs__separator"></li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span class="breadcrumbs__current" itemprop="item"><span class="breadcrumbs__current-text" itemprop="name">{{$category->category_name}}</span></span>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ul>
 
     <div class="components">
         <h1 class="components__title">{{$category->category_name}}</h1>
