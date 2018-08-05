@@ -10,6 +10,7 @@
         <meta itemprop="name" content="Пластиковые окна Kali">
         <meta itemprop="email" content="{{$all_site->bottom_email}}">
         <meta itemprop="telephone" content="{{$all_site->mob_phones}}">
+        <meta itemprop="address" content="{{$all_site->address}}">
         <div class="header__container">
             <script>
                 if (window.location.pathname == '/') {
@@ -35,6 +36,7 @@
                 <div class="header__center-col">
                     @if($page == 'main')
                     <span class="header__home-link">
+                        <a href="/" class="hidden" itemprop="url"></a>
                         <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" itemprop="logo" class="header__logo">
                     </span>
                     @else
@@ -71,7 +73,7 @@
                     <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="mobile-header__logo">
                 </span>
                 @else
-                <a href="/" class="mobile-header__home-link" itemprop="url">
+                <a href="/" class="mobile-header__home-link">
                     <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="mobile-header__logo">
                 </a>
                 @endif

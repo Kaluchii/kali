@@ -91,6 +91,16 @@
                           data-id="0">{{$block->bottom_mob_phones_field}}</textarea>
             </div>
             <div class="form-group">
+                <label>Адрес</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$block->address_field}}"
+                       data-name="address"
+                       data-type="string"
+                       data-block="all_site"
+                       data-id="0">
+            </div>
+            <div class="form-group">
                 <label>Широта расположения метки на карте (подвал)</label>
                 <input class="form-control string"
                        type="text" placeholder=""
