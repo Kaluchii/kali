@@ -1,5 +1,6 @@
 @extends('front.layout')
 @section('content')
+    @php $page = 'main' @endphp
     @include('front.index.about-windows', ['text' => $main_dop_text->text])
     @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords, 'spare' => 'Изготовление пластиковых окон, дверей и витражей'])
     <div class="slider">

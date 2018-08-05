@@ -1,11 +1,15 @@
 @section('header')
+    @php if(!isset($page)) $page = 'other' @endphp
     <div class="only">
         <div class="only__container">
-            <div class="only__text">Единственный дистрибьютор <img src="/img/only_conch.png" alt="Kali дистрибьютор CONCH" class="only__img"> в Казахстане</div>
+            <div class="only__text">Единственный дистрибьютор <img src="/img/only_conch.png" alt="Kali дистрибьютор CONCH" title="Kali дистрибьютор CONCH" class="only__img"> в Казахстане</div>
             <div class="only__years"></div>
         </div>
     </div>
-    <header class="header">
+    <header class="header" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Пластиковые окна Kali">
+        <meta itemprop="email" content="{{$all_site->bottom_email}}">
+        <meta itemprop="telephone" content="{{$all_site->mob_phones}}">
         <div class="header__container">
             <script>
                 if (window.location.pathname == '/') {
@@ -20,17 +24,24 @@
                         <a href="/calculator" class="header__link header__link--calc link-black">Калькулятор стоимости</a>
                     </div>
                     <ul class="header__phones-list">
-                        <li class="header__phones-item">+ 7 (727) 294 86 51</li>
-                        <li class="header__phones-item">+ 7 (777) 256 09 07</li>
+                        @foreach($all_site->top_phones_group as $item)
+                            <li class="header__phones-item">{{$item->number}}</li>
+                        @endforeach
                     </ul>
                     <div class="header__call-btn-wrap">
                         <a href="#call_back_form" class="header__call-btn button button--orange-border js_call_back">Заказать звонок</a>
                     </div>
                 </div>
                 <div class="header__center-col">
+                    @if($page == 'main')
+                    <span class="header__home-link">
+                        <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" itemprop="logo" class="header__logo">
+                    </span>
+                    @else
                     <a href="/" class="header__home-link">
-                        <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="header__logo">
+                        <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" itemprop="logo" class="header__logo">
                     </a>
+                    @endif
                     <p class="header__under-logo">ДОСТОЙНОЕ РЕШЕНИЕ</p>
                 </div>
                 <div class="header__right-col">
@@ -55,14 +66,20 @@
         </div>
         <div class="header__mobile mobile-header">
             <div class="mobile-header__top">
+                @if($page == 'main')
+                <span class="mobile-header__home-link">
+                    <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="mobile-header__logo">
+                </span>
+                @else
                 <a href="/" class="mobile-header__home-link">
                     <img src="/img/logo.svg" alt="Kali логотип пластиковые окна" class="mobile-header__logo">
                 </a>
+                @endif
                 <p class="mobile-header__tag">ДОСТОЙНОЕ РЕШЕНИЕ</p>
             </div>
             <div class="mobile-header__navigation">
                 <div class="mobile-header__links-list">
-                    <a href="#" class="mobile-header__icon-link mobile-header__icon-link--phone-out"></a>
+                    <a href="{{$all_site->mob_phones}}" class="mobile-header__icon-link mobile-header__icon-link--phone-out"></a>
                     <a href="#call_back_form" class="mobile-header__icon-link mobile-header__icon-link--phone-in js_call_back"></a>
                     <a href="/calculator" class="mobile-header__icon-link mobile-header__icon-link--calc"></a>
                     <a href="/contacts" class="mobile-header__icon-link mobile-header__icon-link--map"></a>
