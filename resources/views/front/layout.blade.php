@@ -66,7 +66,7 @@
 @include('front.footer')
 @include('front.scripts')
 
-    <div class="page-wrapper">
+    <div class="page-wrapper" itemscope itemtype="http://schema.org/WebPage">
         @yield('header')
 
         @yield('content')
