@@ -8,7 +8,7 @@
         </li>
         <li class="breadcrumbs__separator"></li>
         <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <span class="breadcrumbs__current" itemprop="item"><meta itemprop="url" content="/windows-price" /><span class="breadcrumbs__current-text" itemprop="name">{{$prices->title}}<meta itemprop="url" content="/windows-price" /></span></span>
+            <span class="breadcrumbs__current" itemprop="item"><span class="breadcrumbs__current-text" itemprop="name">{{$prices->title}}</span></span>
             <meta itemprop="position" content="2" />
         </li>
     </ul>
