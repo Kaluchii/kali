@@ -213,4 +213,13 @@ class FrontController extends Controller
             'calculator_components' => $calculator_components,
         ]);
     }
+
+
+    public function getSitemap(){
+        $this->extract->tuneSelection('components_categories')->like('show', true)->sortBy('sorter','ASC');
+        $components = $this->extract->getBlock('components');
+        return view('front.sitemap.sitemap', [
+            'components' => $components
+        ]);
+    }
 }

@@ -9,7 +9,7 @@ return [
     'all_site' => [
         'string' => ['inst', 'vk', 'contact_us_phone', 'bottom_work_time',
                     'bottom_phones', 'bottom_fax', 'bottom_email',
-                    'bottom_mob_phones', 'mob_phones', 'address', 'longitude', 'latitude'],
+                    'bottom_mob_phones', 'mob_phones', 'address', 'longitude', 'latitude', 'copyright'],
         'groups' => [
             'top_phones' => [
                 'string' => ['number'],

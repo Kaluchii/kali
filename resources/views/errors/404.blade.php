@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow" />
-    <title>404 Ошибка</title>
+    <title>Страница не найдена - 404 Ошибка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>
@@ -14,68 +14,91 @@
         top: 0;
         left: 0;
         margin: 0;
-        display: flex;
-        overflow: auto;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+        font-family: "Arial",sans-serif;
+        text-align: center;
     }
+
     p{
         margin: 0;
     }
-    p.big {
-        text-align: center;
-        font-size: 80px;
-        line-height: 75px;
-        font-family: "Arial",sans-serif;
-        color: #333333;
+
+    .main-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: scroll;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 40px 20px;
     }
 
-    p.big:first-child {
-        border-bottom: 1px solid #999999;
+    .center-block{}
+
+    .error {
+        text-align: center;
+        font-size: 60px;
+        line-height: 1;
+        color: #1d8ed5;
+    }
+
+    .code {
+        border-bottom: 1px solid rgba(153, 153, 153, 0.6);
         margin: 0 auto;
-        max-width: 280px;
-        font-size: 160px;
-        line-height: 140px;
-        color: #333333;
+        max-width: 250px;
+        font-size: 130px;
+        line-height: 1;
+        color: #1d8ed5;
     }
 
-    p.big.error {
-    }
-
-    p.text {
-        font-family: "Arial", sans-serif;
-        margin-top: 15px;
+    .text {
+        margin-top: 20px;
+        margin-bottom: 35px;
+        max-width: 400px;
+        font-size: 20px;
+        line-height: 1.5;
         text-align: center;
-        color: #333333;
-        margin-bottom: 17px;
+        color: #1d8ed5;
     }
 
-    a {
+    .home {
         font-size: 36px;
-        border-bottom: 1px solid rgba(0, 102, 153, 0.25);
+        border-bottom: 1px solid rgba(29, 142, 213, 1);
         text-decoration: none;
-        color: #006699;
-        font-family: "Arial", sans-serif;
+        color: #1d8ed5;
     }
 
-    a:hover {
-        color: red;
-        border-bottom: 1px solid red;
+    .home:hover {
+        color: #ff9815;
+        border-bottom: 1px solid #ff9815;
     }
 
-    a {}
+    @media all and (max-width: 768px) {
+        .error{
+            font-size: 40px;
+        }
 
-    p {
-        text-align: center;
+        .code{
+            max-width: 160px;
+            font-size: 90px;
+        }
+
+        .home{
+            font-size: 28px;
+        }
+
+        .text{
+            font-size: 16px;
+        }
     }
 </style>
 <body>
-<div>
-<p class="big">404</p>
-<p class="big error">Ошибка</p>
-<p class="text">Неправильно набран адрес, или такой страницы на сайте больше не существует</p>
-<p><a href="/">На главную</a></p>
-</div>
+    <div class="main-wrapper">
+        <div class="center-block">
+            <p class="code">404</p>
+            <p class="error">Ошибка</p>
+            <p class="text">Неправильно набран адрес, или такой страницы на сайте больше не существует</p>
+            <p class="home-wrap"><a href="/" class="home">На главную</a></p>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 @section('footer')
+    @php if(!isset($page)) $page = 'other' @endphp
     <footer class="footer">
         <div class="footer__contacts-info contacts-info">
             <div class="contacts-info__container">
@@ -26,6 +27,9 @@
                         <span class="contacts-info__made-logo"></span>
                         <span class="contacts-info__made-text">Сайт разработан в GoodViz</span>
                     </a>
+                    <p class="contacts-info__sitemap-wrap">
+                        <a href="/sitemap" class="contacts-info__sitemap link-white">Карта сайта</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -49,5 +53,7 @@
                 </div>
             </div>
         </div>
+        <div class="footer__copyright">© {{$all_site->copyright}} Kali.kz - @if($page == 'main')Пластиковые окна в Алматы@else
+                <a href="/" class="link-black">Пластиковые окна в Алматы</a> @endif. Все права защищены</div>
     </footer>
 @endsection

@@ -120,6 +120,16 @@
                        data-block="all_site"
                        data-id="0">
             </div>
+            <div class="form-group">
+                <label>Год для копирайта</label>
+                <input class="form-control string"
+                       type="text" placeholder=""
+                       value="{{$block->copyright_field}}"
+                       data-name="copyright"
+                       data-type="string"
+                       data-block="all_site"
+                       data-id="0">
+            </div>
         </div>
     </div>
 

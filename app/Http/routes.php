@@ -25,6 +25,7 @@ Route::get('/components',         'FrontController@getComponents');
 Route::get('/components/{slug}',      'FrontController@getComponentsCategory');
 Route::get('/components/{other}/{slug}',      'FrontController@getComponentsItem');
 Route::get('/calculator',                   'FrontController@getCalculator');
+Route::get('/sitemap',                   'FrontController@getSitemap');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');
