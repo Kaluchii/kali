@@ -13,6 +13,7 @@
 
 Route::get('/',                 'FrontController@getIndex');
 Route::get('/about',         'FrontController@getAbout');
+Route::get('/pay',           'FrontController@getPay');
 Route::get('/services',         'FrontController@getServices');
 Route::get('/guarantee',         'FrontController@getGuarantee');
 Route::get('/sale',         'FrontController@getSale');
@@ -26,6 +27,8 @@ Route::get('/components/{slug}',      'FrontController@getComponentsCategory');
 Route::get('/components/{other}/{slug}',      'FrontController@getComponentsItem');
 Route::get('/calculator',                   'FrontController@getCalculator');
 Route::get('/sitemap',                   'FrontController@getSitemap');
+
+Route::get('/sitemap.xml',                   'FrontController@getSitemapXml');
 
 
 Route::post('/captcha',          'Back\MailController@Captcha');
@@ -67,6 +70,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/components/{other}/{id}',                'AdminController@getComponentsItem');
     Route::get('/services',           'AdminController@getServices');
     Route::get('/about',                   'AdminController@getAbout');
+    Route::get('/pay',                   'AdminController@getPay');
     Route::get('/contacts',              'AdminController@getContacts');
     Route::get('/calculator',                    'AdminController@getCalculator');
     Route::get('/calculator/{id}',                    'AdminController@getCalculatorCategory');

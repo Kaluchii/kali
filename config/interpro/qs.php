@@ -112,6 +112,10 @@ return [
         'text' => ['text']
     ],
 
+    'pay' => [// Использовать 'title' для заголовка
+        'text' => ['text']
+    ],
+
     'services' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
         'groups' => [

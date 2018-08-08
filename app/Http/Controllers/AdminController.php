@@ -276,6 +276,14 @@ class AdminController extends Controller
     }
 
 
+    public function getPay(){
+        $block = $this->extract->getBlock('pay');
+        return view('back.blocks.pay', [
+            'block' => $block
+        ]);
+    }
+
+
     public function getContacts(){
         $block = $this->extract->getBlock('contacts');
         return view('back.blocks.contacts', [

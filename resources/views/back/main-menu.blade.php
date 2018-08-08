@@ -95,6 +95,11 @@
                 </ul>
             </li>
             <li>
+                <a href="/adm/pay">
+                    <i class="fa fa-circle-o"></i> <span>Оплата</span>
+                </a>
+            </li>
+            <li>
                 <a href="/adm/post">
                     <i class="fa fa-circle-o"></i> <span>Настройки почты</span>
                 </a>

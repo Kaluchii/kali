@@ -13,6 +13,7 @@ return [
             'slider',
             'contacts',
             'about',
+            'pay',
             'services',
             'sale',
             'guarantee',

@@ -9,7 +9,7 @@
                 <a href="/about" class="small-info__link link-white">О компании</a>
             </div>
             <div class="small-info__link-wrap small-info__link-wrap--pay">
-                <a href="#" class="small-info__link link-white">Оплата</a>
+                <a href="/pay" class="small-info__link link-white">Оплата</a>
             </div>
         </div>
     </div>

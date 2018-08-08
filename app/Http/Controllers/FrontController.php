@@ -123,6 +123,14 @@ class FrontController extends Controller
     }
 
 
+    public function getPay(){
+        $pay = $this->extract->getBlock('pay');
+        return view('front.pay.pay', [
+            'pay' => $pay
+        ]);
+    }
+
+
     public function getProducts(){
         $this->extract->tuneSelection('products_list_1')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('products_list_2')->like('show', true)->sortBy('sorter','ASC');
@@ -221,5 +229,20 @@ class FrontController extends Controller
         return view('front.sitemap.sitemap', [
             'components' => $components
         ]);
+    }
+
+
+    public function getSitemapXml(){
+        $this->extract->tuneSelection('products_list_1')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('products_list_2')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('other_products_list')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('components_categories')->like('show', true)->sortBy('sorter','ASC');
+
+        $products = $this->extract->getBlock('products');
+        $components = $this->extract->getBlock('components');
+        return response()->view('front.sitemap.sitemap_xml', [
+            'products' => $products,
+            'components' => $components,
+        ])->header('Content-Type', 'text/xml');
     }
 }
