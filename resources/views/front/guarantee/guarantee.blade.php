@@ -56,5 +56,5 @@
             </div>
         </div>
     </div>
-    @include('front.seo-text', ['seo_text' => $guarantee->seo_text])
+    @include('front.seo-text', ['seotext' => $guarantee->seotext])
 @endsection

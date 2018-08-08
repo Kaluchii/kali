@@ -35,5 +35,5 @@
             @endforeach
         </div>
     </div>
-    @include('front.seo-text', ['seo_text' => $sale->seo_text])
+    @include('front.seo-text', ['seotext' => $sale->seotext])
 @endsection

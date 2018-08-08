@@ -38,5 +38,5 @@
             </div>
         </div>
     </div>
-    @include('front.seo-text', ['seo_text' => ''])
+    @include('front.seo-text', ['seotext' => ''])
 @endsection

@@ -145,5 +145,5 @@
         <div class="calculator__window-price">Цена выбранного окна <span class="calculator__price-num js_window_price"></span>&nbsp;тенге</div>
         <p class="calculator__important-text">{{$calculator->under_price}}</p>
     </div>
-    @include('front.seo-text', ['seo_text' => $calculator->seo_text])
+    @include('front.seo-text', ['seotext' => $calculator->seotext])
 @endsection

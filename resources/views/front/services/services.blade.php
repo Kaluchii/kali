@@ -29,5 +29,5 @@
             @endforeach
         </ul>
     </div>
-    @include('front.seo-text', ['seo_text' => $services->seo_text])
+    @include('front.seo-text', ['seotext' => $services->seotext])
 @endsection

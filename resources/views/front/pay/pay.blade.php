@@ -17,5 +17,5 @@
         <h1 class="static-page__title">{{$pay->title}}</h1>
         <div class="static-page__text text-block">{!! $pay->text !!}</div>
     </div>
-    @include('front.seo-text', ['seo_text' => $pay->seo_text])
+    @include('front.seo-text', ['seotext' => $pay->seotext])
 @endsection

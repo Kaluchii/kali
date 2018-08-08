@@ -17,5 +17,5 @@
         <h1 class="static-page__title">{{$about->title}}</h1>
         <div class="static-page__text text-block">{!! $about->text !!}</div>
     </div>
-    @include('front.seo-text', ['seo_text' => $about->seo_text])
+    @include('front.seo-text', ['seotext' => $about->seotext])
 @endsection

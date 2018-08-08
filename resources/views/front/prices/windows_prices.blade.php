@@ -30,5 +30,5 @@
         </div>
         <div class="prices__text text-block"></div>
     </div>
-    @include('front.seo-text', ['seo_text' => $prices->seo_text])
+    @include('front.seo-text', ['seotext' => $prices->seotext])
 @endsection

@@ -135,10 +135,10 @@
                     <div class="form-group">
                         <label>SEO-текст</label>
                         <textarea class="form-control text-editor"
-                                  data-name="seo_text"
-                                  data-type="seo"
+                                  data-name="seotext"
+                                  data-type="text"
                                   data-block="products"
-                                  data-id="0">{{$block->seo_text_field}}</textarea>
+                                  data-id="0">{{$block->seotext_field}}</textarea>
                     </div>
                 </div>
             </div>

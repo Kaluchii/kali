@@ -143,5 +143,5 @@
             </ul>
         </div>
     </div>
-    @include('front.seo-text', ['seo_text' => $slider->seo_text])
+    @include('front.seo-text', ['seotext' => $slider->seotext])
 @endsection

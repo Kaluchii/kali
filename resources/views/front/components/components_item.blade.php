@@ -27,5 +27,5 @@
         <h1 class="components__title">{{$component->component_name}}</h1>
         <div class="components__text text-block">{!! $component->text !!}</div>
     </div>
-@include('front.seo-text', ['seo_text' => $component->seo_text])
+@include('front.seo-text', ['seotext' => $component->seotext])
 @endsection

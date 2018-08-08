@@ -24,6 +24,7 @@ return [
     ],
 
     'slider' => [// Использовать 'title' для заголовка
+        'text' => ['seotext'],
         'groups' => [
             'slides' => [
                 'image' => ['img'],
@@ -100,6 +101,7 @@ return [
 
     'contacts' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
+        'text' => ['seotext'],
         'groups' => [
             'contacts_list' => [
                 'string' => ['longitude', 'latitude', 'address', 'phones', 'fax', 'mob',
@@ -109,15 +111,16 @@ return [
     ],
 
     'about' => [// Использовать 'title' для заголовка
-        'text' => ['text']
+        'text' => ['text', 'seotext']
     ],
 
     'pay' => [// Использовать 'title' для заголовка
-        'text' => ['text']
+        'text' => ['text', 'seotext']
     ],
 
     'services' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
+        'text' => ['seotext'],
         'groups' => [
             'services_list' => [
                 'image' => ['img'],
@@ -128,7 +131,7 @@ return [
 
     'sale' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
-        'text' => ['text'],
+        'text' => ['text', 'seotext'],
         'groups' => [
             'sale_list' => [
                 'image' => ['img'],
@@ -138,7 +141,7 @@ return [
 
     'guarantee' => [// Использовать 'title' для заголовка
         'string' => ['banner_text'],
-        'text' => ['text', 'text2', 'reviews_title'],
+        'text' => ['text', 'text2', 'reviews_title', 'seotext'],
         'file' => ['instruction', 'guarantee'],
         'groups' => [
             'guarantee_facts_list' => [
@@ -154,14 +157,16 @@ return [
 
     'components' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
+        'text' => ['seotext'],
         'groups' => [
             'components_categories' => [
-                'string' => ['category_name']
+                'string' => ['category_name'],
+                'text' => ['seotext'],
             ],
             'components_list' => [
                 'string' => ['component_name', 'article'],
                 'float' => ['price'],
-                'text' => ['text'],
+                'text' => ['text', 'seotext'],
                 'image' => ['img'],
                 'components_categories' => ['superior']
             ],
@@ -170,6 +175,7 @@ return [
 
     'windows_price' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
+        'text' => ['seotext'],
         'groups' => [
             'windows_price_categories' => [
                 'string' => ['category_name']
@@ -184,6 +190,7 @@ return [
 
     'balcony_price' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
+        'text' => ['seotext'],
         'groups' => [
             'balcony_price_categories' => [
                 'string' => ['category_name'],
@@ -198,15 +205,16 @@ return [
 
     'products' => [
         'string' => ['banner_1_title', 'banner_2_title'],
+        'text' => ['seotext'],
         'groups' => [
             'products_list_1' => [
                 'string' => ['product_name'],
-                'text' => ['text', 'preview_text'],
+                'text' => ['text', 'preview_text', 'seotext'],
                 'image' => ['img'],
             ],
             'products_list_2' => [
                 'string' => ['product_name'],
-                'text' => ['text', 'preview_text'],
+                'text' => ['text', 'preview_text', 'seotext'],
                 'image' => ['img'],
             ],
             'firms_list_1' => [
@@ -216,7 +224,7 @@ return [
                 'image' => ['img'],
             ],
             'other_products_list' => [
-                'string' => ['product_name'],
+                'string' => ['product_name', 'seotext'],
                 'text' => ['text'],
                 'image' => ['img'],
             ],
@@ -225,7 +233,7 @@ return [
 
     'calculator' => [// Использовать 'title' для заголовка
         'string' => ['sub_title'],
-        'text' => ['under_price'],
+        'text' => ['under_price', 'seotext'],
         'groups' => [
             'product_categories' => [
                 'string' => ['category_name'],

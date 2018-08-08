@@ -22,5 +22,5 @@
         <h1 class="static-page__title">{{$product->product_name}}</h1>
         <div class="static-page__text text-block">{!! $product->text !!}</div>
     </div>
-    @include('front.seo-text', ['seo_text' => $product->seo_text])
+    @include('front.seo-text', ['seotext' => $product->seotext])
 @endsection
