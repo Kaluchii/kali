@@ -214,6 +214,14 @@
                                   data-block="guarantee"
                                   data-id="0">{{$block->seo_description_field}}</textarea>
                     </div>
+                    <div class="form-group">
+                        <label>SEO-текст</label>
+                        <textarea class="form-control text-editor"
+                                  data-name="seotext"
+                                  data-type="text"
+                                  data-block="guarantee"
+                                  data-id="0">{{$block->seotext_field}}</textarea>
+                    </div>
                 </div>
             </div>
         </div>
