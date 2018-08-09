@@ -20,11 +20,16 @@
                 <ul class="sitemap__level">
                     <li class="sitemap__level-item"><a href="/about" class="sitemap__link link-black">О компании</a></li>
                     <li class="sitemap__level-item"><a href="/calculator" class="sitemap__link link-black">Калькулятор стоимости</a></li>
-                    <li class="sitemap__level-item"><a href="/products" class="sitemap__link link-black">Продукция</a></li>
-                    <li class="sitemap__level-item"><a href="/components" class="sitemap__link link-black">Комплектующие</a>
+                    <li class="sitemap__level-item"><a href="/products" class="sitemap__link link-black">Продукция</a>
                         <ul class="sitemap__level">
-                            @foreach($components->components_categories_group as $item)
-                                <li class="sitemap__level-item"><a href="/components/{{$item->slug}}" class="sitemap__link link-black">{{$item->category_name}}</a></li>
+                            @foreach($products->products_list_1_group as $item)
+                                <li class="sitemap__level-item"><a href="/products/{{$item->slug}}" class="sitemap__link link-black">{{$item->product_name}}</a></li>
+                            @endforeach
+                            @foreach($products->products_list_2_group as $item)
+                                <li class="sitemap__level-item"><a href="/products/{{$item->slug}}" class="sitemap__link link-black">{{$item->product_name}}</a></li>
+                            @endforeach
+                            @foreach($products->other_products_list_group as $item)
+                                <li class="sitemap__level-item"><a href="/products/{{$item->slug}}" class="sitemap__link link-black">{{$item->product_name}}</a></li>
                             @endforeach
                         </ul>
                     </li>
@@ -34,6 +39,20 @@
                     <li class="sitemap__level-item"><a href="/sale" class="sitemap__link link-black">Распродажа</a></li>
                     <li class="sitemap__level-item"><a href="/services" class="sitemap__link link-black">Услуги</a></li>
                     <li class="sitemap__level-item"><a href="/contacts" class="sitemap__link link-black">Контакты</a></li>
+                    <li class="sitemap__level-item"><a href="/pay" class="sitemap__link link-black">Оплата</a></li>
+                    <li class="sitemap__level-item"><a href="/components" class="sitemap__link link-black">Комплектующие</a>
+                        <ul class="sitemap__level">
+                            @foreach($components->components_categories_group as $category)
+                                <li class="sitemap__level-item"><a href="/components/{{$category->slug}}" class="sitemap__link link-black">{{$category->category_name}}</a>
+                                    <ul class="sitemap__level">
+                                        @foreach($category->components_list_group as $item)
+                                            <li class="sitemap__level-item"><a href="/components/{{$category->slug}}/{{$item->slug}}" class="sitemap__link link-black">{{$item->component_name}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
