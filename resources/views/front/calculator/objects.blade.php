@@ -1,5 +1,5 @@
 @section('objects')
-    <script type="text/javascript">
+    <script>
         var componentsObj = {
             net_price: '{{$calculator_components->net_price}}',
             net_price_color: '{{$calculator_components->net_price_color}}',

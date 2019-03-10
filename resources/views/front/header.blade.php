@@ -124,7 +124,7 @@
             </div>
             <div class="mobile-header__navigation">
                 <div class="mobile-header__links-list">
-                    <a href="{{$all_site->mob_phones}}" class="mobile-header__icon-link mobile-header__icon-link--phone-out"></a>
+                    <a href="tel:+{{preg_replace('/[^\d]+/', '', $all_site->mob_phones)}}" class="mobile-header__icon-link mobile-header__icon-link--phone-out"></a>
                     <a href="#call_back_form" class="mobile-header__icon-link mobile-header__icon-link--phone-in js_call_back"></a>
                     @if(Request::is('calculator'))
                         <span class="mobile-header__icon-link mobile-header__icon-link--calc"></span>
