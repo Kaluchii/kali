@@ -33,6 +33,7 @@ Route::get('/sitemap.xml',                   'FrontController@getSitemapXml');
 
 Route::post('/captcha',          'Back\MailController@Captcha');
 Route::post('/feedback/mail',    'Back\MailController@send');
+Route::post('/rating/send',      'RatingController@saveRating');
 
 
 Route::auth();

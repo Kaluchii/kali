@@ -76,6 +76,13 @@
         background: url("/img/header_handshake.png") no-repeat center;
       }
     }
+
+    &.is-active{
+      cursor: default;
+      pointer-events: none;
+      background: none;
+      color: @main-blue;
+    }
   }
 
   &__phones-list{
@@ -170,6 +177,13 @@
     white-space: nowrap;
 
     &:hover{
+      color: @main-blue;
+    }
+
+    &.is-active{
+      cursor: default;
+      pointer-events: none;
+      background: none;
       color: @main-blue;
     }
   }

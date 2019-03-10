@@ -66,5 +66,15 @@
     }
   }
 
-  &__link{}
+  &__link{
+
+    &.is-active{
+      display: inline-block;
+      padding-top: 5px;
+      cursor: default;
+      pointer-events: none;
+      background: none;
+      color: @main-orange;
+    }
+  }
 }

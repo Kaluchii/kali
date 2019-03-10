@@ -1,6 +1,7 @@
 @extends('front.layout')
 @section('content')
     @include('front.meta', ['title' => $components->seo_title, 'description' => $components->seo_description, 'keywords' => $components->seo_keywords, 'spare' => $components->title])
+    @include('front.rating', ['block_name' => 'components', 'block_id' => 0, 'rating' => $rating])
     <ul class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
         <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black" itemprop="item"><span class="breadcrumbs__link-text" itemprop="name">Главная</span></a>
@@ -8,7 +9,8 @@
         </li>
         <li class="breadcrumbs__separator"></li>
         <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <span class="breadcrumbs__current" itemprop="item"><span class="breadcrumbs__current-text" itemprop="name">{{$components->title}}</span></span>
+            <a href="/components" itemprop="item" class="hide"><span itemprop="name">{{$components->title}}</span></a>
+            <span class="breadcrumbs__current"><span class="breadcrumbs__current-text">{{$components->title}}</span></span>
             <meta itemprop="position" content="2" />
         </li>
     </ul>

@@ -1,6 +1,7 @@
 @extends('front.layout')
 @section('content')
     @include('front.meta', ['title' => '', 'description' => '', 'keywords' => '', 'spare' => 'Карта сайт'])
+    @include('front.rating', ['block_name' => 'sitemap', 'block_id' => 0, 'rating' => $rating])
     <ul class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
         <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black" itemprop="item"><span class="breadcrumbs__link-text" itemprop="name">Главная</span></a>

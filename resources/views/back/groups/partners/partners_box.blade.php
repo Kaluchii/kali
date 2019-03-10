@@ -48,6 +48,16 @@
                 </div>
             </div>
         </div>
+        <div class="form-group">
+            <label>Ссылка на сайт</label>
+            <input class="form-control string"
+                   type="text" placeholder=""
+                   value="{{$item->link_field}}"
+                   data-name="link"
+                   data-type="string"
+                   data-block="partners"
+                   data-id="{{$item->id_field}}">
+        </div>
         <div class="col-xs-1 no-padding">
             <div class="form-group">
                 <label>Позиция</label>

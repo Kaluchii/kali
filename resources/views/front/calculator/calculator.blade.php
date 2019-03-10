@@ -3,6 +3,7 @@
     @include('front.calculator.objects')
     @yield('objects')
     @include('front.meta', ['title' => $calculator->seo_title, 'description' => $calculator->seo_description, 'keywords' => $calculator->seo_keywords, 'spare' => $calculator->title])
+    @include('front.rating', ['block_name' => 'calculator', 'block_id' => 0, 'rating' => $rating])
     <ul class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
         <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black" itemprop="item"><span class="breadcrumbs__link-text" itemprop="name">Главная</span></a>
@@ -10,7 +11,8 @@
         </li>
         <li class="breadcrumbs__separator"></li>
         <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <span class="breadcrumbs__current" itemprop="item"><span class="breadcrumbs__current-text" itemprop="name">{{$calculator->title}}</span></span>
+            <a href="/calculator" itemprop="item" class="hide"><span itemprop="name">{{$calculator->title}}</span></a>
+            <span class="breadcrumbs__current"><span class="breadcrumbs__current-text">{{$calculator->title}}</span></span>
             <meta itemprop="position" content="2" />
         </li>
     </ul>

@@ -7,7 +7,6 @@
     <script defer src="/js/jquery.fancybox.min.js"></script>
     <script defer src="/js/form.js"></script>
     <script defer src="/js/select.js"></script>
-    {{--<script defer src="/js/jquery.easing.1.3.js"></script>--}}
-    {{--<script defer src="/js/jquery.quicksand.js"></script>--}}
+    <script defer src="/js/rating.js"></script>
     <script defer src="/js/main.js"></script>
 @endsection

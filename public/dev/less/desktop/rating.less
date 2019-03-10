@@ -1,0 +1,57 @@
+.rating{
+  font-size: 16px;
+
+  &__please{
+    color: #fff;
+  }
+
+  &__stars-wrap{
+    margin-top: 5px;
+  }
+
+  &__default{
+    position: relative;
+    height: 25px;
+    width: 125px;
+    overflow: hidden;
+    background: url('/img/all_stars.png') left top repeat-x;
+  }
+
+  &__current-rating{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    height: 25px;
+    max-width: 100%;
+    outline: 0;
+    overflow: hidden;
+    background: url('/img/all_stars.png') left center repeat-x;
+  }
+
+  &__star{
+    font-size: 0;
+  }
+
+  &__star-link{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 25px;
+    max-width: 100%;
+    outline: 0;
+    overflow: hidden;
+
+    &:hover, &:focus, &:active{
+      background: url('/img/all_stars.png') left bottom repeat-x;
+      cursor: pointer;
+    }
+  }
+
+  &__total-votes{
+    margin-top: 4px;
+    color: #fff;
+  }
+}

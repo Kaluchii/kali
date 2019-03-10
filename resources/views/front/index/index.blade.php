@@ -1,8 +1,8 @@
 @extends('front.layout')
 @section('content')
-    @php $page = 'main' @endphp
     @include('front.index.about-windows', ['text' => $main_dop_text->text])
     @include('front.meta', ['title' => $slider->seo_title, 'description' => $slider->seo_description, 'keywords' => $slider->seo_keywords, 'spare' => 'Изготовление пластиковых окон, дверей и витражей'])
+    @include('front.rating', ['block_name' => 'index', 'block_id' => 0, 'rating' => $rating])
     <div class="slider">
         <div class="slider__list js_main_slick">
             @foreach($slider->slides_group as $item)
@@ -71,7 +71,9 @@
                             <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="examples__img">
                         </div>
                         <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/окно</div>
-                        <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
+                        @if($item->full_price)
+                            <p class="examples__full-price">Цена с монтажом <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
+                        @endif
                     </li>
                     @endforeach
                     @php $isFirst = false @endphp
@@ -114,7 +116,9 @@
                         <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="examples__img">
                     </div>
                     <div class="examples__price">{{number_format($item->price, 0, '', ' ')}} <span class="tenge">d</span>/балкон</div>
-                    <p class="examples__full-price">Цена под ключ <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
+                    @if($item->full_price)
+                        <p class="examples__full-price">Цена с монтажом <span class="examples__blue-text">{{number_format($item->full_price, 0, '', ' ')}} <span class="tenge">d</span></span></p>
+                    @endif
                 </li>
                 @endforeach
                 @php $isFirst = false @endphp

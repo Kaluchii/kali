@@ -134,4 +134,11 @@
             </div>
         </div>
     </div>
+
+    <input class="form-control string" type="hidden" value="{{time()}}"
+           data-name="last_modified" data-type="string" data-block="products" data-id="0">
+
+    <input class="form-control string" type="hidden" value="{{time()}}"
+           data-name="last_modified" data-type="string" data-block="products_list_2" data-id="{{$item->id_field}}">
+
 @endsection

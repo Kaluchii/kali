@@ -18,6 +18,7 @@ return [
                 'string' => ['text'],
             ],
             'partners' => [
+                'string' => ['link'],
                 'image' => ['img']
             ]
         ]
@@ -25,6 +26,7 @@ return [
 
     'slider' => [// Использовать 'title' для заголовка
         'text' => ['seotext'],
+        'string' => ['last_modified'],
         'groups' => [
             'slides' => [
                 'image' => ['img'],
@@ -100,7 +102,7 @@ return [
     ],
 
     'contacts' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title'],
+        'string' => ['sub_title', 'last_modified'],
         'text' => ['seotext'],
         'groups' => [
             'contacts_list' => [
@@ -111,15 +113,17 @@ return [
     ],
 
     'about' => [// Использовать 'title' для заголовка
+        'string' => ['last_modified'],
         'text' => ['text', 'seotext']
     ],
 
     'pay' => [// Использовать 'title' для заголовка
+        'string' => ['last_modified'],
         'text' => ['text', 'seotext']
     ],
 
     'services' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title'],
+        'string' => ['sub_title', 'last_modified'],
         'text' => ['seotext'],
         'groups' => [
             'services_list' => [
@@ -130,7 +134,7 @@ return [
     ],
 
     'sale' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title'],
+        'string' => ['sub_title', 'last_modified'],
         'text' => ['text', 'seotext'],
         'groups' => [
             'sale_list' => [
@@ -140,7 +144,7 @@ return [
     ],
 
     'guarantee' => [// Использовать 'title' для заголовка
-        'string' => ['banner_text'],
+        'string' => ['banner_text', 'last_modified'],
         'text' => ['text', 'text2', 'reviews_title', 'seotext'],
         'file' => ['instruction', 'guarantee'],
         'groups' => [
@@ -156,15 +160,15 @@ return [
     ],
 
     'components' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title'],
+        'string' => ['sub_title', 'last_modified'],
         'text' => ['seotext'],
         'groups' => [
             'components_categories' => [
-                'string' => ['category_name'],
+                'string' => ['category_name', 'last_modified'],
                 'text' => ['seotext'],
             ],
             'components_list' => [
-                'string' => ['component_name', 'article'],
+                'string' => ['component_name', 'article', 'last_modified'],
                 'float' => ['price'],
                 'text' => ['text', 'seotext'],
                 'image' => ['img'],
@@ -174,7 +178,7 @@ return [
     ],
 
     'windows_price' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title'],
+        'string' => ['sub_title', 'last_modified'],
         'text' => ['seotext'],
         'groups' => [
             'windows_price_categories' => [
@@ -189,7 +193,7 @@ return [
     ],
 
     'balcony_price' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title'],
+        'string' => ['sub_title', 'last_modified'],
         'text' => ['seotext'],
         'groups' => [
             'balcony_price_categories' => [
@@ -204,16 +208,16 @@ return [
     ],
 
     'products' => [
-        'string' => ['banner_1_title', 'banner_2_title'],
+        'string' => ['banner_1_title', 'banner_2_title', 'last_modified'],
         'text' => ['seotext'],
         'groups' => [
             'products_list_1' => [
-                'string' => ['product_name'],
+                'string' => ['product_name', 'last_modified'],
                 'text' => ['text', 'preview_text', 'seotext'],
                 'image' => ['img'],
             ],
             'products_list_2' => [
-                'string' => ['product_name'],
+                'string' => ['product_name', 'last_modified'],
                 'text' => ['text', 'preview_text', 'seotext'],
                 'image' => ['img'],
             ],
@@ -224,15 +228,15 @@ return [
                 'image' => ['img'],
             ],
             'other_products_list' => [
-                'string' => ['product_name', 'seotext'],
-                'text' => ['text'],
+                'string' => ['product_name', 'last_modified'],
+                'text' => ['text', 'seotext'],
                 'image' => ['img'],
             ],
         ]
     ],
 
     'calculator' => [// Использовать 'title' для заголовка
-        'string' => ['sub_title'],
+        'string' => ['sub_title', 'last_modified'],
         'text' => ['under_price', 'seotext'],
         'groups' => [
             'product_categories' => [

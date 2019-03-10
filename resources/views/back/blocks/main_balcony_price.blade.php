@@ -72,4 +72,8 @@
             <!-- /.col -->
         </div>
     </div>
+
+    <input class="form-control string" type="hidden" value="{{time()}}"
+           data-name="last_modified" data-type="string" data-block="slider" data-id="0">
+
 @endsection

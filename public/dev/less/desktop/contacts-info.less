@@ -12,7 +12,15 @@
     justify-content: space-between;
   }
 
-  &__col{}
+  &__col{
+    position: relative;
+  }
+
+  &__rating-wrap{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 
   &__title{
     font-size: 24px;
@@ -44,9 +52,11 @@
   }
 
   &__text{
+    display: block;
     margin-top: 7px;
     font-size: 22px;
     line-height: 1.2;
+    color: inherit;
 
     &--phones{
       text-align: right;
@@ -83,5 +93,10 @@
   }
 
   &__sitemap{
+    &.is-active{
+      background: none;
+      color: @main-orange;
+      pointer-events: none;
+    }
   }
 }

@@ -146,4 +146,11 @@
             </div>
         </div>
     </div>
+
+    <input class="form-control string" type="hidden" value="{{time()}}"
+           data-name="last_modified" data-type="string" data-block="components_categories" data-id="{{$item->superior}}">
+
+    <input class="form-control string" type="hidden" value="{{time()}}"
+           data-name="last_modified" data-type="string" data-block="components_list" data-id="{{$item->id_field}}">
+
 @endsection
