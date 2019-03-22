@@ -2,9 +2,9 @@
 @section('content')
     @include('front.meta', ['title' => $contacts->seo_title, 'description' => $contacts->seo_description, 'keywords' => $contacts->seo_keywords, 'spare' => $contacts->title])
     @include('front.rating', ['block_name' => 'contacts', 'block_id' => 0, 'rating' => $rating])
-    @prepend('scripts')
+    @push('first_scripts')
         <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-    @endprepend
+    @endpush
     <ul class="breadcrumbs" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
         <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a href="/" class="breadcrumbs__link breadcrumbs__link--home link-black" itemprop="item"><span class="breadcrumbs__link-text" itemprop="name">Главная</span></a>
