@@ -37,9 +37,9 @@
                 </div>
             </div>
         </div>
-        <div class="footer__map-wrap">
+        {{--<div class="footer__map-wrap">
             <div class="footer__map js_map" id="map" data-latitude="{{$all_site->latitude}}" data-longitude="{{$all_site->longitude}}"></div>
-        </div>
+        </div>--}}
         <div class="footer__our-partners our-partners">
             <div class="our-partners__container">
                 <p class="our-partners__title">Наши партнеры</p>

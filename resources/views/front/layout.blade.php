@@ -84,7 +84,7 @@
         <a href="#thanks" class="thank"></a>
     </div>
 
-    @yield('scripts')
+    @stack('scripts')
 
     {!! $scripts->before_body_close_field !!}
 
