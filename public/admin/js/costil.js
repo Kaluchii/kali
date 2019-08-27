@@ -3,6 +3,10 @@ $(document).ready(function(){
         $('.slug').val( $(this).val() + '-' + $(this).data('id') ).trigger('change');
     });
 
+    if ( /^new\d{6}/.test($('.slug').val()) ) {
+        $('.js-slug-source').trigger('change');
+    }
+
     $(window).on('load', function () {
         if ( ($date = $('.pub_date')).length ) {
             if ( $date.val() == '' ) {

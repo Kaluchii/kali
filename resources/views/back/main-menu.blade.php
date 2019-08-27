@@ -73,6 +73,11 @@
                 </a>
             </li>
             <li>
+                <a href="/adm/blog">
+                    <i class="fa fa-circle-o"></i> <span>Блог</span>
+                </a>
+            </li>
+            <li>
                 <a href="/adm/contacts">
                     <i class="fa fa-circle-o"></i> <span>Контакты</span>
                 </a>

@@ -92,6 +92,22 @@ class AdminController extends Controller
     }
 
 
+    public function getBlog(){
+        $block = $this->extract->getBlock('blog');
+        return view('back.blocks.blog', [
+            'block' => $block
+        ]);
+    }
+
+
+    public function getBlogPost( $id ){
+        $item = $this->extract->getGroupItem('posts', $id);
+        return view('back.groups.posts.posts', [
+            'item' => $item
+        ]);
+    }
+
+
     public function getHomeBalconies(){
         $block = $this->extract->getBlock('main_balcony_price');
         return view('back.blocks.main_balcony_price', [

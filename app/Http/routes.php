@@ -13,6 +13,8 @@
 
 Route::get('/',                 'FrontController@getIndex');
 Route::get('/about',         'FrontController@getAbout');
+Route::get('/blog',         'FrontController@getBlog');
+Route::get('/blog/{slug}',         'FrontController@getBlogPost');
 Route::get('/pay',           'FrontController@getPay');
 Route::get('/services',         'FrontController@getServices');
 Route::get('/guarantee',         'FrontController@getGuarantee');
@@ -71,6 +73,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'],function(){
     Route::get('/components/{other}/{id}',                'AdminController@getComponentsItem');
     Route::get('/services',           'AdminController@getServices');
     Route::get('/about',                   'AdminController@getAbout');
+    Route::get('/blog',                   'AdminController@getBlog');
+    Route::get('/blog/{id}',                   'AdminController@getBlogPost');
     Route::get('/pay',                   'AdminController@getPay');
     Route::get('/contacts',              'AdminController@getContacts');
     Route::get('/calculator',                    'AdminController@getCalculator');

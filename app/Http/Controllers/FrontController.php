@@ -180,6 +180,34 @@ class FrontController extends Controller
     }
 
 
+    public function getBlog(){
+        $this->extract->tuneSelection('posts')->like('show', true)->sortBy('sorter','ASC');
+        $blog = $this->extract->getBlock('blog');
+
+        $rating = $this->getRating('blog', 0);
+
+        return response()->view('front.blog.blog', [
+            'blog' => $blog,
+            'rating' => $rating,
+        ])->header('Last-Modified', gmdate('D, d M Y H:i:s T', $blog->last_modified?:time()));
+    }
+
+
+    public function getBlogPost( $slug ){
+        $post = $this->extract->getBySlug('posts', $slug);
+        if (is_null($post)) {
+          return response(view('errors.404'), 404);
+        }
+
+        $rating = $this->getRating('posts', $post->id);
+
+        return response()->view('front.blog.blog_post', [
+            'post' => $post,
+            'rating' => $rating,
+        ])->header('Last-Modified', gmdate('D, d M Y H:i:s T', $post->last_modified?:time()));
+    }
+
+
     public function getPay(){
         $pay = $this->extract->getBlock('pay');
 
@@ -317,15 +345,18 @@ class FrontController extends Controller
         $this->extract->tuneSelection('products_list_2')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('other_products_list')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('components_categories')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('posts')->like('show', true)->sortBy('sorter','ASC');
 
         $products = $this->extract->getBlock('products');
         $components = $this->extract->getBlock('components');
+        $blog = $this->extract->getBlock('blog');
 
         $rating = $this->getRating('sitemap', 0);
 
         return response()->view('front.sitemap.sitemap', [
             'products' => $products,
             'components' => $components,
+            'blog' => $blog,
             'rating' => $rating,
         ])->header('Last-Modified', gmdate('D, d M Y H:i:s T', time()));
     }
@@ -336,12 +367,16 @@ class FrontController extends Controller
         $this->extract->tuneSelection('products_list_2')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('other_products_list')->like('show', true)->sortBy('sorter','ASC');
         $this->extract->tuneSelection('components_categories')->like('show', true)->sortBy('sorter','ASC');
+        $this->extract->tuneSelection('posts')->like('show', true)->sortBy('sorter','ASC');
 
         $products = $this->extract->getBlock('products');
         $components = $this->extract->getBlock('components');
+        $blog = $this->extract->getBlock('blog');
+
         return response()->view('front.sitemap.sitemap_xml', [
             'products' => $products,
             'components' => $components,
+            'blog' => $blog,
         ])->header('Content-Type', 'text/xml');
     }
 }

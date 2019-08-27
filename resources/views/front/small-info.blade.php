@@ -12,11 +12,11 @@
                     <a href="/about" class="small-info__link link-white">О компании</a>
                 @endif
             </div>
-            <div class="small-info__link-wrap small-info__link-wrap--pay">
-                @if(Request::is('pay'))
-                    <span class="small-info__link link-white is-active">Оплата</span>
+            <div class="small-info__link-wrap small-info__link-wrap--blog">
+                @if(Request::is('blog'))
+                    <span class="small-info__link link-white is-active">Блог</span>
                 @else
-                    <a href="/pay" class="small-info__link link-white">Оплата</a>
+                    <a href="/blog" class="small-info__link link-white">Блог</a>
                 @endif
             </div>
         </div>

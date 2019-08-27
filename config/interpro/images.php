@@ -82,4 +82,8 @@ return [
         'resizes' => ['preview']
     ],
 
+    'posts.img' => [
+        'resizes' => ['preview']
+    ],
+
 ];

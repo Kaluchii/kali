@@ -45,6 +45,11 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+    <url>
+        <loc>https://www.kali.kz/blog</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 @foreach($products->products_list_1_group as $item)
     <url>
         <loc>https://www.kali.kz/products/{{$item->slug}}</loc>
@@ -69,6 +74,13 @@
 @foreach($components->components_categories_group as $item)
     <url>
         <loc>https://www.kali.kz/components/{{$item->slug}}</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+@endforeach
+@foreach($blog->posts_group as $item)
+    <url>
+        <loc>https://www.kali.kz/blog/{{$item->slug}}</loc>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>

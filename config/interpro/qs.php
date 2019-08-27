@@ -282,4 +282,16 @@ return [
         ]
     ],
 
+    'blog' => [// Использовать 'title' для заголовка
+        'string' => ['last_modified'],
+        'text' => ['seotext'],
+        'groups' => [
+            'posts' => [
+                'string' => ['post_name', 'last_modified'],
+                'image' => ['img'],
+                'text' => ['text', 'seotext']
+            ],
+        ]
+    ],
+
 ];

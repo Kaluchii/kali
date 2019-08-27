@@ -12,6 +12,8 @@ return [
             'slider',
             'contacts',
             'about',
+            'blog',
+            'posts',
             'pay',
             'services',
             'sale',
