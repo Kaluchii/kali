@@ -25,7 +25,7 @@
                             <img src="{{$item->img->link}}?{{$item->img->cache_index}}" alt="{{$item->img->alt}}" title="{{$item->img->alt}}" class="blog__item-preview">
                         </div>
                         <p class="blog__item-text">{{$item->post_name}}</p>
-                        <p class="blog__item-pub-date">dd/mm/yyyy</p>
+                        <p class="blog__item-pub-date">{{date('d/m/Y', $item->updated_at)}}</p>
                     </a>
                 </li>
             @endforeach

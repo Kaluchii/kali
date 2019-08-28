@@ -62,6 +62,13 @@
                             <a href="/contacts" class="header__link link-black">Контакты</a>
                         @endif
                     </div>
+                    <div class="header__links-wrap header__links-wrap--vacancy">
+                        @if(Request::is('blog/vakansii-449'))
+                            <span class="header__link link-black is-active">Вакансии</span>
+                        @else
+                            <a href="/blog/vakansii-449" class="header__link link-black">Вакансии</a>
+                        @endif
+                    </div>
                 </div>
             </div>
             <nav class="header__nav">
@@ -187,6 +194,11 @@
                         <li class="mobile-header__menu-item"><span class="mobile-header__menu-link is-active">КОНТАКТЫ</span></li>
                     @else
                         <li class="mobile-header__menu-item"><a href="/contacts" class="mobile-header__menu-link">КОНТАКТЫ</a></li>
+                    @endif
+                    @if(Request::is('blog/vakansii-449'))
+                        <li class="mobile-header__menu-item"><span class="mobile-header__menu-link is-active">ВАКАНСИИ</span></li>
+                    @else
+                        <li class="mobile-header__menu-item"><a href="/blog/vakansii-449" class="mobile-header__menu-link">ВАКАНСИИ</a></li>
                     @endif
                 </ul>
             </div>
